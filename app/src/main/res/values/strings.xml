@@ -2,13 +2,47 @@
     <string name="app_name">Newtoons_Toolbox</string>
     <string-array name="f1_lhp">
         <item>Un resorte se estira 5 cm cuando se le aplica una fuerza de 2 N. ¿Cuál es la constante del resorte?</item>
+        <item>Un resorte tiene una constante k=120N/m y se estira 8 cm. ¿Qué fuerza ejerce?</item>
+        <item>Una masa de 2 kg cuelga de un resorte con k=50N/m. ¿Cuánto se estira?</item>
+        <item>Un resorte de constante k=200N/m se estira 10 cm. ¿Qué energía almacena?</item>
+        <item>Un resorte de 30 cm se estira 15 cm. ¿Cuál es su longitud final?</item>
+        <item>Un alambre tiene un diámetro de 2 mm. ¿Cuál es su área transversal?</item>
+        <item>Una fuerza de 150 N se aplica sobre un alambre que se deforma 0.005 m. ¿Cuál es el esfuerzo?</item>
+        <item>Un alambre de acero con área A=2×10^−6m^2 soporta un esfuerzo máximo de 1.5×10^8 Pa. ¿Cuál es la fuerza máxima?</item>
+        <item>Un alambre con área 3×10^−6 m^2 soporta una fuerza de 90 N. ¿Cuál es el esfuerzo?</item>
+        <item>Una fuerza de 200 N actúa sobre un alambre con área 4×10^−6 m^2, y módulo de elasticidad 2×10^11 Pa. ¿Cuál es su elongación?</item>
     </string-array>
     <string-array name="f1_lhr">
-        <item>40</item>
+        <item>40N/m</item>
+        <item>9.6N</item>
+        <item>0.392m</item>
+        <item>1J</item>
+        <item>0.45m</item>
+        <item>3.14×10−6m2</item>
+        <item>30000Pa</item>
+        <item>300N</item>
+        <item>3×107Pa</item>
+        <item>2.5×10−4m</item>
     </string-array>
     <string-array name="f1_lha">
         <item>Primero, conviertes los centímetros a metros (divide entre 100). Luego, aplicas la fórmula 𝑘=𝐹/x
             que relaciona la fuerza con el alargamiento del resorte. Este valor indica la rigidez del resorte: mientras mayor es
             𝑘, más difícil es estirarlo.</item>
+        <item>Multiplica la constante del resorte por la elongación. La fuerza resultante es la necesaria para producir dicho estiramiento,
+            y es directamente proporcional a cuánto se estira el resorte.</item>
+        <item>Calculas primero el peso de la masa usando la gravedad (g=9.8m/s2). Luego, usas la fórmula de Hooke para calcular
+            cuánto se estira el resorte. Es importante hacer esta secuencia correctamente.</item>
+        <item>Elevas el alargamiento al cuadrado porque la energía depende del cuadrado de la deformación. Luego multiplicas por la constante
+                k y divides entre 2. Esta es la energía almacenada en el resorte cuando se estira.</item>
+        <item>Solo debes sumar la longitud inicial con la elongación para obtener la longitud total.
+            Esto es útil para saber hasta dónde llegará el extremo del resorte.</item>
+        <item>Eleva el diámetro al cuadrado antes de multiplicar por π y dividir entre 4. Esta área es esencial
+            para calcular esfuerzo y otras propiedades mecánicas.</item>
+        <item>El esfuerzo representa cuánta fuerza hay por unidad de deformación. Esta fórmula es básica en análisis de materiales.</item>
+        <item>Multiplica el esfuerzo máximo que puede soportar el material por el área de la sección. Esto te da la fuerza máxima que el alambre puede resistir antes de romperse.</item>
+        <item>Divides la fuerza entre el área para saber cuánto esfuerzo se genera en ese material. Entre menor el área,
+            mayor será el esfuerzo.</item>
+        <item>Este ejercicio combina el área con el módulo de elasticidad para obtener cuánto se alarga el alambre.
+            Este tipo de cálculo es fundamental en estructuras.</item>
     </string-array>
 </resources>
