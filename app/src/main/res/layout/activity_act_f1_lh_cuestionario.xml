@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ACT_F1_LH_cuestionario">
+
+    <Button
+        android:id="@+id/btnCalificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
+        android:enabled="false"
+        android:onClick="ocCalificar"
+        android:text="REVISAR"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btnContinuar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNopregunta"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtRetroa"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRetro" />
+
+    <TextView
+        android:id="@+id/txtNopregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPregunta"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:textColor="#EFEFEF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNopregunta" />
+
+    <RadioGroup
+        android:id="@+id/rgP1"
+        android:layout_width="364dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPregunta"
+        tools:ignore="TextSizeCheck">
+
+        <RadioButton
+            android:id="@+id/rbO1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ocRB1"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <RadioButton
+            android:id="@+id/rbO2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ocRB1"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <RadioButton
+            android:id="@+id/rbO3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ocRB1"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <RadioButton
+            android:id="@+id/rbO4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ocRB1"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtRetro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgP1" />
+
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="136dp"
+        android:layout_height="51dp"
+        android:backgroundTint="#4CAF50"
+        android:onClick="ocContinua"
+        android:text="CONTINUAR"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNopregunta"
+        app:layout_constraintVertical_bias="0.973" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="417dp"
+        android:layout_height="730dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nuevo_fodo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

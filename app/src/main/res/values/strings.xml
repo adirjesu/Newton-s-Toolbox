@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Newtoons_Toolbox</string>
+    <string-array name="f1_lhp">
+        <item>Un resorte se estira 5 cm cuando se le aplica una fuerza de 2 N. ¿Cuál es la constante del resorte?</item>
+    </string-array>
+    <string-array name="f1_lhr">
+        <item>40</item>
+    </string-array>
+    <string-array name="f1_lha">
+        <item>Primero, conviertes los centímetros a metros (divide entre 100). Luego, aplicas la fórmula 𝑘=𝐹/x
+            que relaciona la fuerza con el alargamiento del resorte. Este valor indica la rigidez del resorte: mientras mayor es
+            𝑘, más difícil es estirarlo.</item>
+    </string-array>
+</resources>

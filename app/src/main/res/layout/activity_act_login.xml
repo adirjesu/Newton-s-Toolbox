@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ACT_Login">
+
+    <TextView
+        android:id="@+id/txtTitulo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="Seleccione el modo"
+        android:textAlignment="center"
+        android:textSize="50dp" />
+
+    <Button
+        android:id="@+id/btnEstudiante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ocEstudiante"
+        android:text="estudiante" />
+
+    <Button
+        android:id="@+id/btnAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin." />
+
+</LinearLayout>
