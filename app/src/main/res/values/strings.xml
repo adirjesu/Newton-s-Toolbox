@@ -18,11 +18,11 @@
         <item>0.392m</item>
         <item>1J</item>
         <item>0.45m</item>
-        <item>3.14×10−6m2</item>
+        <item>3.14×10^−6m^2</item>
         <item>30000Pa</item>
         <item>300N</item>
         <item>3×107Pa</item>
-        <item>2.5×10−4m</item>
+        <item>2.5×10^−4m</item>
     </string-array>
     <string-array name="f1_lha">
         <item>Primero, conviertes los centímetros a metros (divide entre 100). Luego, aplicas la fórmula 𝑘=𝐹/x

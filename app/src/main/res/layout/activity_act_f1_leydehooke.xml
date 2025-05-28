@@ -19,26 +19,30 @@
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btncalf1lh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="ocCalf1lh"
         android:text="Calculadora" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/btncuesf1lh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="ocCuesf1lh"
         android:text="Cuestionario" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/btnforf1lh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="ocForf1lh"
         android:text="Banco de Fórmulas" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/btnexpf1lh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Explicación " />
+        android:onClick="ocExpf1lh"
+        android:text="Explicación" />
 </LinearLayout>

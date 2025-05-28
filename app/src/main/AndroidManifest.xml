@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Newtoons_Toolbox"
         tools:targetApi="31">
         <activity
+            android:name=".ACT_F1_LH_C_Resultados"
+            android:exported="false" />
+        <activity
             android:name=".ACT_F1_LH_cuestionario"
             android:exported="false" />
         <activity

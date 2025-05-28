@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:textAlignment="center"
-        android:textColor="#EFEFEF"
+        android:textColor="#000000"
         android:textSize="20dp" />
 
     <EditText
@@ -29,21 +29,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:inputType="textPersonName" />
 
     <TextView
-        android:id="@+id/txtRetroa"
+        android:id="@+id/txtsino"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
-        android:textColor="@color/white" />
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/txtRetro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20dp" />
 
     <Button
@@ -51,7 +50,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#4CAF50"
-        android:enabled="false"
         android:onClick="ocCalificar"
         android:text="REVISAR"
         android:textColor="@color/white" />
@@ -61,7 +59,7 @@
         android:layout_width="136dp"
         android:layout_height="51dp"
         android:backgroundTint="#4CAF50"
-        android:onClick="ocContinua"
+        android:onClick="ocContinuar"
         android:text="CONTINUAR"
         android:visibility="invisible" />
 

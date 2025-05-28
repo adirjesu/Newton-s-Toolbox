@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -22,17 +23,42 @@ public class ACT_LobbyFisica1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_lobby_fisica1);
-        hidro=findViewById(R.id.btn);
-        hidro=findViewById(R.id);
-        hidro=findViewById(R.id);
-        hidro=findViewById(R.id);
-        hidro=findViewById(R.id);
-        hidro=findViewById(R.id);
-        hidro=findViewById(R.id);
+        hidro=findViewById(R.id.btnhidrodinamica);
+        hidro=findViewById(R.id.btntorricelli);
+        hidro=findViewById(R.id.btnpascal);
+        hidro=findViewById(R.id.btnhidrostatica);
+        hidro=findViewById(R.id.btnhooke);
+        hidro=findViewById(R.id.btnarquimidez);
+        hidro=findViewById(R.id.btnyoung);
 
-
-
+    }//main
+    public void ocHidrodinamica (View view){
+        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        startActivity(x);
     }
+    public void ocTorricelli (View view){
+        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        startActivity(x);
+    }
+    public void ocPascal (View view){
+        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        startActivity(x);
+    }
+    public void ocHidrostatica (View view){
+        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        startActivity(x);
+    }
+    public void ocHooke (View view){
+        Intent x =  new Intent(this,ACT_F1_Leydehooke.class);
+        startActivity(x);
+    }    public void ocArquimidez (View view){
+        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        startActivity(x);
+    }    public void ocYoung (View view){
+        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        startActivity(x);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menuestudiantes,menu);
