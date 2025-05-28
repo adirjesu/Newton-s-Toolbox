@@ -6,14 +6,32 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class ACT_LobbyFisica1 extends AppCompatActivity {
+    private Button hidro;
+    private Button torricelli;
+    private Button pascal;
+    private Button hidrostatica;
+    private Button hooke;
+    private Button arqui;
+    private Button young;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_lobby_fisica1);
+        hidro=findViewById(R.id.btn);
+        hidro=findViewById(R.id);
+        hidro=findViewById(R.id);
+        hidro=findViewById(R.id);
+        hidro=findViewById(R.id);
+        hidro=findViewById(R.id);
+        hidro=findViewById(R.id);
+
+
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
