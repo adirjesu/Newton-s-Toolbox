@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ACT_F1_LH_banco_formulas">
+
+    <TextView
+        android:id="@+id/txtTitulo6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="Tema: Ley de Hooke\nBanco de Fórmulas"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btnf1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/trianguloinvertido"
+                android:onClick="ocAbrirf1"
+                android:text="CONSTANTE DEL RESORTE" />
+
+            <TextView
+                android:id="@+id/txtf1_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+
+            <TextView
+                android:id="@+id/txtf1_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="k = F / x" />
+
+            <TextView
+                android:id="@+id/txtf1_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf1_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="k: Constante elástica del resorte (N/m)\n
+F: Fuerza aplicada (N)\n
+x: Deformación o alargamiento (m)" />
+
+            <Button
+                android:id="@+id/btnf2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/trianguloinvertido"
+                android:onClick="ocAbrirf2"
+                android:text="FUERZA COMO PESO" />
+
+            <TextView
+                android:id="@+id/txtf2_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+            <TextView
+                android:id="@+id/txtf2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="F = w" />
+
+            <TextView
+                android:id="@+id/txtf2_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf2_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="F: Fuerza (N)\n
+w: Peso (N)" />
+
+            <Button
+                android:id="@+id/btnf3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocAbrirf3"
+                android:text="Cálculo del peso" />
+
+            <TextView
+                android:id="@+id/txtf3_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+            <TextView
+                android:id="@+id/txtf3_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtf3_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf3_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+            <Button
+                android:id="@+id/btnf4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocAbrirf3"
+                android:text="Cálculo del peso" />
+
+            <TextView
+                android:id="@+id/txtf4_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+            <TextView
+                android:id="@+id/txtf4_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtf4_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf4_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+            <Button
+                android:id="@+id/btnf5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocAbrirf3"
+                android:text="Cálculo del peso" />
+
+            <TextView
+                android:id="@+id/txtf5_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+            <TextView
+                android:id="@+id/txtf5_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtf5_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf5_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+            <Button
+                android:id="@+id/btnf6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocAbrirf3"
+                android:text="Cálculo del peso" />
+
+            <TextView
+                android:id="@+id/txtf6_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+            <TextView
+                android:id="@+id/txtf6_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtf6_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf6_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+            <Button
+                android:id="@+id/btnf7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocAbrirf3"
+                android:text="Cálculo del peso" />
+
+            <TextView
+                android:id="@+id/txtf7_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+            <TextView
+                android:id="@+id/txtf7_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtf7_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf7_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+            <Button
+                android:id="@+id/btnf8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocAbrirf3"
+                android:text="Cálculo del peso" />
+
+            <TextView
+                android:id="@+id/txtf8_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+            <TextView
+                android:id="@+id/txtf8_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtf8_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf8_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+            <Button
+                android:id="@+id/btnf9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocAbrirf3"
+                android:text="Cálculo del peso" />
+
+            <TextView
+                android:id="@+id/txtf9_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+            <TextView
+                android:id="@+id/txtf9_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtf9_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf9_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+            <Button
+                android:id="@+id/btnf10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocAbrirf3"
+                android:text="Cálculo del peso" />
+
+            <TextView
+                android:id="@+id/txtf10_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+            <TextView
+                android:id="@+id/txtf10_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtf10_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf10_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <Button
+                android:id="@+id/btnf11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocAbrirf3"
+                android:text="Cálculo del peso" />
+
+            <TextView
+                android:id="@+id/txtf11_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+            <TextView
+                android:id="@+id/txtf11_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtf11_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf11_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+            <Button
+                android:id="@+id/btnf12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocAbrirf3"
+                android:text="Cálculo del peso" />
+
+            <TextView
+                android:id="@+id/txtf12_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+            <TextView
+                android:id="@+id/txtf12_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtf12_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf12_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+            <Button
+                android:id="@+id/btnf13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocAbrirf3"
+                android:text="Cálculo del peso" />
+
+            <TextView
+                android:id="@+id/txtf13_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+            <TextView
+                android:id="@+id/txtf13_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtf13_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf13_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+            <Button
+                android:id="@+id/btnf14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocAbrirf3"
+                android:text="Cálculo del peso" />
+
+            <TextView
+                android:id="@+id/txtf14_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_formula" />
+            <TextView
+                android:id="@+id/txtf14_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtf3_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_significado" />
+
+            <TextView
+                android:id="@+id/txtf3_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

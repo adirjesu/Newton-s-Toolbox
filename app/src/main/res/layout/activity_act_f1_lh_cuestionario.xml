@@ -29,13 +29,95 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/txtTituloV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Unidades"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnNm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocNm"
+                android:text="N/m" />
+
+            <Button
+                android:id="@+id/btnN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ocN"
+                android:text="N" />
+
+            <Button
+                android:id="@+id/btnm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ocm"
+                android:text="m" />
+
+            <Button
+                android:id="@+id/btnJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ocJ"
+                android:text="J" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ocmenos"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/btnx10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ocpor10"
+                android:text="×10^" />
+
+            <Button
+                android:id="@+id/btnal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ocala"
+                android:text="^" />
+
+            <Button
+                android:id="@+id/btnPa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ocpa"
+                android:text="Pa" />
+        </TableRow>
+
+    </TableLayout>
 
     <TextView
         android:id="@+id/txtsino"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="20dp"
         android:textColor="@color/black" />
 
     <TextView
