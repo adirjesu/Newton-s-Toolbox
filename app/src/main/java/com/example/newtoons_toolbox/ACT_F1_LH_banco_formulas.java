@@ -14,13 +14,14 @@ public class ACT_F1_LH_banco_formulas extends AppCompatActivity {
     private Button f4;
     private Button f5;
     private Button f6;
-    private TextView tf1;
-    private TextView tf2;
-    private TextView tf3;
-    private TextView tf4;
-    private TextView tf5;
-    private TextView tf6;
-    private TextView tf0;
+    private Button f7;
+    private Button f8;
+    private Button f9;
+    private Button f10;
+    private Button f11;
+
+    private TextView[][] tfArrays;
+
     public static String nombre;
 
     @Override
@@ -28,12 +29,23 @@ public class ACT_F1_LH_banco_formulas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_f1_lh_banco_formulas);
         f1          =findViewById(R.id.btnf1);
-        f2          =findViewById(R.id.btnf2);
-        f3          =findViewById(R.id.btnf3);
+        tfArrays = new TextView[16][5];
+        //OPIO SON 15 ELEMENTOS
 
-        tf1         =findViewById(R.id.txtf1);
-        tf2         =findViewById(R.id.txtf2);
-        tf3         =findViewById(R.id.txtf3);
+
+
+        for (int a = 1; a < 16; a++) {
+            for (int i = 1; i < 5; i++) {
+                String idName = "txtf" + a + "_" + i;
+                int resID = getResources().getIdentifier(idName, "id", getPackageName());
+                tfArrays[a][i] = findViewById(resID);
+            }
+        }
+        for (int a = 1; a < 12; a++) {
+            for (int i = 1; i < 5; i++) {
+                tfArrays[a][i].setVisibility(View.GONE);
+            }
+        }
 
 
     }//main
@@ -47,33 +59,233 @@ public class ACT_F1_LH_banco_formulas extends AppCompatActivity {
     public void ocAbrirf3(View view){
         abrir("tf3");
     }
+    public void ocAbrirf4(View view){
+        abrir("tf4");
+    }
+    public void ocAbrirf5(View view){
+        abrir("tf5");
+    }
+    public void ocAbrirf6(View view){
+        abrir("tf6");
+    }
+    public void ocAbrirf7(View view){
+        abrir("tf7");
+    }
+    public void ocAbrirf8(View view){
+        abrir("tf8");
+    }
+    public void ocAbrirf9(View view){
+        abrir("tf9");
+    }
+    public void ocAbrirf10(View view){
+        abrir("tf10");
+    }
+    public void ocAbrirf11(View view){
+        abrir("tf11");
+    }
     public void abrir(String nombre) {
         // Ocultar todos los TextViews antes de mostrar el seleccionado
-        tf1.setVisibility(View.GONE);
-        tf2.setVisibility(View.GONE);
-        tf3.setVisibility(View.GONE);
-        tf4.setVisibility(View.GONE);
-        tf5.setVisibility(View.GONE);
-        tf6.setVisibility(View.GONE);
+        for (int a = 1; a < 16; a++) {
+            for (int i = 1; i < 5; i++) {
+                tfArrays[a][i].setVisibility(View.GONE);
+            }
+        }
         // Mostrar el TextView correspondiente basado en el nombre
         switch (nombre) {
             case "tf1":
-                tf1.setVisibility(View.VISIBLE);
+                if(tfArrays[1][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[1][i].setVisibility(View.GONE);
+                    }
+                }
+                else{
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[1][i].setVisibility(View.VISIBLE);
+                    }
+                }
+
                 break;
+
             case "tf2":
-                tf2.setVisibility(View.VISIBLE);
+                if(tfArrays[2][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[2][i].setVisibility(View.GONE);
+                    }
+                }
+                else {
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[2][i].setVisibility(View.VISIBLE);
+                    }
+                }
                 break;
+
             case "tf3":
-                tf3.setVisibility(View.VISIBLE);
+                if(tfArrays[3][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[3][i].setVisibility(View.GONE);
+                    }
+                }
+                else {
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[3][i].setVisibility(View.VISIBLE);
+                    }
+                }
                 break;
+
             case "tf4":
-                tf4.setVisibility(View.VISIBLE);
+                if(tfArrays[4][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[4][i].setVisibility(View.GONE);
+                    }
+                }
+                else {
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[4][i].setVisibility(View.VISIBLE);
+                    }
+                }
                 break;
+
             case "tf5":
-                tf5.setVisibility(View.VISIBLE);
+                if(tfArrays[5][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[5][i].setVisibility(View.GONE);
+                    }
+                }
+                else {
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[5][i].setVisibility(View.VISIBLE);
+                    }
+                }
                 break;
+
             case "tf6":
-                tf6.setVisibility(View.VISIBLE);
+                if(tfArrays[6][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[6][i].setVisibility(View.GONE);
+                    }
+                }
+                else {
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[6][i].setVisibility(View.VISIBLE);
+                    }
+                }
+                break;
+
+            case "tf7":
+                if(tfArrays[7][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[7][i].setVisibility(View.GONE);
+                    }
+                }
+                else {
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[7][i].setVisibility(View.VISIBLE);
+                    }
+                }
+                break;
+
+            case "tf8":
+                if(tfArrays[8][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[8][i].setVisibility(View.GONE);
+                    }
+                }
+                else {
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[8][i].setVisibility(View.VISIBLE);
+                    }
+                }
+                break;
+
+            case "tf9":
+                if(tfArrays[9][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[9][i].setVisibility(View.GONE);
+                    }
+                }
+                else {
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[9][i].setVisibility(View.VISIBLE);
+                    }
+                }
+                break;
+
+            case "tf10":
+                if(tfArrays[10][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[10][i].setVisibility(View.GONE);
+                    }
+                }
+                else {
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[10][i].setVisibility(View.VISIBLE);
+                    }
+                }
+                break;
+
+            case "tf11":
+                if(tfArrays[11][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[11][i].setVisibility(View.GONE);
+                    }
+                }
+                else {
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[11][i].setVisibility(View.VISIBLE);
+                    }
+                }
+                break;
+            case "tf12":
+                if(tfArrays[12][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[12][i].setVisibility(View.GONE);
+                    }
+                }
+                else{
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[12][i].setVisibility(View.VISIBLE);
+                    }
+                }
+
+                break;
+            case "tf13":
+                if(tfArrays[13][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[13][i].setVisibility(View.GONE);
+                    }
+                }
+                else{
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[13][i].setVisibility(View.VISIBLE);
+                    }
+                }
+
+                break;
+            case "tf14":
+                if(tfArrays[14][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[14][i].setVisibility(View.GONE);
+                    }
+                }
+                else{
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[14][i].setVisibility(View.VISIBLE);
+                    }
+                }
+
+                break;
+            case "tf15":
+                if(tfArrays[15][1].getVisibility()==View.VISIBLE){
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[15][i].setVisibility(View.GONE);
+                    }
+                }
+                else{
+                    for (int i = 1; i < 5; i++) {
+                        tfArrays[15][i].setVisibility(View.VISIBLE);
+                    }
+                }
+
                 break;
             default:
                 // Manejar el caso en que no se encuentra el nombre
