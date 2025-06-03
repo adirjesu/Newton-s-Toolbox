@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/captura_de_pantalla_2025_05_28_204330"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="Newton´s\nToolbox"
+        android:textAlignment="center"
+        android:textSize="50dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="250sp"
+        android:width="155sp"
+        android:height="60sp"
+        android:background="@drawable/button_background"
+        android:onClick="ocInicio"
+        android:text="Ingresar"
+        android:textSize="20sp" />  <!-- Esta línea centra el botón horizontalmente -->
+
+</LinearLayout>

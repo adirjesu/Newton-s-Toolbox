@@ -1,0 +1,99 @@
+package com.example.newtoons_toolbox;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class ACT_LobbyFisica1 extends AppCompatActivity {
+    private Button hidro;
+    private Button torricelli;
+    private Button pascal;
+    private Button hidrostatica;
+    private Button hooke;
+    private Button arqui;
+    private Button young;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_act_lobby_fisica1);
+        hidro=findViewById(R.id.btnhidrodinamica);
+        hidro=findViewById(R.id.btntorricelli);
+        hidro=findViewById(R.id.btnpascal);
+        hidro=findViewById(R.id.btnhidrostatica);
+        hidro=findViewById(R.id.btnhooke);
+        hidro=findViewById(R.id.btnarquimidez);
+        hidro=findViewById(R.id.btnyoung);
+
+    }//main
+    public void ocHidrodinamica (View view){
+        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        startActivity(x);
+    }
+    public void ocTorricelli (View view){
+        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        startActivity(x);
+    }
+    public void ocPascal (View view){
+        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        startActivity(x);
+    }
+    public void ocHidrostatica (View view){
+        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        startActivity(x);
+    }
+    public void ocHooke (View view){
+        Intent x =  new Intent(this,ACT_F1_Leydehooke.class);
+        startActivity(x);
+    }    public void ocArquimidez (View view){
+        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        startActivity(x);
+    }    public void ocYoung (View view){
+        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        startActivity(x);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menuestudiantes,menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item){
+        int id=item.getItemId();
+        if(id==R.id.regresar){
+            Toast.makeText(this, "Regresando",
+                    Toast.LENGTH_SHORT).show();
+            Intent w =  new Intent(this,ACT_LobbyEstudiante.class);
+            startActivity(w);
+        }
+
+        if(id==R.id.Algebra){
+            Toast.makeText(this, "Accediendo a Algebra",
+                    Toast.LENGTH_SHORT).show();
+            Intent x =  new Intent(this,ACT_LobbyAlgebra.class);
+            startActivity(x);
+        }
+
+        if(id==R.id.Fisica1){
+            Toast.makeText(this, "Accediendo a Física I",
+                    Toast.LENGTH_SHORT).show();
+            Intent y =  new Intent(this,ACT_LobbyFisica1.class);
+            startActivity(y);
+        }
+        if(id==R.id.Fisica2){
+            Toast.makeText(this, "Accediendo a Física II",
+                    Toast.LENGTH_SHORT).show();
+            Intent z =  new Intent(this,ACT_LobbyFisica2.class);
+            startActivity(z);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}

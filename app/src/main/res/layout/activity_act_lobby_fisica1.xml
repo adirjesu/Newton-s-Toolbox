@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ACT_LobbyFisica1">
+
+    <TextView
+        android:id="@+id/txtTitulo4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="FÍSICA I"
+        android:textAlignment="center"
+        android:textSize="50dp" />
+
+    <Button
+        android:id="@+id/btnhidrodinamica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ocHidrodinamica"
+        android:text="Hidrodinámica" />
+
+    <Button
+        android:id="@+id/btntorricelli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ocTorricelli"
+        android:text="Teorema de Torricelli" />
+
+    <Button
+        android:id="@+id/btnpascal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ocPascal"
+        android:text="Principio de Pascal" />
+
+    <Button
+        android:id="@+id/btnhidrostatica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ocHidrostatica"
+        android:text="Hidrostática" />
+
+    <Button
+        android:id="@+id/btnhooke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ocHooke"
+        android:text="Ley de Hooke" />
+
+    <Button
+        android:id="@+id/btnarquimidez"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ocArquimidez"
+        android:text="Principio de Arquímidez" />
+
+    <Button
+        android:id="@+id/btnyoung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ocYoung"
+        android:text="Módulo de Young" />
+
+</LinearLayout>
