@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ACT_F1_LH_explicacion2">
+
+    <TextView
+        android:id="@+id/txttituloc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Características" />
+
+    <TextView
+        android:id="@+id/txtc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="•	Válida solo en el rango elástico(antes de que el material se deforme permanentemente). \n•	Si duplicas la fuerza, duplicas la deformación. \n•	La constante k es específica de cada resorte o material. \n•	Cuanto más grande sea k, más rígido será el resorte. " />
+</LinearLayout>
