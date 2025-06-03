@@ -31,10 +31,13 @@
         android:layout_height="wrap_content"
         android:text="Admin." />
 
+<<<<<<< HEAD
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="match_parent"
         android:layout_height="535dp"
         app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
 
+=======
+>>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
 </LinearLayout>

@@ -5,7 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+<<<<<<< HEAD
     android:background="@drawable/captura_de_pantalla_2025_05_28_204330"
+=======
+>>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
     tools:context=".MainActivity">
 
     <TextView

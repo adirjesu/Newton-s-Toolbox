@@ -23,6 +23,18 @@ public class ACT_F1_LH_cuestionario extends AppCompatActivity {
     private TextView sino;
     private Button calificar;
     private Button continuar;
+<<<<<<< HEAD
+=======
+    private Button nm;
+    private Button n;
+    private Button m;
+    private Button j;
+    private Button menos;
+    private Button por10;
+    private Button ala;
+    private Button pa;
+
+>>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
     private TextView retro;
     public static  String[][] matriz = new String[10][3];
     public static int contador=0;
@@ -40,7 +52,18 @@ public class ACT_F1_LH_cuestionario extends AppCompatActivity {
         retro     =findViewById(R.id.txtRetro);
         calificar =findViewById(R.id.btnCalificar);
         continuar =findViewById(R.id.btnContinuar);
+<<<<<<< HEAD
 
+=======
+        nm        =findViewById(R.id.btnNm);
+        n         =findViewById(R.id.btnN);
+        m         =findViewById(R.id.btnm);
+        j         =findViewById(R.id.btnJ);
+        menos     =findViewById(R.id.m);
+        por10     =findViewById(R.id.btnx10);
+        ala       =findViewById(R.id.btnal);
+        pa        =findViewById(R.id.btnPa);
+>>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
         String[] preguntas = getResources().getStringArray(R.array.f1_lhp);
         String[] respuestas = getResources().getStringArray(R.array.f1_lhr);
         String[] retroalimentaciones = getResources().getStringArray(R.array.f1_lha);
@@ -128,9 +151,46 @@ public class ACT_F1_LH_cuestionario extends AppCompatActivity {
         });
         builder.show();
     }
+<<<<<<< HEAD
 
 
 
+=======
+    /*//////////////EMPIEZAN LAS VARIABLES\\\\\\\\\\\\\\*/
+    public void ocNm(View view){
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"N/m");
+    }
+    public void ocN(View view){
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"N");
+    }
+    public void ocm(View view){
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"m");
+    }
+    public void ocJ(View view){
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"J");
+    }
+    public void ocmenos(View view){
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"-");
+    }
+    public void ocpor10(View view){
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"×10^");
+    }
+    public void ocala(View view){
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"^");
+    }
+    public void ocpa(View view){
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"Pa");
+    }
+    /*//////////////TERMINAN LAS VARIABLES\\\\\\\\\\\\\\*/
+>>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
     private static void shuffleArray(int[] array)
     {
         int index, temp;
