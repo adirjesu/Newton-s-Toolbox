@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/captura_de_pantalla_2025_05_28_204330"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 647ff258d0d59d09f84281a44b2a07d98ab05bc1
     tools:context=".MainActivity">
 
 
