@@ -23,6 +23,8 @@ public class ACT_F1_LH_cuestionario extends AppCompatActivity {
     private TextView sino;
     private Button calificar;
     private Button continuar;
+<<<<<<< HEAD
+=======
     private Button nm;
     private Button n;
     private Button m;
@@ -32,6 +34,7 @@ public class ACT_F1_LH_cuestionario extends AppCompatActivity {
     private Button ala;
     private Button pa;
 
+>>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
     private TextView retro;
     public static  String[][] matriz = new String[10][3];
     public static int contador=0;
@@ -49,6 +52,9 @@ public class ACT_F1_LH_cuestionario extends AppCompatActivity {
         retro     =findViewById(R.id.txtRetro);
         calificar =findViewById(R.id.btnCalificar);
         continuar =findViewById(R.id.btnContinuar);
+<<<<<<< HEAD
+
+=======
         nm        =findViewById(R.id.btnNm);
         n         =findViewById(R.id.btnN);
         m         =findViewById(R.id.btnm);
@@ -57,6 +63,7 @@ public class ACT_F1_LH_cuestionario extends AppCompatActivity {
         por10     =findViewById(R.id.btnx10);
         ala       =findViewById(R.id.btnal);
         pa        =findViewById(R.id.btnPa);
+>>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
         String[] preguntas = getResources().getStringArray(R.array.f1_lhp);
         String[] respuestas = getResources().getStringArray(R.array.f1_lhr);
         String[] retroalimentaciones = getResources().getStringArray(R.array.f1_lha);
@@ -144,6 +151,11 @@ public class ACT_F1_LH_cuestionario extends AppCompatActivity {
         });
         builder.show();
     }
+<<<<<<< HEAD
+
+
+
+=======
     /*//////////////EMPIEZAN LAS VARIABLES\\\\\\\\\\\\\\*/
     public void ocNm(View view){
         String resbefore= String.valueOf(res.getText());
@@ -178,6 +190,7 @@ public class ACT_F1_LH_cuestionario extends AppCompatActivity {
         res.setText(resbefore+"Pa");
     }
     /*//////////////TERMINAN LAS VARIABLES\\\\\\\\\\\\\\*/
+>>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
     private static void shuffleArray(int[] array)
     {
         int index, temp;

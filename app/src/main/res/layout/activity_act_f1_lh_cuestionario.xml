@@ -29,6 +29,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+<<<<<<< HEAD
+        android:inputType="textPersonName" />
+=======
         android:inputType="number"/>
 
     <TextView
@@ -112,12 +115,17 @@
         </TableRow>
 
     </TableLayout>
+>>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
 
     <TextView
         android:id="@+id/txtsino"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
+        android:layout_marginTop="120dp"
+=======
         android:layout_marginTop="20dp"
+>>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
         android:textColor="@color/black" />
 
     <TextView
