@@ -14,7 +14,7 @@
         android:layout_marginTop="120dp"
         android:fontFamily="@font/audiowide"
         android:gravity="center"
-        android:text="Newton´s\nTool box"
+        android:text="Newton´s\nToolbox"
         android:textAlignment="center"
         android:textSize="50dp" />
 
