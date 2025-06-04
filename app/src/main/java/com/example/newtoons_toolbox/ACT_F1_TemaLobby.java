@@ -41,11 +41,11 @@ public class ACT_F1_Leydehooke extends AppCompatActivity {
         startActivity(x);
     }
     public void ocForf1lh (View view){
-        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        Intent x =  new Intent(this,ACT_F1_LH_banco_formulas.class);
         startActivity(x);
     }
     public void ocExpf1lh (View view){
-        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        Intent x =  new Intent(this,ACT_F1_LH_explicacion.class);
         startActivity(x);
     }
 

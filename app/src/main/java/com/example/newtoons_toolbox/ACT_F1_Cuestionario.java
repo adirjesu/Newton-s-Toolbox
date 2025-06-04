@@ -9,9 +9,12 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -193,5 +196,23 @@ public class ACT_F1_LH_cuestionario extends AppCompatActivity {
             array[i] = temp;
         }
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.regresar,menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item){
+        int id=item.getItemId();
+        if(id==R.id.regresar){
+            Toast.makeText(this, "Regresando",
+                    Toast.LENGTH_SHORT).show();
+            Intent w =  new Intent(this,ACT_F1_Leydehooke.class);
+            startActivity(w);
+        }
 
+
+
+        return super.onOptionsItemSelected(item);
+    }
 }
