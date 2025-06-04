@@ -37,12 +37,12 @@
       android:inputType="text" />
 
   <Button
-      android:id="@+id/botonEnviar"
+      android:id="@+id/botonEnvia"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="16dp"
-      android:onClick="ocEnviar"
-      android:text="Enviar correo" />
+      android:onClick="ocEnvia"
+      android:text="Ingresar" />
 
   <Button
       android:id="@+id/btntonto"
