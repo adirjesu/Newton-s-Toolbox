@@ -1,10 +1,8 @@
 <resources>
     <string name="app_name">Newtoons_Toolbox</string>
-<<<<<<< HEAD
-=======
+
     <string name="titulo_formula">Fórmula:</string>
     <string name="titulo_significado">significado</string>
->>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
     <string-array name="f1_lhp">
         <item>Un resorte se estira 5 cm cuando se le aplica una fuerza de 2 N. ¿Cuál es la constante del resorte?</item>
         <item>Un resorte tiene una constante k=120N/m y se estira 8 cm. ¿Qué fuerza ejerce?</item>
@@ -26,11 +24,9 @@
         <item>3.14×10^−6m^2</item>
         <item>30000Pa</item>
         <item>300N</item>
-<<<<<<< HEAD
+
         <item>3×107Pa</item>
-=======
         <item>3×10^7Pa</item>
->>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
         <item>2.5×10^−4m</item>
     </string-array>
     <string-array name="f1_lha">
@@ -54,9 +50,5 @@
         <item>Este ejercicio combina el área con el módulo de elasticidad para obtener cuánto se alarga el alambre.
             Este tipo de cálculo es fundamental en estructuras.</item>
     </string-array>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
 </resources>
