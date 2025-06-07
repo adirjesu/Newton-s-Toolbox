@@ -9,13 +9,13 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ACT_F1_LH_C_Resultados extends AppCompatActivity {
+public class ACT_F1_Resultados extends AppCompatActivity {
 public static int puntuacion=0;
 private TextView resultado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_act_f1_lh_cresultados);
+        setContentView(R.layout.activity_activity_act_f1_cresultados);
         resultado=findViewById(R.id.txtResultado);
 
         Bundle recibeDatos = getIntent().getExtras();
@@ -34,7 +34,7 @@ private TextView resultado;
         if(id==R.id.regresar){
             Toast.makeText(this, "Regresando",
                     Toast.LENGTH_SHORT).show();
-            Intent w =  new Intent(this,ACT_F1_Leydehooke.class);
+            Intent w =  new Intent(this, ACT_F1_TemaLobby.class);
             startActivity(w);
         }
 

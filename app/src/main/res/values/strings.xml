@@ -1,5 +1,54 @@
 <resources>
     <string name="app_name">Newtoons_Toolbox</string>
+    <string name="valor_0_0_0">Capa 0, Fila 0, Columna 0</string>
+    <string name="valor_0_0_1">Capa 0, Fila 0, Columna 1</string>
+    <string name="valor_0_0_2">Capa 0, Fila 0, Columna 2</string>
+    <string name="valor_0_0_3">Capa 0, Fila 0, Columna 3</string>
+
+    <string name="valor_0_1_0">Capa 0, Fila 1, Columna 0</string>
+    <string name="valor_0_1_1">Capa 0, Fila 1, Columna 1</string>
+    <string name="valor_0_1_2">Capa 0, Fila 1, Columna 2</string>
+    <string name="valor_0_1_3">Capa 0, Fila 1, Columna 3</string>
+
+    <string name="valor_0_2_0">Capa 0, Fila 2, Columna 0</string>
+    <string name="valor_0_2_1">Capa 0, Fila 2, Columna 1</string>
+    <string name="valor_0_2_2">Capa 0, Fila 2, Columna 2</string>
+    <string name="valor_0_2_3">Capa 0, Fila 2, Columna 3</string>
+
+
+    <string name="valor_1_0_0">Capa 1, Fila 0, Columna 0</string>
+    <string name="valor_1_0_1">Capa 1, Fila 0, Columna 1</string>
+    <string name="valor_1_0_2">Capa 1, Fila 0, Columna 2</string>
+    <string name="valor_1_0_3">Capa 1, Fila 0, Columna 3</string>
+
+    <string name="valor_1_1_0">Capa 1, Fila 1, Columna 0</string>
+    <string name="valor_1_1_1">Capa 1, Fila 1, Columna 1</string>
+    <string name="valor_1_1_2">Capa 1, Fila 1, Columna 2</string>
+    <string name="valor_1_1_3">Capa 1, Fila 1, Columna 3</string>
+
+    <string name="valor_1_2_0">Capa 1, Fila 2, Columna 0</string>
+    <string name="valor_1_2_1">Capa 1, Fila 2, Columna 1</string>
+    <string name="valor_1_2_2">Capa 1, Fila 2, Columna 2</string>
+    <string name="valor_1_2_3">Capa 1, Fila 2, Columna 3</string>
+
+
+
+    <string name="valor_5_0_0">Tema: Ley de Hooke</string>
+
+    <string name="valor_5_1_0">Capa 0, Fila 1, Columna 0</string>
+    <string name="valor_5_1_1">Capa 0, Fila 1, Columna 1</string>
+    <string name="valor_5_1_2">Capa 0, Fila 1, Columna 2</string>
+    <string name="valor_5_1_3">Capa 0, Fila 1, Columna 3</string>
+
+    <string name="valor_5_2_0">Capa 0, Fila 2, Columna 0</string>
+    <string name="valor_5_2_1">Capa 0, Fila 2, Columna 1</string>
+    <string name="valor_5_2_2">Capa 0, Fila 2, Columna 2</string>
+    <string name="valor_5_2_3">Capa 0, Fila 2, Columna 3</string>
+
+
+
+
+
 
     <string name="titulo_formula">Fórmula:</string>
     <string name="titulo_significado">significado</string>

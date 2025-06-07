@@ -4,48 +4,63 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Random;
+public class ACT_F1_TemaLobby extends AppCompatActivity {
 
-public class ACT_F1_Leydehooke extends AppCompatActivity {
-
+    private TextView titulo;
     private Button cal;
     private Button cues;
     private Button form;
     private Button exp;
-
+    public static int tema_elegido;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_act_f1_leydehooke);
-
+        setContentView(R.layout.activity_act_f1_temalobby);
+        Bundle recibeDatos = getIntent().getExtras();
+        tema_elegido = recibeDatos.getInt("tema");
+        titulo=findViewById(R.id.txtTitulo5);
 
 
 
     }//main
+
     public void ocCalf1lh (View view){
-        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
+        x.putExtras(enviarDatos);
         startActivity(x);
+
     }
     public void ocCuesf1lh (View view){
-        Intent x =  new Intent(this,ACT_F1_LH_cuestionario.class);
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_F1_Cuestionario.class);
+        x.putExtras(enviarDatos);
         startActivity(x);
+
+
     }
     public void ocForf1lh (View view){
-        Intent x =  new Intent(this,ACT_F1_LH_banco_formulas.class);
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_F1_banco_formulas.class);
+        x.putExtras(enviarDatos);
         startActivity(x);
     }
     public void ocExpf1lh (View view){
-        Intent x =  new Intent(this,ACT_F1_LH_explicacion.class);
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_F1_Explicacion.class);
+        x.putExtras(enviarDatos);
         startActivity(x);
     }
 

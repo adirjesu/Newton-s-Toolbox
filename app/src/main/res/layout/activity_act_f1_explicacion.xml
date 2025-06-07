@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ACT_F1_LH_explicacion">
+    tools:context=".ACT_F1_Explicacion">
 
     <TextView
         android:id="@+id/txttitulo_eX"

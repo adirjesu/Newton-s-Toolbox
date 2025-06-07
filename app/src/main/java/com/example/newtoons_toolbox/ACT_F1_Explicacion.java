@@ -8,12 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class ACT_F1_LH_explicacion extends AppCompatActivity {
+public class ACT_F1_Explicacion extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_act_f1_lh_explicacion);
+        setContentView(R.layout.activity_act_f1_explicacion);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -26,7 +26,7 @@ public class ACT_F1_LH_explicacion extends AppCompatActivity {
         if(id==R.id.regresar){
             Toast.makeText(this, "Regresando",
                     Toast.LENGTH_SHORT).show();
-            Intent w =  new Intent(this,ACT_F1_Leydehooke.class);
+            Intent w =  new Intent(this, ACT_F1_TemaLobby.class);
             startActivity(w);
         }
 

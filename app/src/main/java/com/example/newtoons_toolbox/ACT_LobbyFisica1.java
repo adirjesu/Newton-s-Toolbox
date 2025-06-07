@@ -18,7 +18,7 @@ public class ACT_LobbyFisica1 extends AppCompatActivity {
     private Button hooke;
     private Button arqui;
     private Button young;
-
+    public static int tema_elegido=-1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,29 +33,57 @@ public class ACT_LobbyFisica1 extends AppCompatActivity {
 
     }//main
     public void ocHidrodinamica (View view){
-        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        tema_elegido=1;
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
+        x.putExtras(enviarDatos);
         startActivity(x);
     }
     public void ocTorricelli (View view){
-        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        tema_elegido=2;
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
+        x.putExtras(enviarDatos);
         startActivity(x);
     }
     public void ocPascal (View view){
-        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        tema_elegido=3;
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
+        x.putExtras(enviarDatos);
         startActivity(x);
     }
     public void ocHidrostatica (View view){
-        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        tema_elegido=4;
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
+        x.putExtras(enviarDatos);
         startActivity(x);
     }
     public void ocHooke (View view){
-        Intent x =  new Intent(this,ACT_F1_Leydehooke.class);
+        tema_elegido=5;
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
+        x.putExtras(enviarDatos);
         startActivity(x);
     }    public void ocArquimidez (View view){
-        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        tema_elegido=6;
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
+        x.putExtras(enviarDatos);
         startActivity(x);
     }    public void ocYoung (View view){
-        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
+        tema_elegido=7;
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
+        x.putExtras(enviarDatos);
         startActivity(x);
     }
 

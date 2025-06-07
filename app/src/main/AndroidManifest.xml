@@ -18,25 +18,25 @@
             android:name=".ACT_LobbyAdmin"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ACT_LogginAdmin"
             android:exported="false" />
         <activity
-            android:name=".ACT_F1_LH_explicacion2"
+            android:name=".ACT_F1_explicacion2"
             android:exported="false" />
         <activity
-            android:name=".ACT_F1_LH_explicacion"
+            android:name=".ACT_F1_Explicacion"
             android:exported="false" />
         <activity
-            android:name=".ACT_F1_LH_banco_formulas"
+            android:name=".ACT_F1_banco_formulas"
             android:exported="false" />
         <activity
-            android:name=".ACT_F1_LH_C_Resultados"
+            android:name=".ACT_F1_Resultados"
             android:exported="false" />
         <activity
-            android:name=".ACT_F1_LH_cuestionario"
+            android:name=".ACT_F1_Cuestionario"
             android:exported="false" />
         <activity
-            android:name=".ACT_F1_Leydehooke"
+            android:name=".ACT_F1_TemaLobby"
             android:exported="false" />
         <activity
             android:name=".ACT_LobbyFisica2"
@@ -54,7 +54,7 @@
             android:name=".ACT_Login"
             android:exported="false" />
         <activity
-            android:name=".ACT_LogginAdmin"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
