@@ -33,7 +33,8 @@ public class ACT_LobbyFisica1 extends AppCompatActivity {
 
     }//main
 
-    /*public void ocHidrodinamica (View view){
+
+    public void ocPascal (View view){
         tema_elegido=1;
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
@@ -41,48 +42,18 @@ public class ACT_LobbyFisica1 extends AppCompatActivity {
         x.putExtras(enviarDatos);
         startActivity(x);
     }
-    public void ocTorricelli (View view){
+
+    public void ocHooke (View view){
         tema_elegido=2;
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
         Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
         x.putExtras(enviarDatos);
         startActivity(x);
-    }*/
-    public void ocPascal (View view){
-        tema_elegido=3;
-        Bundle enviarDatos = new Bundle();
-        enviarDatos.putInt("tema",tema_elegido);
-        Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
-        x.putExtras(enviarDatos);
-        startActivity(x);
     }
-    /*public void ocHidrostatica (View view){
-        tema_elegido=4;
-        Bundle enviarDatos = new Bundle();
-        enviarDatos.putInt("tema",tema_elegido);
-        Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
-        x.putExtras(enviarDatos);
-        startActivity(x);
-    }*/
-    public void ocHooke (View view){
-        tema_elegido=5;
-        Bundle enviarDatos = new Bundle();
-        enviarDatos.putInt("tema",tema_elegido);
-        Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
-        x.putExtras(enviarDatos);
-        startActivity(x);
-    }
-    /*public void ocArquimidez (View view){
-        tema_elegido=6;
-        Bundle enviarDatos = new Bundle();
-        enviarDatos.putInt("tema",tema_elegido);
-        Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
-        x.putExtras(enviarDatos);
-        startActivity(x);
-    }    */
+
     public void ocYoung (View view){
-        tema_elegido=7;
+        tema_elegido=3;
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
         Intent x =  new Intent(this,ACT_F1_TemaLobby.class);

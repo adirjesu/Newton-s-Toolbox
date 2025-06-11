@@ -27,15 +27,24 @@ public class ACT_F1_TemaLobby extends AppCompatActivity {
         Bundle recibeDatos = getIntent().getExtras();
         tema_elegido = recibeDatos.getInt("tema");
         titulo=findViewById(R.id.txtTitulo5);
+        if(tema_elegido==1){
+            titulo.setText("Principio de Pascal");
 
+        }
+        if(tema_elegido==2){
+        titulo.setText("Ley de Hooke");
+        }
 
+        if(tema_elegido==3){
+            titulo.setText("Módulo de Young");
 
+        }
     }//main
 
     public void ocCalf1lh (View view){
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
-        Intent x =  new Intent(this,ACT_F1_TemaLobby.class);
+        Intent x =  new Intent(this,ACT_F1_Calculadora_Hooke.class);
         x.putExtras(enviarDatos);
         startActivity(x);
 

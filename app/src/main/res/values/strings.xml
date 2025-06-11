@@ -32,21 +32,13 @@
     <string name="valor_1_2_3">Capa 1, Fila 2, Columna 3</string>
 
 
-    <string name="valor_5_0_0">Tema: Ley de Hooke</string>
+    <string name="valor_3_0_0">Tema: Ley de Hooke</string>
 
-    <string name="valor_5_1_0">Capa 0, Fila 1, Columna 0</string>
-    <string name="valor_5_1_1">Capa 0, Fila 1, Columna 1</string>
-    <string name="valor_5_1_2">Capa 0, Fila 1, Columna 2</string>
-    <string name="valor_5_1_3">Capa 0, Fila 1, Columna 3</string>
-
-    <string name="valor_5_2_0">Capa 0, Fila 2, Columna 0</string>
-    <string name="valor_5_2_1">Capa 0, Fila 2, Columna 1</string>
-    <string name="valor_5_2_2">Capa 0, Fila 2, Columna 2</string>
-    <string name="valor_5_2_3">Capa 0, Fila 2, Columna 3</string>
 
 
     <string name="titulo_formula">Fórmula:</string>
     <string name="titulo_significado">significado</string>
+
     <string-array name="f1_lhp">
         <item>Un resorte se estira 5 cm cuando se le aplica una fuerza de 2 N. ¿Cuál es la constante del resorte?</item>
         <item>Un resorte tiene una constante k=120N/m y se estira 8 cm. ¿Qué fuerza ejerce?</item>
@@ -59,6 +51,7 @@
         <item>Un alambre con área 3×10^−6 m^2 soporta una fuerza de 90 N. ¿Cuál es el esfuerzo?</item>
         <item>Una fuerza de 200 N actúa sobre un alambre con área 4×10^−6 m^2, y módulo de elasticidad 2×10^11 Pa. ¿Cuál es su elongación?</item>
     </string-array>
+
     <string-array name="f1_lhr">
         <item>40N/m</item>
         <item>9.6N</item>
@@ -68,7 +61,6 @@
         <item>3.14×10^−6m^2</item>
         <item>30000Pa</item>
         <item>300N</item>
-
         <item>3×107Pa</item>
         <item>3×10^7Pa</item>
         <item>2.5×10^−4m</item>
@@ -94,5 +86,53 @@
         <item>Este ejercicio combina el área con el módulo de elasticidad para obtener cuánto se alarga el alambre.
             Este tipo de cálculo es fundamental en estructuras.</item>
     </string-array>
+    <string-array name="f1_lhf">
+        <item>k = F / x</item>
+        <item>F = w</item>
+        <item>w = m * g</item>
+        <item>x = Lf - Lo</item>
+        <item>F = -k * x</item>
+        <item>F = m * g</item>
+        <item>F = k * ΔL</item>
+        <item>w = (1/2) * k * ΔL²</item>
+        <item>E = F / A</item>
+        <item>A = π * r²</item>
+        <item>Le = Fm / A</item>
+    </string-array>
 
+    <string-array name="f1_lhv">
+
+        <item>k: Constante elástica del resorte (N/m)\n
+F: Fuerza aplicada (N)\n
+x: Deformación o alargamiento (m)</item>
+        <item>F: Fuerza (N)\n
+w: Peso (N)</item>
+        <item>w: Peso (N)\n
+m: Masa (kg)\n
+g: Aceleración gravitacional (9.8 m/s²)</item>
+        <item>x: Deformación (m)\n
+Lf: Longitud final del resorte (m)\n
+Lo: Longitud original del resorte (m)</item>
+        <item>F: Fuerza restauradora (N)\n
+k: Constante del resorte (N/m)\n
+x: Deformación (m)</item>
+        <item>F: Fuerza (N)
+m: Masa (kg)\n
+g: Gravedad (9.8 m/s²)</item>
+        <item>F: Fuerza (N)\n
+k: Constante elástica (N/m)\n
+ΔL: Alargamiento (m)</item>
+        <item>w: Energía potencial elástica (J)\n
+k: Constante del resorte (N/m)\n
+ΔL: Deformación (m)</item>
+        <item>E: Esfuerzo (Pa o N/m²)\n
+F: Fuerza (N)\n
+A: Área de la sección transversal (m²)</item>
+        <item>A: Área (m²)\n
+r: Radio (m)\n
+π: Constante pi ≈ 3.1416</item>
+        <item>Le: Alargamiento específico (m)\n
+Fm: Fuerza máxima aplicada (N)\n
+A: Área de la sección transversal (m²)</item>
+    </string-array>
 </resources>

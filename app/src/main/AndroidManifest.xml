@@ -12,6 +12,15 @@
         android:theme="@style/Theme.Newtoons_Toolbox"
         tools:targetApi="31">
         <activity
+            android:name=".ACT_F1_Calculadora_Pascal"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_F1_Calculadora_Young"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_F1_Calculadora_Hooke"
+            android:exported="false" />
+        <activity
             android:name=".ACT_AL_banco_formulas"
             android:exported="false" />
         <activity
