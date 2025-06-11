@@ -11,12 +11,14 @@
       android:id="@+id/imageView"
       android:layout_width="207dp"
       android:layout_height="267dp"
+      android:layout_marginLeft="110dp"
       app:srcCompat="@drawable/profesor" />
 
   <TextView
       android:id="@+id/txtTitulo3"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:textColor="#6A5ACD"
       android:fontFamily="@font/audiowide"
       android:gravity="center"
       android:text="Inicie sesión"
@@ -41,6 +43,9 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="16dp"
+      android:layout_marginLeft="150dp"
+      android:textSize="15dp"
+      android:backgroundTint="@color/black"
       android:onClick="ocEnvia"
       android:text="Ingresar" />
 
@@ -49,6 +54,16 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="16dp"
+      android:backgroundTint="@color/black"
+      android:textSize="15dp"
+      android:layout_marginLeft="110dp"
       android:onClick="ocLaperdi"
       android:text="Olvidé la contraseña" />
+
+  <ImageView
+      android:id="@+id/imageView5"
+      android:layout_width="480dp"
+      android:layout_height="200dp"
+      android:scaleType="fitCenter"
+      app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
 </LinearLayout>

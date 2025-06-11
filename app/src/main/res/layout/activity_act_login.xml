@@ -43,8 +43,7 @@
         android:onClick="ocAdmin"
         android:text="Admin." />
 
-<<<<<<< HEAD
-=======
+
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="match_parent"
@@ -52,5 +51,4 @@
         app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
 
 
->>>>>>> 4214a16d9340f7ccaea578e563e822bbd880aa24
 </LinearLayout>

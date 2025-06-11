@@ -11,10 +11,12 @@
         android:id="@+id/imageView"
         android:layout_width="207dp"
         android:layout_height="267dp"
+        android:layout_marginLeft="110dp"
         app:srcCompat="@drawable/profesor" />
 
     <TextView
         android:id="@+id/txtTitulo3"
+        android:textColor="#6A5ACD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/audiowide"
@@ -22,4 +24,11 @@
         android:text="Bienvenido Admin"
         android:textAlignment="center"
         android:textSize="50dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="429dp"
+        android:layout_marginLeft="-30dp"
+        app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
 </LinearLayout>
