@@ -7,20 +7,32 @@
     android:orientation="vertical"
     tools:context=".ACT_LobbyEstudiante">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="207dp"
-        android:layout_height="267dp"
-        app:srcCompat="@drawable/_7902" />
-
     <TextView
         android:id="@+id/txtTitulo3"
-        android:layout_width="match_parent"
+        android:layout_width="393dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
         android:layout_marginTop="120dp"
         android:fontFamily="@font/audiowide"
         android:gravity="center"
         android:text="Bienvenido Estudiante"
         android:textAlignment="center"
-        android:textSize="50dp" />
+        android:textColor="#6A5ACD"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="227dp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="70sp"
+        android:layout_marginStart="20sp"
+        app:srcCompat="@drawable/captura_de_pantalla_2025_06_04_083821" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="307dp"
+        app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
+
 </LinearLayout>

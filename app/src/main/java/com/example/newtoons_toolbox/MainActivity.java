@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        titulo=findViewById(R.id.txtTitulo);
+        titulo=findViewById(R.id.txtTitulo2);
         titulo.setGravity(Gravity.HORIZONTAL_GRAVITY_MASK);
 
     }

@@ -40,7 +40,7 @@
         android:text="Unidades"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="20dp" />
+        android:textSize="30dp" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -55,12 +55,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="ocNm"
+                android:layout_marginLeft="40dp"
+                android:backgroundTint="@color/black"
                 android:text="" />
 
             <Button
                 android:id="@+id/btns2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
                 android:onClick="ocN"
                 android:text="" />
 
@@ -69,10 +72,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="ocm"
+                android:backgroundTint="@color/black"
                 android:text="" />
 
             <Button
                 android:id="@+id/btns4"
+                android:backgroundTint="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="ocJ"
@@ -87,6 +92,8 @@
                 android:id="@+id/btns5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:backgroundTint="@color/black"
                 android:onClick="ocmenos"
                 android:text="" />
 
@@ -94,6 +101,7 @@
                 android:id="@+id/btns6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
                 android:onClick="ocpor10"
                 android:text="" />
 
@@ -101,6 +109,7 @@
                 android:id="@+id/btns7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
                 android:onClick="ocala"
                 android:text="" />
 
@@ -108,6 +117,7 @@
                 android:id="@+id/btns8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
                 android:onClick="ocpa"
                 android:text="" />
         </TableRow>
@@ -132,9 +142,12 @@
         android:id="@+id/btnCalificar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#4CAF50"
         android:onClick="ocCalificar"
         android:text="REVISAR"
+        android:textSize="20dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginRight="150dp"
+        android:backgroundTint="@color/black"
         android:textColor="@color/white" />
 
     <Button
@@ -145,5 +158,12 @@
         android:onClick="ocContinuar"
         android:text="CONTINUAR"
         android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="473dp"
+        android:layout_height="220dp"
+        android:layout_marginLeft="-30dp"
+        app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
 
 </LinearLayout>
