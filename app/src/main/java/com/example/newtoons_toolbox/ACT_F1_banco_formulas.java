@@ -23,6 +23,7 @@ public class ACT_F1_banco_formulas extends AppCompatActivity {
     private Button f9;
     private Button f10;
     private Button f11;
+    public static int tema_elegido=0;
 
     private TextView[][] tfArrays;
 
@@ -34,6 +35,9 @@ public class ACT_F1_banco_formulas extends AppCompatActivity {
         setContentView(R.layout.activity_act_f1_banco_formulas);
         f1          =findViewById(R.id.btnf1);
         tfArrays = new TextView[16][5];
+
+        Bundle recibeDatos = getIntent().getExtras();
+        tema_elegido = recibeDatos.getInt("tema");
         //OPIO SON 15 ELEMENTOS
 
 
@@ -307,7 +311,10 @@ public class ACT_F1_banco_formulas extends AppCompatActivity {
         if(id==R.id.regresar){
             Toast.makeText(this, "Regresando",
                     Toast.LENGTH_SHORT).show();
+            Bundle enviarDatos = new Bundle();
+            enviarDatos.putInt("tema",tema_elegido);
             Intent w =  new Intent(this, ACT_F1_TemaLobby.class);
+            w.putExtras(enviarDatos);
             startActivity(w);
         }
 

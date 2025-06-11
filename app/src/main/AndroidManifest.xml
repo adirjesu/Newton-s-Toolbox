@@ -12,6 +12,42 @@
         android:theme="@style/Theme.Newtoons_Toolbox"
         tools:targetApi="31">
         <activity
+            android:name=".ACT_AL_banco_formulas"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_AL_Cuestionario"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_AL_Explicacion"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_AL_explicacion2"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_AL_Resultados"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_AL_TemaLobby"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_F2_banco_formulas"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_F2_Cuestionario"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_F2_Explicacion"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_F2_explicacion2"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_F2_Resultados"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_F2_TemaLobby"
+            android:exported="false" />
+        <activity
             android:name=".ACT_RecuperarPass"
             android:exported="false" />
         <activity
