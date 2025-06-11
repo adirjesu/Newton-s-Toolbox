@@ -35,8 +35,11 @@ public class ACT_LobbyEstudiante extends AppCompatActivity {
         if(id==R.id.regresar){
             Toast.makeText(this, "Regresando",
                     Toast.LENGTH_SHORT).show();
+
             Intent w =  new Intent(this,ACT_Login.class);
             startActivity(w);
+
+            //onBackPressed();
         }
 
         if(id==R.id.Algebra){
