@@ -2,12 +2,16 @@ package com.example.newtoons_toolbox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class ACT_F1_LH_banco_formulas extends AppCompatActivity {
+public class ACT_F1_banco_formulas extends AppCompatActivity {
     private Button f1;
     private Button f2;
     private Button f3;
@@ -27,7 +31,7 @@ public class ACT_F1_LH_banco_formulas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_act_f1_lh_banco_formulas);
+        setContentView(R.layout.activity_act_f1_banco_formulas);
         f1          =findViewById(R.id.btnf1);
         tfArrays = new TextView[16][5];
         //OPIO SON 15 ELEMENTOS
@@ -291,5 +295,24 @@ public class ACT_F1_LH_banco_formulas extends AppCompatActivity {
                 // Manejar el caso en que no se encuentra el nombre
                 break;
         }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.regresar,menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item){
+        int id=item.getItemId();
+        if(id==R.id.regresar){
+            Toast.makeText(this, "Regresando",
+                    Toast.LENGTH_SHORT).show();
+            Intent w =  new Intent(this, ACT_F1_TemaLobby.class);
+            startActivity(w);
+        }
+
+
+
+        return super.onOptionsItemSelected(item);
     }
 }

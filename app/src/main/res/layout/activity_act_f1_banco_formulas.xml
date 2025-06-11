@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ACT_F1_LH_banco_formulas">
+    tools:context=".ACT_F1_banco_formulas">
 
     <TextView
         android:id="@+id/txtTitulo6"

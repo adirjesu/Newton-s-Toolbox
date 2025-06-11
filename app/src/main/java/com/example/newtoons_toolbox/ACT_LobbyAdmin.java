@@ -4,52 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Random;
-
-public class ACT_F1_Leydehooke extends AppCompatActivity {
-
-    private Button cal;
-    private Button cues;
-    private Button form;
-    private Button exp;
-
+public class ACT_LobbyAdmin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_act_f1_leydehooke);
-
-
-
-
+        setContentView(R.layout.activity_act_lobby_admin);
     }//main
-    public void ocCalf1lh (View view){
-        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
-        startActivity(x);
-    }
-    public void ocCuesf1lh (View view){
-        Intent x =  new Intent(this,ACT_F1_LH_cuestionario.class);
-        startActivity(x);
-    }
-    public void ocForf1lh (View view){
-        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
-        startActivity(x);
-    }
-    public void ocExpf1lh (View view){
-        Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
-        startActivity(x);
-    }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menuestudiantes,menu);
@@ -61,7 +26,7 @@ public class ACT_F1_Leydehooke extends AppCompatActivity {
         if(id==R.id.regresar){
             Toast.makeText(this, "Regresando",
                     Toast.LENGTH_SHORT).show();
-            Intent w =  new Intent(this,ACT_LobbyFisica1.class);
+            Intent w =  new Intent(this,ACT_LogginAdmin.class);
             startActivity(w);
         }
 
@@ -87,6 +52,4 @@ public class ACT_F1_Leydehooke extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 }

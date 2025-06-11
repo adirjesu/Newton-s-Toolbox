@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ACT_F1_LH_cuestionario">
+    tools:context=".ACT_F1_Cuestionario">
 
     <TextView
         android:id="@+id/txtNopregunta"
@@ -29,16 +29,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-<<<<<<< HEAD
-        android:inputType="textPersonName" />
-=======
+        android:hint="Respuesta:"
         android:inputType="number"/>
 
     <TextView
         android:id="@+id/txtTituloV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:text="Unidades"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -53,32 +51,32 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btnNm"
+                android:id="@+id/btns1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="ocNm"
-                android:text="N/m" />
+                android:text="" />
 
             <Button
-                android:id="@+id/btnN"
+                android:id="@+id/btns2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="ocN"
-                android:text="N" />
+                android:text="" />
 
             <Button
-                android:id="@+id/btnm"
+                android:id="@+id/btns3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="ocm"
-                android:text="m" />
+                android:text="" />
 
             <Button
-                android:id="@+id/btnJ"
+                android:id="@+id/btns4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="ocJ"
-                android:text="J" />
+                android:text="" />
         </TableRow>
 
         <TableRow
@@ -86,46 +84,41 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/m"
+                android:id="@+id/btns5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="ocmenos"
-                android:text="-" />
+                android:text="" />
 
             <Button
-                android:id="@+id/btnx10"
+                android:id="@+id/btns6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="ocpor10"
-                android:text="×10^" />
+                android:text="" />
 
             <Button
-                android:id="@+id/btnal"
+                android:id="@+id/btns7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="ocala"
-                android:text="^" />
+                android:text="" />
 
             <Button
-                android:id="@+id/btnPa"
+                android:id="@+id/btns8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="ocpa"
-                android:text="Pa" />
+                android:text="" />
         </TableRow>
 
     </TableLayout>
->>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
 
     <TextView
         android:id="@+id/txtsino"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_marginTop="120dp"
-=======
         android:layout_marginTop="20dp"
->>>>>>> eea76bfe2fcac0fa3b975d3abf75769a172691af
         android:textColor="@color/black" />
 
     <TextView
