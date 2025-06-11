@@ -52,7 +52,7 @@ private int existe=0;
         if(existe==0){
             SharedPreferences.Editor elemento = prefe1.edit();
             elemento.putString("Admin", "12345");
-            elemento.putString("Adminc", "soy tonto");
+            elemento.putString("Adminc", "cambio");
             elemento.commit();
         }
 

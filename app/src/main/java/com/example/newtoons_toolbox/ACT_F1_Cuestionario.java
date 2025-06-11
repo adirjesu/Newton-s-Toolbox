@@ -382,7 +382,10 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         if(id==R.id.regresar){
             Toast.makeText(this, "Regresando",
                     Toast.LENGTH_SHORT).show();
+            Bundle enviarDatos = new Bundle();
+            enviarDatos.putInt("tema",tema_elegido);
             Intent w =  new Intent(this, ACT_F1_TemaLobby.class);
+            w.putExtras(enviarDatos);
             startActivity(w);
         }
 
