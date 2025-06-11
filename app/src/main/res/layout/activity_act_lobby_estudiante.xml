@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".ACT_LobbyEstudiante">
 
+
     <TextView
         android:id="@+id/txtTitulo3"
         android:layout_width="393dp"
