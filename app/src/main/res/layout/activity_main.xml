@@ -6,35 +6,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/captura_de_pantalla_2025_05_28_204330"
-<<<<<<< HEAD
-=======
-
->>>>>>> 647ff258d0d59d09f84281a44b2a07d98ab05bc1
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/txtTitulo"
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="match_parent"
+        android:layout_marginTop="120sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:fontFamily="@font/audiowide"
-        android:gravity="center"
-        android:text="Newton´s\nToolbox"
-        android:textAlignment="center"
-        android:textSize="50dp" />
+        app:srcCompat="@drawable/titulo" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="250sp"
+        android:layout_marginTop="150sp"
         android:width="155sp"
-        android:height="60sp"
         android:background="@drawable/button_background"
         android:onClick="ocInicio"
         android:text="Ingresar"
-        android:textSize="20sp" />  <!-- Esta línea centra el botón horizontalmente -->
+        android:textSize="20sp" />
+
+    <!-- Esta línea centra el botón horizontalmente -->
 
 </LinearLayout>
