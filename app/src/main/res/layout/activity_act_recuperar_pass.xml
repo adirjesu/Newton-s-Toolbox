@@ -8,16 +8,16 @@
     tools:context=".ACT_RecuperarPass">
 
     <EditText
-        android:id="@+id/etusuario2"
+        android:id="@+id/etmensaje"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingresa tu usuario"
+        android:hint="mensaje"
         android:inputType="text" />
 
     <Button
-        android:id="@+id/botonEnviar2"
+        android:id="@+id/btnenviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="ocCambiar"
-        android:text="Cambiar contraseña" />
+        android:onClick="ocEnviar"
+        android:text="Enviar" />
 </LinearLayout>

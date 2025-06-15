@@ -8,14 +8,25 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.Map;
+import java.util.Properties;
+
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 public class ACT_RecuperarPass extends AppCompatActivity {
     private EditText usu;
@@ -24,14 +35,85 @@ public class ACT_RecuperarPass extends AppCompatActivity {
     public static String usuario;
 
     public static Intent w;
+    String correo;
+    String contra1;
+
+    EditText mensaje;
+    Button enviar;
+    Session session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_recuperar_pass);
         prefe1=getSharedPreferences("datosusuarios", Context.MODE_PRIVATE);
-        usu  = findViewById(R.id.etusuario2);
+       // usu  = findViewById(R.id.etusuario2);
+        mensaje = findViewById(R.id.etmensaje);
+        enviar=findViewById(R.id.btnenviar);
+
+
+        correo="newtonstoolbox@gmail.com";
+        contra1="icuu usyt bvvm vqmy";
+        enviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                StrictMode.setThreadPolicy(policy);
+                Properties properties= new Properties();
+                properties.put("mail.smtp.host","smtp.googlemail.com");
+                properties.put("mail.smtp.socketFactory.port","465");
+                properties.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
+                properties.put("mail.smtp.auth","true");
+                properties.put("mail.smtp.port","465");
+
+                try {
+                    session=Session.getDefaultInstance(properties, new Authenticator() {
+                        @Override
+                        protected PasswordAuthentication getPasswordAuthentication() {
+                            return new PasswordAuthentication(correo,contra1);
+                        }
+                    });
+
+                    if(session!=null){
+                        Message message = new MimeMessage(session);
+                        message.setFrom(new InternetAddress(correo));
+                        message.setSubject("espero que funcie");
+                        message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("ajcrhu22@cetis26.edu.mx"));
+                        message.setContent(mensaje.getText().toString(),"text/html; charset=utf-8");
+                        Transport.send(message);
+                    }
+                    else{
+                        mensaje.setText("else");
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     public void ocCambiar(View view){

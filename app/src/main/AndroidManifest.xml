@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -57,7 +58,7 @@
             android:name=".ACT_F2_TemaLobby"
             android:exported="false" />
         <activity
-            android:name=".ACT_RecuperarPass"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".ACT_LobbyAdmin"
@@ -99,7 +100,7 @@
             android:name=".ACT_Login"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ACT_RecuperarPass"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
