@@ -16,12 +16,20 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Map;
 
 public class ACT_LogginAdmin extends AppCompatActivity {
     private EditText usu;
-    private EditText pass;
+    private EditText contra;
     private Button conf;
+    private Button log;
     private Button olv;
     private static final String PREFS_NAME = "UsuariosPrefs";
     private static final String KEY_USUARIOS = "usuarios";
@@ -34,56 +42,55 @@ private int existe=0;
         setContentView(R.layout.activity_act_logginadmin);
 
         usu  = findViewById(R.id.etusuario);
-        pass = findViewById(R.id.etpass);
-        conf = findViewById(R.id.botonEnvia);
+        contra = findViewById(R.id.etpass);
+        log = findViewById(R.id.btnlogin);
         olv  = findViewById(R.id.btntonto);
         prefe1=getSharedPreferences("datosusuarios", Context.MODE_PRIVATE);
 
-        //agregarlo
-        Map<String,?> claves=prefe1.getAll();
+        log.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String usuario= usu.getText().toString();
+                final String pass=contra.getText().toString();
 
-        for(Map.Entry<String,?>ele:claves.entrySet()) {
-            if(ele.getKey().equals("Admin")){
-                existe++;
+                Response.Listener<String> responseListener =new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonresponse= new JSONObject(response);
+                            boolean sucess=jsonresponse.getBoolean("success");
+                            if(sucess){
+                                String name= jsonresponse.getString("nombres");
+                                Intent intent = new Intent (ACT_LogginAdmin.this, ACT_LobbyAdmin.class);
+                                intent.putExtra("nombres",name);
+                                intent.putExtra("usuario",usuario);
+                                ACT_LogginAdmin.this.startActivity(intent);
+
+
+                            }else{
+                                AlertDialog.Builder builder =new AlertDialog.Builder(ACT_LogginAdmin.this);
+                                builder.setMessage("Error Login")
+                                        .setNegativeButton("Retry",null)
+                                        .create().show();
+
+                            }
+                        } catch (JSONException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                };
+
+                LoginReques loginreques= new LoginReques(usuario,pass,responseListener);
+                RequestQueue queue= Volley.newRequestQueue(ACT_LogginAdmin.this);
+                queue.add(loginreques);
             }
-
-
-        }
-        if(existe==0){
-            SharedPreferences.Editor elemento = prefe1.edit();
-            elemento.putString("Admin", "12345");
-            elemento.putString("Adminc", "cambio");
-            elemento.commit();
-        }
-
-        //leerlo
+        });
 
     }
-    public void ocEnvia(View view){
 
-        usuario= String.valueOf(usu.getText());
-        String pas= String.valueOf(pass.getText());
-        Map<String,?> claves=prefe1.getAll();
 
-        for(Map.Entry<String,?>elem:claves.entrySet()){
-            if(usuario.equals(elem.getKey())){
-                if(pas.equals(elem.getValue().toString())){
-                    Toast.makeText(this, "Bienvenid@ "+elem.getKey(), Toast.LENGTH_LONG).show();
-                    Intent w =  new Intent(this,ACT_LobbyAdmin.class);
-                    startActivity(w);
-                }
-                else{
-                    Toast.makeText(this, "Contraseña incorrecta"+ elem.getValue(), Toast.LENGTH_LONG).show();
 
-                }
 
-            }
-            Toast.makeText(this, "Contraseña incorrecta"+ elem.getValue(), Toast.LENGTH_LONG).show();
-
-        }
-        Toast.makeText(this, "No hay usuarios que coincidan", Toast.LENGTH_LONG).show();
-        // No hay clave usuarios en prefs, no hay usuarios registrados
-    }
     public void ocLaperdi(View view) {
         Intent x =  new Intent(this,ACT_RecuperarPass.class);
         startActivity(x);

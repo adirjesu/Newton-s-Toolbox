@@ -39,15 +39,16 @@
       android:inputType="text" />
 
   <Button
-      android:id="@+id/botonEnvia"
+      android:id="@+id/btnlogin"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="16dp"
       android:layout_marginLeft="150dp"
       android:textSize="15dp"
       android:backgroundTint="@color/black"
-      android:onClick="ocEnvia"
       android:text="Ingresar" />
+
+
 
   <Button
       android:id="@+id/btntonto"

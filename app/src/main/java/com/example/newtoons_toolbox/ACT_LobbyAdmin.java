@@ -14,6 +14,11 @@ public class ACT_LobbyAdmin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_lobby_admin);
+
+
+
+
+
     }//main
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

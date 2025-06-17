@@ -77,9 +77,10 @@ public class ACT_RecuperarPass extends AppCompatActivity {
                         Message message = new MimeMessage(session);
                         message.setFrom(new InternetAddress(correo));
                         message.setSubject("espero que funcie");
-                        message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("ajcrhu22@cetis26.edu.mx"));
+                        message.setRecipients(Message.RecipientType.TO,InternetAddress.parse(""));
                         message.setContent(mensaje.getText().toString(),"text/html; charset=utf-8");
                         Transport.send(message);
+                        Toast.makeText(ACT_RecuperarPass.this, "Correo Enviado", Toast.LENGTH_SHORT).show();
                     }
                     else{
                         mensaje.setText("else");
