@@ -3,13 +3,10 @@ package com.example.newtoons_toolbox;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,7 +28,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -44,6 +40,11 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import android.text.Editable;
+import android.text.InputFilter;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
+
 
 public class ACT_AD_RecuperarPass extends AppCompatActivity {
     public static Intent w;
@@ -78,7 +79,9 @@ public class ACT_AD_RecuperarPass extends AppCompatActivity {
         enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                buscar("http://192.168.3.67:8080/newtons/recuperar_pass.php?usuario="+usuario.getText()+"");
+                //sala 1:   192.168.0.247
+                //mi casa:  192.168.3.67
+                buscar("http://192.168.0.247:8080/newtons/recuperar_pass.php?usuario="+usuario.getText()+"");
             }
         });
         confcodigo.setOnClickListener(new View.OnClickListener() {
@@ -90,10 +93,165 @@ public class ACT_AD_RecuperarPass extends AppCompatActivity {
         cambiarpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cambiarpass("http://192.168.3.67:8080/newtons/editar_pass.php");
+                cambiarpass("http://192.168.0.247:8080/newtons/editar_pass.php");
 
             }
         });
+        //////
+
+
+
+        n2.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    // Detectar si se presionó la tecla retroceso (Backspace)
+                    if (keyCode == KeyEvent.KEYCODE_DEL) {
+                        n2.setText("");
+                        n1.requestFocus();
+                        return true; // Indica que el evento fue manejado
+                    }
+                }
+                return false; // Permite que otros eventos se procesen normalmente
+            }
+        });
+        n3.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    // Detectar si se presionó la tecla retroceso (Backspace)
+                    if (keyCode == KeyEvent.KEYCODE_DEL) {
+                        n3.setText("");
+                        n2.requestFocus();
+                        return true; // Indica que el evento fue manejado
+                    }
+                }
+                return false; // Permite que otros eventos se procesen normalmente
+            }
+        });
+        n4.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    // Detectar si se presionó la tecla retroceso (Backspace)
+                    if (keyCode == KeyEvent.KEYCODE_DEL) {
+                        n4.setText("");
+                        n3.requestFocus();
+                        return true; // Indica que el evento fue manejado
+                    }
+                }
+                return false; // Permite que otros eventos se procesen normalmente
+            }
+        });
+        n5.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    // Detectar si se presionó la tecla retroceso (Backspace)
+                    if (keyCode == KeyEvent.KEYCODE_DEL) {
+                        n5.setText("");
+                        n4.requestFocus();
+                        return true; // Indica que el evento fue manejado
+                    }
+
+                }
+                return false; // Permite que otros eventos se procesen normalmente
+            }
+        });
+        ///////
+
+        n1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Este método se llama antes de que el texto cambie
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(!n1.getText().toString().isEmpty()){
+                    n2.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+
+        });
+
+        n2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Este método se llama antes de que el texto cambie
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(!n2.getText().toString().isEmpty()){
+                    n3.requestFocus();
+                }
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+
+        });
+        n3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Este método se llama antes de que el texto cambie
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(!n3.getText().toString().isEmpty()){
+                    n4.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+
+        });
+        n4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Este método se llama antes de que el texto cambie
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(!n4.getText().toString().isEmpty()){
+                    n5.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+
+        });
+        n5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Este método se llama antes de que el texto cambie
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+
+        });
+
+        ///////
     }
 
     private void buscar(String URL) {
