@@ -6,4 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".ACT_LobbyAlgebra">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtTituloLobbyAlg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:paddingBottom="15dp"
+            android:fontFamily="@font/audiowide"
+            android:gravity="center"
+            android:text="ÁLGEBRA"
+            android:textAlignment="center"
+            android:textColor="#6A5ACD"
+            android:textSize="50dp" />
+
+        <Button
+            android:id="@+id/btnpolinomios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="100dp"
+            android:backgroundTint="@color/black"
+            android:onClick="ocPoli"
+            android:text="Operaciones con polinomios"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <Button
+            android:id="@+id/btnecuaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="100dp"
+            android:backgroundTint="@color/black"
+            android:onClick="ocEcua"
+            android:text="Resolución de ecuaciones"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <Button
+            android:id="@+id/btnfactor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="100dp"
+            android:backgroundTint="@color/black"
+            android:onClick="ocFactor"
+            android:text="Factorización"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="543dp"
+            android:layout_height="252dp"
+            android:layout_marginLeft="-78dp"
+            app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

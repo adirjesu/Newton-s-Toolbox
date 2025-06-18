@@ -6,14 +6,53 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class ACT_LobbyAlgebra extends AppCompatActivity {
+
+    private Button poli;
+    private Button ecua;
+    private Button fact;
+    public static int tema_elegido=-1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_lobby_algebra);
+
+        poli = findViewById(R.id.btnpolinomios);
+        ecua = findViewById(R.id.btnecuaciones);
+        fact = findViewById(R.id.btnfactor);
+    }
+
+
+    public void ocPoli (View view){
+        tema_elegido=1;
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_AL_TemaLobby.class);
+        x.putExtras(enviarDatos);
+        startActivity(x);
+    }
+
+    public void ocEcua (View view){
+        tema_elegido=2;
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_AL_TemaLobby.class);
+        x.putExtras(enviarDatos);
+        startActivity(x);
+    }
+
+    public void ocFactor (View view){
+        tema_elegido=3;
+        Bundle enviarDatos = new Bundle();
+        enviarDatos.putInt("tema",tema_elegido);
+        Intent x =  new Intent(this,ACT_AL_TemaLobby.class);
+        x.putExtras(enviarDatos);
+        startActivity(x);
     }
 
 
