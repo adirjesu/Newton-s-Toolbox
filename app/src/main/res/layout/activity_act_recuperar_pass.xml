@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ACT_AD_RecuperarPass">
+
+    <EditText
+        android:id="@+id/etusuario2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa tu usuario"
+        android:textSize="20dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="180dp"
+        android:layout_gravity="center_vertical"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/botonEnviar2"
+        android:textSize="20dp"
+        android:layout_marginLeft="60dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ocCambiar"
+        android:text="Cambiar contraseña" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="match_parent"
+        android:layout_height="682dp"
+        app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
+</LinearLayout>

@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
+        android:paddingBottom="15dp"
         android:fontFamily="@font/audiowide"
         android:gravity="center"
         android:text="FÍSICA I"
@@ -19,29 +20,6 @@
         android:textColor="#6A5ACD"
         android:textSize="50dp" />
 
-<!--
-    <Button
-        android:id="@+id/btnhidrodinamica"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="ocHidrodinamica"
-        android:textSize="15dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginLeft="120dp"
-        android:backgroundTint="@color/black"
-        android:text="Hidrodinámica" />
-
-    <Button
-        android:id="@+id/btntorricelli"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginLeft="120dp"
-        android:backgroundTint="@color/black"
-        android:onClick="ocTorricelli"
-        android:text="Teorema de Torricelli" />
--->
 
     <Button
         android:id="@+id/btnpascal"
@@ -52,20 +30,9 @@
         android:backgroundTint="@color/black"
         android:onClick="ocPascal"
         android:text="Principio de Pascal"
-        android:textSize="15dp"
+        android:textSize="20dp"
         tools:ignore="TextSizeCheck" />
-<!--
-    <Button
-        android:id="@+id/btnhidrostatica"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="ocHidrostatica"
-        android:textSize="15dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginLeft="120dp"
-        android:backgroundTint="@color/black"
-        android:text="Hidrostática" />
--->
+
     <Button
         android:id="@+id/btnhooke"
         android:layout_width="match_parent"
@@ -75,20 +42,9 @@
         android:backgroundTint="@color/black"
         android:onClick="ocHooke"
         android:text="Ley de Hooke"
-        android:textSize="15dp"
+        android:textSize="20dp"
         tools:ignore="TextSizeCheck" />
-<!--
-    <Button
-        android:id="@+id/btnarquimidez"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginLeft="120dp"
-        android:backgroundTint="@color/black"
-        android:onClick="ocArquimidez"
-        android:text="Principio de Arquímidez" />
--->
+
     <Button
         android:id="@+id/btnyoung"
         android:layout_width="match_parent"
@@ -98,14 +54,14 @@
         android:backgroundTint="@color/black"
         android:onClick="ocYoung"
         android:text="Módulo de Young"
-        android:textSize="15dp"
+        android:textSize="20dp"
         tools:ignore="TextSizeCheck" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="543dp"
-        android:layout_height="252dp"
-        android:layout_marginLeft="-78dp"
+        android:layout_width="497dp"
+        android:layout_height="505dp"
+        android:layout_marginLeft="-79dp"
         app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
 
 </LinearLayout>

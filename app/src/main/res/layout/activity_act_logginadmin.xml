@@ -63,7 +63,7 @@
 
   <ImageView
       android:id="@+id/imageView5"
-      android:layout_width="480dp"
+      android:layout_width="479dp"
       android:layout_height="200dp"
       android:scaleType="fitCenter"
       app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
