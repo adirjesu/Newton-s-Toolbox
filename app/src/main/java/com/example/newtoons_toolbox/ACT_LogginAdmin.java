@@ -1,11 +1,9 @@
 package com.example.newtoons_toolbox;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,16 +11,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
+import java.util.HashMap;
 import java.util.Map;
 
 public class ACT_LogginAdmin extends AppCompatActivity {
@@ -50,49 +49,44 @@ private int existe=0;
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String usuario= usu.getText().toString();
-                final String pass=contra.getText().toString();
-
-                Response.Listener<String> responseListener =new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonresponse= new JSONObject(response);
-                            boolean sucess=jsonresponse.getBoolean("success");
-                            if(sucess){
-                                String name= jsonresponse.getString("nombres");
-                                Intent intent = new Intent (ACT_LogginAdmin.this, ACT_LobbyAdmin.class);
-                                intent.putExtra("nombres",name);
-                                intent.putExtra("usuario",usuario);
-                                ACT_LogginAdmin.this.startActivity(intent);
-
-
-                            }else{
-                                AlertDialog.Builder builder =new AlertDialog.Builder(ACT_LogginAdmin.this);
-                                builder.setMessage("Error Login")
-                                        .setNegativeButton("Retry",null)
-                                        .create().show();
-
-                            }
-                        } catch (JSONException e) {
-                            throw new RuntimeException(e);
-                        }
-                    }
-                };
-
-                LoginReques loginreques= new LoginReques(usuario,pass,responseListener);
-                RequestQueue queue= Volley.newRequestQueue(ACT_LogginAdmin.this);
-                queue.add(loginreques);
+                login("http://192.168.3.67:8080/newtons/login_admin.php");
             }
         });
 
     }
-
+    private void login (String URL){
+        StringRequest stringRequest= new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if(!response.isEmpty()){
+                    Intent intent = new Intent(getApplicationContext(),ACT_LobbyAdmin.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(ACT_LogginAdmin.this, "Usuario o contraseña incorrecta", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(ACT_LogginAdmin.this, error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> parametros=new HashMap<String,String>();
+                parametros.put("usuario",usu.getText().toString());
+                parametros.put("pass",contra.getText().toString());
+                return parametros;
+            }
+        };
+        RequestQueue requestQueue=Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
 
 
 
     public void ocLaperdi(View view) {
-        Intent x =  new Intent(this,ACT_RecuperarPass.class);
+        Intent x =  new Intent(this, ACT_AD_RecuperarPass.class);
         startActivity(x);
     }
 //

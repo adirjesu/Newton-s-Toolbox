@@ -20,7 +20,7 @@
 
 
         <activity
-            android:name=".MainActivity"
+            android:name=".ACT_AD_CRUD_maestro"
             android:exported="false" />
         <activity
             android:name=".ACT_F1_Calculadora_Pascal"
@@ -68,7 +68,7 @@
             android:name=".ACT_F2_TemaLobby"
             android:exported="false" />
         <activity
-            android:name=".ACT_RecuperarPass"
+            android:name=".ACT_AD_RecuperarPass"
             android:exported="false" />
         <activity
             android:name=".ACT_LobbyAdmin"
@@ -110,7 +110,7 @@
             android:name=".ACT_Login"
             android:exported="false" />
         <activity
-            android:name=".ACT_AD_CRUD_maestro"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
