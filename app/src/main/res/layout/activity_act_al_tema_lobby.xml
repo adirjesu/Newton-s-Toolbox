@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ACT_AL_TemaLobby">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTituloAlgLobby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:fontFamily="@font/audiowide"
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btncalf1lh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="50dp"
+            android:backgroundTint="@color/black"
+            android:onClick="ocCalf1lh"
+            android:text="Calculadora"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btncuesf1lh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ocCuesf1lh"
+            android:textSize="19dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="120dp"
+            android:backgroundTint="@color/black"
+            android:text="Cuestionario" />
+
+        <Button
+            android:id="@+id/btnforf1lh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ocForf1lh"
+            android:textSize="19dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="120dp"
+            android:backgroundTint="@color/black"
+            android:text="Banco de Fórmulas" />
+
+        <Button
+            android:id="@+id/btnexpf1lh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ocExpf1lh"
+            android:textSize="19dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="120dp"
+            android:backgroundTint="@color/black"
+            android:text="Explicación" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="match_parent"
+            android:layout_height="510dp"
+            android:layout_marginLeft="-30dp"
+            app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

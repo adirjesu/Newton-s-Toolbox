@@ -23,10 +23,16 @@ public class ACT_F1_banco_formulas extends AppCompatActivity {
     private Button f9;
     private Button f10;
     private Button f11;
+    private TextView tit;
+    public static int tema_elegido=0;
 
     private TextView[][] tfArrays;
 
     public static String nombre;
+    public static String[] formulas;
+    public static String[] variables;
+    public static String[] retroalimentaciones;
+    public static  String[][] matriz = new String[15][2];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +40,30 @@ public class ACT_F1_banco_formulas extends AppCompatActivity {
         setContentView(R.layout.activity_act_f1_banco_formulas);
         f1          =findViewById(R.id.btnf1);
         tfArrays = new TextView[16][5];
+        tit= findViewById(R.id.txtTitulo6);
+        Bundle recibeDatos = getIntent().getExtras();
+        tema_elegido = recibeDatos.getInt("tema");
         //OPIO SON 15 ELEMENTOS
+
+
+        if(tema_elegido==1){
+            tit.setText("Tema:\nPrincipio de Pascal");
+
+            } else if (tema_elegido==2) {
+            formulas = getResources().getStringArray(R.array.f1_lhf);
+            variables = getResources().getStringArray(R.array.f1_lhv);
+            retroalimentaciones = getResources().getStringArray(R.array.f1_lha);
+            tit.setText("Tema:\nLey de Hooke");
+                }else if (tema_elegido==3) {
+            tit.setText("Tema:\nMódulo de Young");
+
+                    }
+
+
+
+
+
+
 
 
 
@@ -48,6 +77,16 @@ public class ACT_F1_banco_formulas extends AppCompatActivity {
         for (int a = 1; a < 12; a++) {
             for (int i = 1; i < 5; i++) {
                 tfArrays[a][i].setVisibility(View.GONE);
+            }
+        }
+        for (int i = 0; i < formulas.length; i++) {
+            matriz[i][0] = formulas[i]; // Formula
+            matriz[i][1] = variables[i]; // Variables
+        }
+
+        for (int a = 1; a < 12; a++) {
+            for (int i = 2 ,o=0; i < 5; i+=2, o++) {
+                tfArrays[a][i].setText(matriz[a][o]);
             }
         }
 
@@ -307,7 +346,10 @@ public class ACT_F1_banco_formulas extends AppCompatActivity {
         if(id==R.id.regresar){
             Toast.makeText(this, "Regresando",
                     Toast.LENGTH_SHORT).show();
+            Bundle enviarDatos = new Bundle();
+            enviarDatos.putInt("tema",tema_elegido);
             Intent w =  new Intent(this, ACT_F1_TemaLobby.class);
+            w.putExtras(enviarDatos);
             startActivity(w);
         }
 

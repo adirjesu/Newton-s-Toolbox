@@ -72,28 +72,20 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         if(tema_elegido==1){
 
             } else if (tema_elegido==2) {
-
+            preguntas = getResources().getStringArray(R.array.f1_lhp);
+            respuestas = getResources().getStringArray(R.array.f1_lhr);
+            retroalimentaciones = getResources().getStringArray(R.array.f1_lha);
+            s1.setText("N/m");
+            s2.setText("N");
+            s3.setText("m");
+            s4.setText("J");
+            s5.setText("-");
+            s6.setText("×10^");
+            s7.setText("^");
+            s8.setText("Pa");
                 }else if (tema_elegido==3) {
 
-                    }else if (tema_elegido==4) {
-
-                        }else if (tema_elegido==5) {
-                            preguntas = getResources().getStringArray(R.array.f1_lhp);
-                            respuestas = getResources().getStringArray(R.array.f1_lhr);
-                            retroalimentaciones = getResources().getStringArray(R.array.f1_lha);
-                            s1.setText("N/m");
-                            s2.setText("N");
-                            s3.setText("m");
-                            s4.setText("J");
-                            s5.setText("-");
-                            s6.setText("×10^");
-                            s7.setText("^");
-                            s8.setText("Pa");
-                            }else if (tema_elegido==6) {
-
-                                }else if (tema_elegido==7) {
-
-                                    }
+                    }
 
 
 // Inicializa la matriz con el tamaño adecuado
@@ -382,7 +374,10 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         if(id==R.id.regresar){
             Toast.makeText(this, "Regresando",
                     Toast.LENGTH_SHORT).show();
+            Bundle enviarDatos = new Bundle();
+            enviarDatos.putInt("tema",tema_elegido);
             Intent w =  new Intent(this, ACT_F1_TemaLobby.class);
+            w.putExtras(enviarDatos);
             startActivity(w);
         }
 

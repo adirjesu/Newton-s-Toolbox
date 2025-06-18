@@ -19,6 +19,7 @@
         android:textColor="#6A5ACD"
         android:textSize="50dp" />
 
+<!--
     <Button
         android:id="@+id/btnhidrodinamica"
         android:layout_width="match_parent"
@@ -40,18 +41,20 @@
         android:backgroundTint="@color/black"
         android:onClick="ocTorricelli"
         android:text="Teorema de Torricelli" />
+-->
 
     <Button
         android:id="@+id/btnpascal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="ocPascal"
-        android:layout_marginRight="100dp"
         android:layout_marginLeft="120dp"
-        android:textSize="15dp"
+        android:layout_marginRight="100dp"
         android:backgroundTint="@color/black"
-        android:text="Principio de Pascal" />
-
+        android:onClick="ocPascal"
+        android:text="Principio de Pascal"
+        android:textSize="15dp"
+        tools:ignore="TextSizeCheck" />
+<!--
     <Button
         android:id="@+id/btnhidrostatica"
         android:layout_width="match_parent"
@@ -62,18 +65,19 @@
         android:layout_marginLeft="120dp"
         android:backgroundTint="@color/black"
         android:text="Hidrostática" />
-
+-->
     <Button
         android:id="@+id/btnhooke"
         android:layout_width="match_parent"
-        android:textSize="15dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginLeft="120dp"
-        android:backgroundTint="@color/black"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="100dp"
+        android:backgroundTint="@color/black"
         android:onClick="ocHooke"
-        android:text="Ley de Hooke" />
-
+        android:text="Ley de Hooke"
+        android:textSize="15dp"
+        tools:ignore="TextSizeCheck" />
+<!--
     <Button
         android:id="@+id/btnarquimidez"
         android:layout_width="match_parent"
@@ -84,17 +88,18 @@
         android:backgroundTint="@color/black"
         android:onClick="ocArquimidez"
         android:text="Principio de Arquímidez" />
-
+-->
     <Button
         android:id="@+id/btnyoung"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:layout_marginRight="100dp"
         android:layout_marginLeft="120dp"
+        android:layout_marginRight="100dp"
         android:backgroundTint="@color/black"
         android:onClick="ocYoung"
-        android:text="Módulo de Young" />
+        android:text="Módulo de Young"
+        android:textSize="15dp"
+        tools:ignore="TextSizeCheck" />
 
     <ImageView
         android:id="@+id/imageView6"
