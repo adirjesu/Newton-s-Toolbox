@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ACT_AD_RecuperarPass">
+    tools:context=".ACT_MA_RecuperarPass">
 
     <TextView
-        android:id="@+id/txttitulorec"
+        android:id="@+id/txttitulorec2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RECUPERAR CONTRASEÑA" />
 
     <EditText
-        android:id="@+id/etmensaje"
+        android:id="@+id/etmensaje2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Usuario"
@@ -22,21 +22,22 @@
         android:maxLength="5" />
 
     <Button
-        android:id="@+id/btnenviar"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnenviar2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="ocEnviar"
         android:text="OKEY" />
 
     <TextView
-        android:id="@+id/txtenviadocorreo"
+        android:id="@+id/txtenviadocorreo2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:text="Se ha enviado un código a su correo electrónico" />
+        android:text="Se ha enviado un código a su correo electrónico"
+        android:visibility="gone" />
+
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="40sp">
 
         <TableRow
@@ -45,7 +46,7 @@
 
 
             <EditText
-                android:id="@+id/etn1"
+                android:id="@+id/etn1m"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -55,93 +56,92 @@
                 android:visibility="gone" />
 
             <EditText
-                android:id="@+id/etn2"
+                android:id="@+id/etn2m"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:visibility="gone"
+                android:inputType="number"
                 android:maxLength="1"
-                android:inputType="number" />
+                android:visibility="gone" />
 
             <EditText
-                android:id="@+id/etn3"
+                android:id="@+id/etn3m"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:inputType="number"
                 android:maxLength="1"
-                android:visibility="gone"
-                android:inputType="number" />
+                android:visibility="gone" />
 
             <EditText
-                android:id="@+id/etn4"
+                android:id="@+id/etn4m"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:visibility="gone"
+                android:inputType="number"
                 android:maxLength="1"
-                android:inputType="number" />
+                android:visibility="gone" />
 
             <EditText
-                android:id="@+id/etn5"
+                android:id="@+id/etn5m"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:visibility="gone"
+                android:inputType="number"
                 android:maxLength="1"
-                android:inputType="number" />
+                android:visibility="gone" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btncodigo"
+                android:id="@+id/btncodigom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:text="Confirmar código" />
+                android:text="Confirmar código"
+                android:visibility="gone" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/txtcontranueva"
+                android:id="@+id/txtcontranuevam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:text="Ingrese su nuevo pin (min. 4-max. 8)"
 
-                android:text="Ingrese su nuevo pin (min. 4-max. 8)" />
+                android:visibility="gone" />
 
             <EditText
-                android:id="@+id/etnuevacontra"
+                android:id="@+id/etnuevacontram"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:visibility="gone"
+                android:inputType="number"
                 android:maxLength="8"
-                android:inputType="number" />
+                android:visibility="gone" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btncambiarpass"
+                android:id="@+id/btncambiarpassm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:text="CAMBIAR CONTRASEÑA" />
+                android:text="CAMBIAR CONTRASEÑA"
+                android:visibility="gone" />
         </TableRow>
 
     </TableLayout>
-
 </LinearLayout>

@@ -19,7 +19,7 @@
                 android:id="@+id/txtusuariomaestro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Usuario" />
+                android:text="Usuario:" />
 
             <EditText
                 android:id="@+id/etusuaiomaes"
@@ -27,6 +27,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Usuario"
+                android:maxLength="5"
                 android:inputType="textPersonName" />
 
             <Button
@@ -50,6 +51,9 @@
                 android:id="@+id/etcontramaes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:maxLength="8"
+                android:inputType="number"
                 android:ems="10" />
 
         </TableRow>
@@ -62,13 +66,15 @@
                 android:id="@+id/txtnombres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre" />
+                android:text="Nombre(s):" />
 
             <EditText
                 android:id="@+id/etnombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="Nombre(s)"
+                android:maxLength="20"
                 android:inputType="textPersonName"
                  />
         </TableRow>
@@ -81,13 +87,14 @@
                 android:id="@+id/txtap_p"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Apellido paterno" />
+                android:text="Apellido paterno:" />
 
             <EditText
                 android:id="@+id/etap_p"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:maxLength="15"
                 android:inputType="textPersonName"
                 android:hint="Apellido" />
         </TableRow>
@@ -100,13 +107,14 @@
                 android:id="@+id/txtape_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Apellido materno" />
+                android:text="Apellido materno:" />
 
             <EditText
                 android:id="@+id/etap_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:maxLength="15"
                 android:inputType="textPersonName"
                 android:hint="Apellido" />
         </TableRow>
@@ -126,6 +134,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="Correo"
+                android:maxLength="40"
                 android:inputType="textEmailAddress" />
 
         </TableRow>
@@ -138,39 +148,72 @@
                 android:id="@+id/txtmateria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Materia: " />
 
-            <EditText
-                android:id="@+id/etmateria"
+            <RadioGroup
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="materia" />
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/rbalgebra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Algebra" />
+
+                <RadioButton
+                    android:id="@+id/rbfisica1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Física I" />
+
+                <RadioButton
+                    android:id="@+id/rbfisica2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Física II" />
+            </RadioGroup>
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="254dp"
             android:layout_weight="3">
 
             <Button
                 android:id="@+id/btnagregar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Agregar" />
+                android:enabled="false"
+                android:text="Agregar"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btnactualizar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Aactualizar" />
+                android:enabled="false"
+                android:text="Aactualizar"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btneliminar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Eliminar" />
+                android:enabled="false"
+                android:text="Eliminar"
+                android:visibility="gone" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btnlipiar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limpiar" />
         </TableRow>
     </TableLayout>
 </LinearLayout>

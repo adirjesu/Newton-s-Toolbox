@@ -12,13 +12,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Newtoons_Toolbox"
-        tools:targetApi="31"
         android:usesCleartextTraffic="true"
-        tools:ignore="WrongManifestParent">
-
-
-
-
+        tools:ignore="WrongManifestParent"
+        tools:targetApi="31">
+        <activity
+            android:name=".ACT_MA_RecuperarPass"
+            android:exported="false" />
+        <activity
+            android:name=".ACT_LogginMaestro"
+            android:exported="false" />
         <activity
             android:name=".ACT_AD_CRUD_maestro"
             android:exported="false" />
@@ -114,6 +116,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

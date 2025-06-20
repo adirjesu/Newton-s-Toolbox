@@ -1,8 +1,8 @@
 package com.example.newtoons_toolbox;
 
-import android.content.Context;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -24,28 +22,26 @@ import com.android.volley.toolbox.Volley;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ACT_LogginAdmin extends AppCompatActivity {
+public class ACT_LogginMaestro extends AppCompatActivity {
     private EditText usu;
     private EditText contra;
     private Button log;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_act_logginadmin);
+        setContentView(R.layout.activity_act_loggin_maestro);
 
-        usu  = findViewById(R.id.etusuario);
-        contra = findViewById(R.id.etpass);
-        log = findViewById(R.id.btnlogin);
-
+        usu  = findViewById(R.id.etusuario2);
+        contra = findViewById(R.id.etpass2);
+        log = findViewById(R.id.btnlogin2);
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                login("http://192.168.0.170:8080/newtons/login_admin.php");
+                login("http://192.168.0.170:8080/newtons/login_maestro.php");
             }
         });
 
-    }
+    }//main
     private void login (String URL){
         StringRequest stringRequest= new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
@@ -54,13 +50,13 @@ public class ACT_LogginAdmin extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(),ACT_LobbyAdmin.class);
                     startActivity(intent);
                 }else{
-                    Toast.makeText(ACT_LogginAdmin.this, "Usuario o contraseña incorrecta", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ACT_LogginMaestro.this, "Usuario o contraseña incorrecta", Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(ACT_LogginAdmin.this, error.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ACT_LogginMaestro.this, error.toString(), Toast.LENGTH_SHORT).show();
             }
         }){
             @Override
@@ -71,22 +67,22 @@ public class ACT_LogginAdmin extends AppCompatActivity {
                 return parametros;
             }
         };
-        RequestQueue requestQueue=Volley.newRequestQueue(this);
+        RequestQueue requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
 
 
 
-    public void ocLaperdi(View view) {
+    public void ocLaperdimaestro(View view) {
         Intent x =  new Intent(this, ACT_AD_RecuperarPass.class);
         startActivity(x);
     }
-//
-@Override
-public boolean onCreateOptionsMenu(Menu menu){
-    getMenuInflater().inflate(R.menu.menuestudiantes,menu);
-    return true;
-}
+    //
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menuestudiantes,menu);
+        return true;
+    }
     @Override
     public boolean onOptionsItemSelected (MenuItem item) {
         int id = item.getItemId();

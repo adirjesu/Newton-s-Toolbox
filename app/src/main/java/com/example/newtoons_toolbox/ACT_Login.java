@@ -17,6 +17,10 @@ public class ACT_Login extends AppCompatActivity {
         Intent x =  new Intent(this,ACT_LobbyEstudiante.class);
         startActivity(x);
     }
+    public void ocMaestro (View view){
+        Intent x =  new Intent(this,ACT_LogginMaestro.class);
+        startActivity(x);
+    }
     public void ocAdmin (View view){
         Intent x =  new Intent(this,ACT_LogginAdmin.class);
         startActivity(x);
