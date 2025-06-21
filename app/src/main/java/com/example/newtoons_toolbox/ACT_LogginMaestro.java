@@ -128,7 +128,7 @@ public class ACT_LogginMaestro extends AppCompatActivity {
 
     ////////////////
     public void ocLaperdimaestro(View view) {
-        Intent x =  new Intent(this, ACT_AD_RecuperarPass.class);
+        Intent x =  new Intent(this, ACT_MA_RecuperarPass.class);
         startActivity(x);
     }
     //

@@ -33,7 +33,7 @@ public class ACT_LobbyMaestro extends AppCompatActivity {
         reactivos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+
             }
         });
     }

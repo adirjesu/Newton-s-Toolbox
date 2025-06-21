@@ -75,7 +75,7 @@ public class ACT_AD_CRUD_maestro extends AppCompatActivity {
         agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                usuariorepetido("http://192.168.0.170:8080/newtons/buscar_maestro.php?usuario="+usuario.getText()+"");
+                usuariorepetido("http://192.168.0.122:8080/newtons/buscar_maestro.php?usuario="+usuario.getText()+"");
             }
         });
 
@@ -84,7 +84,7 @@ public class ACT_AD_CRUD_maestro extends AppCompatActivity {
             public void onClick(View view) {
 
                 if(!usuario.getText().toString().isEmpty()){
-                    buscarmaestro("http://192.168.0.170:8080/newtons/buscar_maestro.php?usuario="+usuario.getText()+"");
+                    buscarmaestro("http://192.168.0.122:8080/newtons/buscar_maestro.php?usuario="+usuario.getText()+"");
                     agregar.setVisibility(View.GONE);
                     agregar.setEnabled(false);
                     actualizar.setVisibility(View.VISIBLE);
@@ -101,14 +101,14 @@ public class ACT_AD_CRUD_maestro extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                    ejecutarServicio("http://192.168.0.170:8080/newtons/editar_maestro.php");
+                    ejecutarServicio("http://192.168.0.122:8080/newtons/editar_maestro.php");
 
             }
         });
         eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                eliminarprofesor("http://192.168.0.170:8080/newtons/eliminar_maestro.php");
+                eliminarprofesor("http://192.168.0.122:8080/newtons/eliminar_maestro.php");
             }
         });
 
