@@ -1,12 +1,13 @@
 package com.example.newtoons_toolbox;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -40,13 +41,8 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import android.text.Editable;
-import android.text.InputFilter;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
 
-
-public class ACT_AD_RecuperarPass extends AppCompatActivity {
+public class ACT_MA_RecuperarPass extends AppCompatActivity {
     public static Intent w;
     String correo,contra1;
     EditText usuario,n1,n2,n3,n4,n5,pass;
@@ -54,25 +50,24 @@ public class ACT_AD_RecuperarPass extends AppCompatActivity {
     Button enviar, confcodigo,cambiarpass;
     Session session;
     public static String correousu,codigo5,codig5;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_act_ad_recuperar_pass);
+        setContentView(R.layout.activity_act_ma_recuperar_pass);
 
-        usuario = findViewById(R.id.etmensaje);
-        enviar = findViewById(R.id.btnenviar);
-        confcodigo =findViewById(R.id.btncodigo);
+        usuario = findViewById(R.id.etmensaje2);
+        enviar = findViewById(R.id.btnenviar2);
+        confcodigo =findViewById(R.id.btncodigom);
 
-        titulo=findViewById(R.id.txtenviadocorreo);
-        n1=findViewById(R.id.etn1);
-        n2=findViewById(R.id.etn2);
-        n3=findViewById(R.id.etn3);
-        n4=findViewById(R.id.etn4);
-        n5=findViewById(R.id.etn5);
-        nuevacontra=findViewById(R.id.txtcontranueva);
-        pass=findViewById(R.id.etnuevacontra);
-        cambiarpass=findViewById(R.id.btncambiarpass);
+        titulo=findViewById(R.id.txtenviadocorreo2);
+        n1=findViewById(R.id.etn1m);
+        n2=findViewById(R.id.etn2m);
+        n3=findViewById(R.id.etn3m);
+        n4=findViewById(R.id.etn4m);
+        n5=findViewById(R.id.etn5m);
+        nuevacontra=findViewById(R.id.txtcontranuevam);
+        pass=findViewById(R.id.etnuevacontram);
+        cambiarpass=findViewById(R.id.btncambiarpassm);
 
         correo = "newtonstoolbox@gmail.com";
         contra1 = "icuu usyt bvvm vqmy";
@@ -81,7 +76,7 @@ public class ACT_AD_RecuperarPass extends AppCompatActivity {
             public void onClick(View view) {
                 //sala 1:   192.168.0.247
                 //mi casa:  192.168.3.67
-                buscar("http://192.168.0.170:8080/newtons/recuperar_pass.php?usuario="+usuario.getText()+"");
+                buscar("http://192.168.0.170:8080/newtons/recuperar_pass_maes.php?usuario="+usuario.getText()+"");
             }
         });
         confcodigo.setOnClickListener(new View.OnClickListener() {
@@ -93,7 +88,7 @@ public class ACT_AD_RecuperarPass extends AppCompatActivity {
         cambiarpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cambiarpass("http://192.168.0.170:8080/newtons/editar_pass.php");
+                cambiarpass("http://192.168.0.170:8080/newtons/editar_pass_maes.php");
 
             }
         });
@@ -250,10 +245,7 @@ public class ACT_AD_RecuperarPass extends AppCompatActivity {
             }
 
         });
-
-        ///////
-    }
-
+    }////////////////////////////////////////////////////////////////////main
     private void buscar(String URL) {
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
             @Override
@@ -291,7 +283,7 @@ public class ACT_AD_RecuperarPass extends AppCompatActivity {
                                 codigo();
                                 message.setContent(codigo5, "text/html; charset=utf-8");
                                 Transport.send(message);
-                                Toast.makeText(ACT_AD_RecuperarPass.this, "Correo Enviado", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ACT_MA_RecuperarPass.this, "Correo Enviado", Toast.LENGTH_SHORT).show();
                                 titulo.setVisibility(View.VISIBLE);
                                 n1.setVisibility(View.VISIBLE);
                                 n2.setVisibility(View.VISIBLE);
@@ -312,17 +304,17 @@ public class ACT_AD_RecuperarPass extends AppCompatActivity {
                         }
                         ///////////////////////////
                     } catch (JSONException e) {
-                        Toast.makeText(ACT_AD_RecuperarPass.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ACT_MA_RecuperarPass.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     }//catch
                 }//for
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(ACT_AD_RecuperarPass.this, "ERROR DE CONEXIÓN", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ACT_MA_RecuperarPass.this, "ERROR DE CONEXIÓN", Toast.LENGTH_SHORT).show();
             }
         });
-        RequestQueue requestQueue=Volley.newRequestQueue(this);
+        RequestQueue requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(jsonArrayRequest);
 
     }
@@ -346,42 +338,42 @@ public class ACT_AD_RecuperarPass extends AppCompatActivity {
             n4.setVisibility(View.GONE);
             n5.setVisibility(View.GONE);
             confcodigo.setVisibility(View.GONE);
-            }else{
-                Toast.makeText(ACT_AD_RecuperarPass.this, "CÓDIGO INCORRECTO", Toast.LENGTH_SHORT).show();
-            }
+        }else{
+            Toast.makeText(ACT_MA_RecuperarPass.this, "CÓDIGO INCORRECTO", Toast.LENGTH_SHORT).show();
+        }
 
 
     }
     public void cambiarpass(String URL) {
         if(pass.length()>3){
 
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                    Toast.makeText(ACT_AD_RecuperarPass.this, "CONTRASEÑA CAMBIADA", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(),ACT_LogginAdmin.class);
+            StringRequest stringRequest=new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    Toast.makeText(ACT_MA_RecuperarPass.this, "CONTRASEÑA CAMBIADA", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(),ACT_LogginMaestro.class);
                     startActivity(intent);
 
 
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(ACT_AD_RecuperarPass.this, error.toString(), Toast.LENGTH_SHORT).show();
-            }
-        }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> parametros= new HashMap<String,String>();
-                parametros.put("usuario",usuario.getText().toString());
-                parametros.put("pass",pass.getText().toString());
-                return parametros;
-            }
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(ACT_MA_RecuperarPass.this, error.toString(), Toast.LENGTH_SHORT).show();
+                }
+            }){
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String,String> parametros= new HashMap<String,String>();
+                    parametros.put("usuario",usuario.getText().toString());
+                    parametros.put("pass",pass.getText().toString());
+                    return parametros;
+                }
+            };
+            RequestQueue requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
         }else{
-            Toast.makeText(ACT_AD_RecuperarPass.this, "Mínimo 4 caracteres", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ACT_MA_RecuperarPass.this, "Mínimo 4 caracteres", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -414,14 +406,14 @@ public class ACT_AD_RecuperarPass extends AppCompatActivity {
         if (id == R.id.regresar) {
             Toast.makeText(this, "Regresando",
                     Toast.LENGTH_SHORT).show();
-            Intent w = new Intent(this,ACT_LogginAdmin.class);
+            Intent w = new Intent(this,ACT_LogginMaestro.class);
             startActivity(w);
         }
         return super.onOptionsItemSelected(item);
 
     }
     public void cambio (){
-        Intent w = new Intent(this,ACT_LogginAdmin.class);
+        Intent w = new Intent(this,ACT_LogginMaestro.class);
         startActivity(w);
     }
-}
+}//final

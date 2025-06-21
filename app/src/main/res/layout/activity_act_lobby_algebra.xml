@@ -61,4 +61,6 @@
         android:layout_height="309dp"
         android:layout_marginLeft="-79dp"
         app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
+
 </LinearLayout>
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ACT_LogginMaestro">
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="207dp"
+        android:layout_height="267dp"
+        android:layout_marginLeft="110dp"
+        app:srcCompat="@drawable/profesor" />
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="Inicie sesión"
+        android:textAlignment="center"
+        android:textColor="#6A5ACD"
+        android:textSize="50dp" />
+
+    <EditText
+        android:id="@+id/etusuario2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa tu usuario"
+        android:inputType="text"
+        android:maxLength="5" />
+
+    <EditText
+        android:id="@+id/etpass2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa tu contraseña"
+        android:inputType="text"
+        android:maxLength="8" />
+
+    <Button
+        android:id="@+id/btnlogin2"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/black"
+        android:text="Ingresar"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/btntonto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/black"
+        android:onClick="ocLaperdimaestro"
+        android:text="Olvidé la contraseña"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
+</LinearLayout>

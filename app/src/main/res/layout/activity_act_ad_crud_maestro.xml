@@ -10,46 +10,63 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <TextView
+            android:id="@+id/txtTitulo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#6A5ACD"
+            android:fontFamily="@font/audiowide"
+            android:gravity="center"
+            android:text="Seleccione el modo"
+            android:textAlignment="center"
+            android:textSize="35dp" />
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
+                android:textSize="20dp"
+                android:textColor="@color/black"
                 android:id="@+id/txtusuariomaestro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Usuario" />
+                android:text="Usuario:" />
 
             <EditText
                 android:id="@+id/etusuaiomaes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:textSize="18dp"
                 android:hint="Usuario"
+                android:maxLength="5"
                 android:inputType="textPersonName" />
 
-            <Button
-                android:id="@+id/btnbuscar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Buscar" />
+
         </TableRow>
+
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
+                android:textSize="20dp"
+                android:textColor="@color/black"
                 android:id="@+id/txtcontra"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Contraseña: " />
 
             <EditText
+                android:textSize="18dp"
                 android:id="@+id/etcontramaes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:maxLength="8"
+                android:inputType="number"
                 android:ems="10" />
 
         </TableRow>
@@ -59,16 +76,21 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="20dp"
+                android:textColor="@color/black"
                 android:id="@+id/txtnombres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre" />
+                android:text="Nombre(s):" />
 
             <EditText
+                android:textSize="18dp"
                 android:id="@+id/etnombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="Nombre(s)"
+                android:maxLength="20"
                 android:inputType="textPersonName"
                  />
         </TableRow>
@@ -78,16 +100,20 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="20dp"
+                android:textColor="@color/black"
                 android:id="@+id/txtap_p"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Apellido paterno" />
+                android:text="Apellido paterno:" />
 
             <EditText
+                android:textSize="18dp"
                 android:id="@+id/etap_p"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:maxLength="15"
                 android:inputType="textPersonName"
                 android:hint="Apellido" />
         </TableRow>
@@ -97,16 +123,20 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="20dp"
+                android:textColor="@color/black"
                 android:id="@+id/txtape_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Apellido materno" />
+                android:text="Apellido materno:" />
 
             <EditText
+                android:textSize="18dp"
                 android:id="@+id/etap_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:maxLength="15"
                 android:inputType="textPersonName"
                 android:hint="Apellido" />
         </TableRow>
@@ -116,16 +146,21 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="20dp"
+                android:textColor="@color/black"
                 android:id="@+id/txtcorreo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Correo:" />
 
             <EditText
+                android:textSize="18dp"
                 android:id="@+id/etcorreo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="Correo"
+                android:maxLength="40"
                 android:inputType="textEmailAddress" />
 
         </TableRow>
@@ -135,18 +170,42 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="20dp"
+                android:textColor="@color/black"
                 android:id="@+id/txtmateria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Materia: " />
 
-            <EditText
-                android:id="@+id/etmateria"
+            <RadioGroup
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="materia" />
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:id="@+id/rbalgebra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Algebra" />
+
+                <RadioButton
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:id="@+id/rbfisica1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Física I" />
+
+                <RadioButton
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:id="@+id/rbfisica2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Física II" />
+            </RadioGroup>
+
         </TableRow>
 
         <TableRow
@@ -158,19 +217,66 @@
                 android:id="@+id/btnagregar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Agregar" />
+                android:enabled="false"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/black"
+                android:text="Agregar"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btnactualizar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Aactualizar" />
+                android:enabled="false"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/black"
+                android:text="Aactualizar"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btneliminar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Eliminar" />
+                android:enabled="false"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/black"
+                android:text="Eliminar"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnlipiar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/black"
+                android:text="Limpiar"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btnbuscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/black"
+                android:text="Buscar" />
+
+
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </TableRow>
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
     </TableLayout>
 </LinearLayout>

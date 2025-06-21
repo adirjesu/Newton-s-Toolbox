@@ -25,10 +25,22 @@
         android:textAlignment="center"
         android:textSize="50dp" />
 
+    <Button
+        android:id="@+id/btncrudmaestros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/black"
+        android:text="modificar Maestros"
+        android:textSize="15dp" />
+
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="match_parent"
         android:layout_height="361dp"
         android:layout_marginLeft="-30dp"
+        android:layout_marginTop="-50dp"
         app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
+
 </LinearLayout>
