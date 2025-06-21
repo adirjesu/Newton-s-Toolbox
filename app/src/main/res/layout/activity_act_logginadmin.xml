@@ -33,13 +33,15 @@
       android:inputType="text"
       android:maxLength="5" />
 
+
+
   <EditText
       android:id="@+id/etpass"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:hint="Ingresa tu contraseña"
-      android:inputType="text"
-      android:maxLength="8" />
+      android:maxLength="8"
+      android:inputType="numberPassword"/>
 
   <Button
       android:id="@+id/btnlogin"
@@ -68,6 +70,6 @@
       android:id="@+id/imageView5"
       android:layout_width="match_parent"
       android:layout_height="200dp"
-      android:scaleType="fitCenter"
+      android:layout_marginTop="-80dp"
       app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
 </LinearLayout>

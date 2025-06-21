@@ -41,7 +41,7 @@ public class ACT_LogginAdmin extends AppCompatActivity {
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                login("http://192.168.0.170:8080/newtons/login_admin.php");
+                login("http://192.168.0.122:8080/newtons/login_admin.php");
             }
         });
 
@@ -51,6 +51,7 @@ public class ACT_LogginAdmin extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 if(!response.isEmpty()){
+
                     Intent intent = new Intent(getApplicationContext(),ACT_LobbyAdmin.class);
                     startActivity(intent);
                 }else{
