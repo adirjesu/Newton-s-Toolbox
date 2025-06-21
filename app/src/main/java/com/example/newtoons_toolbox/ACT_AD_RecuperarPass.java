@@ -81,7 +81,7 @@ public class ACT_AD_RecuperarPass extends AppCompatActivity {
             public void onClick(View view) {
                 //sala 1:   192.168.0.247
                 //mi casa:  192.168.3.67
-                buscar("http://192.168.0.170:8080/newtons/recuperar_pass.php?usuario="+usuario.getText()+"");
+                buscar("http://192.168.0.122:8080/newtons/recuperar_pass.php?usuario="+usuario.getText()+"");
             }
         });
         confcodigo.setOnClickListener(new View.OnClickListener() {
@@ -93,7 +93,7 @@ public class ACT_AD_RecuperarPass extends AppCompatActivity {
         cambiarpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cambiarpass("http://192.168.0.170:8080/newtons/editar_pass.php");
+                cambiarpass("http://192.168.0.122:8080/newtons/editar_pass.php");
 
             }
         });

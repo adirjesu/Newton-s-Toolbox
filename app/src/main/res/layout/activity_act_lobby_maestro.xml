@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ACT_LobbyMaestro">
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="match_parent"
+        android:layout_height="267dp"
+        android:layout_marginLeft="110dp"
+        app:srcCompat="@drawable/profesor" />
+
+    <TextView
+        android:id="@+id/txttitulomaestro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#6A5ACD"
+        android:textSize="50dp" />
+    <TextView
+        android:id="@+id/txtmateriamaestro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#6A5ACD"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/btnmodificarreac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="modificar reactivos" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="match_parent"
+        android:layout_height="429dp"
+        android:layout_marginLeft="-30dp"
+        android:layout_marginTop="-50dp"
+        app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
+</LinearLayout>
