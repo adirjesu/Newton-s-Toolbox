@@ -22,9 +22,9 @@ public class ACT_LobbyAlgebra extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_lobby_algebra);
 
-        poli = findViewById(R.id.btnpolinomios);
+        /*poli = findViewById(R.id.btnpolinomios);
         ecua = findViewById(R.id.btnecuaciones);
-        fact = findViewById(R.id.btnfactor);
+        fact = findViewById(R.id.btnfactor);*/
     }
 
 

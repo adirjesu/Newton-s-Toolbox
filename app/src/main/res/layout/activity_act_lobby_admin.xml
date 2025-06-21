@@ -28,7 +28,7 @@
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="match_parent"
-        android:layout_height="429dp"
+        android:layout_height="361dp"
         android:layout_marginLeft="-30dp"
         app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
 </LinearLayout>
