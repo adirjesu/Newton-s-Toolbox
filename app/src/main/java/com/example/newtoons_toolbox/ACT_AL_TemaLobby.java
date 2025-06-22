@@ -46,7 +46,7 @@ public class ACT_AL_TemaLobby extends AppCompatActivity {
     public void ocCalAl (View view){
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
-        Intent x =  new Intent(this,ACT_F1_Calculadora_Hooke.class);
+        Intent x =  new Intent(this,ACT_AL_Calculadora.class);
         x.putExtras(enviarDatos);
         startActivity(x);
     }
@@ -55,7 +55,7 @@ public class ACT_AL_TemaLobby extends AppCompatActivity {
     public void ocCuesAl (View view){
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
-        Intent x =  new Intent(this,ACT_F1_Cuestionario.class);
+        Intent x =  new Intent(this,ACT_AL_Cuestionario.class);
         x.putExtras(enviarDatos);
         startActivity(x);
     }
@@ -64,7 +64,7 @@ public class ACT_AL_TemaLobby extends AppCompatActivity {
     public void ocForAl (View view){
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
-        Intent x =  new Intent(this,ACT_F1_banco_formulas.class);
+        Intent x =  new Intent(this,ACT_AL_banco_formulas.class);
         x.putExtras(enviarDatos);
         startActivity(x);
     }
@@ -73,7 +73,7 @@ public class ACT_AL_TemaLobby extends AppCompatActivity {
     public void ocExpAl (View view){
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
-        Intent x =  new Intent(this,ACT_F1_Explicacion.class);
+        Intent x =  new Intent(this,ACT_AL_Explicacion.class);
         x.putExtras(enviarDatos);
         startActivity(x);
     }

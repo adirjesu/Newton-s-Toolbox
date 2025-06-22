@@ -153,8 +153,7 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             sino.setTextColor(Color.rgb(76,175,80));
             continuar.setBackgroundColor(Color.rgb(76,175,80));
             puntuacion++;
-        }
-        else{
+        } else {
             sino.setText("Incorrecto");
             sino.setTextColor(Color.rgb(255,0,0));
             continuar.setBackgroundColor(Color.rgb(255,0,0));
@@ -210,84 +209,36 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
 
 /////////////////////////*     SÍMBOLOS   *\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     public void sim1(){
-        if(tema_elegido==1){
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"+");
-        }else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"+");
     }
     public void sim2(){
-        if(tema_elegido==1){
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"-");
-        }else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"-");
     }
     public void sim3(){
-        if(tema_elegido==1){
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"(");
-        }else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"(");
     }
     public void sim4(){
-        if(tema_elegido==1){
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+")");
-        }else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+")");
     }
     public void sim5(){
-        if(tema_elegido==1){
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"÷");
-        }else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"÷");
     }
     public void sim6(){
-        if(tema_elegido==1){
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"^");
-        }else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"^");
     }
     public void sim7(){
-        if(tema_elegido==1){
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"√");
-        }else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"√");
     }
     public void sim8(){
-        if(tema_elegido==1){
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"=");
-        }else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }
+        String resbefore= String.valueOf(res.getText());
+        res.setText(resbefore+"=");
     }
 
 

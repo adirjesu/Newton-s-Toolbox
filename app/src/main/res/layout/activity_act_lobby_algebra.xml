@@ -27,7 +27,7 @@
         android:layout_marginLeft="90dp"
         android:layout_marginRight="100dp"
         android:backgroundTint="@color/black"
-        android:onClick="ocOperaciones"
+        android:onClick="ocPolinomios"
         android:text="Operaciones con polinomios"
         android:textSize="20dp"
         tools:ignore="TextSizeCheck" />

@@ -28,7 +28,7 @@ public class ACT_LobbyAlgebra extends AppCompatActivity {
     }
 
 
-    public void ocPoli (View view){
+    public void ocPolinomios (View view){
         tema_elegido=1;
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
@@ -37,7 +37,7 @@ public class ACT_LobbyAlgebra extends AppCompatActivity {
         startActivity(x);
     }
 
-    public void ocEcua (View view){
+    public void ocEcuaciones (View view){
         tema_elegido=2;
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
@@ -46,7 +46,7 @@ public class ACT_LobbyAlgebra extends AppCompatActivity {
         startActivity(x);
     }
 
-    public void ocFactor (View view){
+    public void ocFactorizacion (View view){
         tema_elegido=3;
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
