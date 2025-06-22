@@ -217,30 +217,37 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
     public void sim2(){
         String resbefore= String.valueOf(res.getText());
         res.setText(resbefore+"-");
+        res.setSelection(resbefore.length());
     }
     public void sim3(){
         String resbefore= String.valueOf(res.getText());
         res.setText(resbefore+"(");
+        res.setSelection(resbefore.length());
     }
     public void sim4(){
         String resbefore= String.valueOf(res.getText());
         res.setText(resbefore+")");
+        res.setSelection(resbefore.length());
     }
     public void sim5(){
         String resbefore= String.valueOf(res.getText());
         res.setText(resbefore+"÷");
+        res.setSelection(resbefore.length());
     }
     public void sim6(){
         String resbefore= String.valueOf(res.getText());
         res.setText(resbefore+"^");
+        res.setSelection(resbefore.length());
     }
     public void sim7(){
         String resbefore= String.valueOf(res.getText());
         res.setText(resbefore+"√");
+        res.setSelection(resbefore.length());
     }
     public void sim8(){
         String resbefore= String.valueOf(res.getText());
         res.setText(resbefore+"=");
+        res.setSelection(resbefore.length());
     }
 
 
