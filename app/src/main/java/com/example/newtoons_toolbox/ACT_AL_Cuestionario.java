@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.EditText;
 
 import java.util.Random;
 
@@ -211,6 +212,7 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
     public void sim1(){
         String resbefore= String.valueOf(res.getText());
         res.setText(resbefore+"+");
+        res.setSelection(resbefore.length());
     }
     public void sim2(){
         String resbefore= String.valueOf(res.getText());
@@ -240,18 +242,6 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
         String resbefore= String.valueOf(res.getText());
         res.setText(resbefore+"=");
     }
-
-
-    /////////////////////////*     SÍMBOLOS   *\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    public void ocMas(View view){ sim1(); }
-    public void ocMenos(View view){ sim2(); }
-    public void ocAbrir(View view){ sim3(); }
-    public void ocCerrar(View view){ sim4(); }
-    public void ocEntre(View view){ sim5(); }
-    public void ocPow(View view){ sim6(); }
-    public void ocSqrt(View view){ sim7(); }
-    public void ocIgual(View view){ sim8(); }
-
 
 
     /*//////////////TERMINAN LAS VARIABLES\\\\\\\\\\\\\\*/

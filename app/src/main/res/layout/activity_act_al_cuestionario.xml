@@ -64,7 +64,7 @@
                     android:id="@+id/btns1Al"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="ocMas"
+                    android:onClick="Sim1"
                     android:textColor="@color/white"
                     android:layout_marginLeft="40dp"
                     android:backgroundTint="@color/black"
@@ -76,7 +76,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/black"
-                    android:onClick="ocMenos"
+                    android:onClick="Sim2"
                     android:text="" />
 
                 <Button
@@ -84,7 +84,7 @@
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="ocAbrir"
+                    android:onClick="Sim3"
                     android:backgroundTint="@color/black"
                     android:text="" />
 
@@ -94,7 +94,7 @@
                     android:backgroundTint="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="ocCerrar"
+                    android:onClick="Sim4"
                     android:text="" />
             </TableRow>
 
@@ -109,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
                     android:backgroundTint="@color/black"
-                    android:onClick="ocEntre"
+                    android:onClick="Sim5"
                     android:text="" />
 
                 <Button
@@ -118,7 +118,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/black"
-                    android:onClick="ocPow"
+                    android:onClick="Sim6"
                     android:text="" />
 
                 <Button
@@ -127,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/black"
-                    android:onClick="ocSqrt"
+                    android:onClick="Sim7"
                     android:text="" />
 
                 <Button
@@ -136,7 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/black"
-                    android:onClick="ocIgual"
+                    android:onClick="Sim8"
                     android:text="" />
             </TableRow>
 
