@@ -44,14 +44,14 @@ public class ACT_MA_C_agregar extends AppCompatActivity {
         pregunta=findViewById(R.id.etpreguntar);
         respuesta=findViewById(R.id.etrespuestar);
 
-        s1      =findViewById(R.id.btns1r);
-        s2      =findViewById(R.id.btns2r);
-        s3      =findViewById(R.id.btns3r);
-        s4      =findViewById(R.id.btns4r);
-        s5      =findViewById(R.id.btns5r);
-        s6      =findViewById(R.id.btns6r);
-        s7      =findViewById(R.id.btns7r);
-        s8      =findViewById(R.id.btns8r);
+        s1      =findViewById(R.id.btns1a);
+        s2      =findViewById(R.id.btns2a);
+        s3      =findViewById(R.id.btns3a);
+        s4      =findViewById(R.id.btns4a);
+        s5      =findViewById(R.id.btns5a);
+        s6      =findViewById(R.id.btns6a);
+        s7      =findViewById(R.id.btns7a);
+        s8      =findViewById(R.id.btns8a);
 
         t1      =findViewById(R.id.rbt1);
         t2      =findViewById(R.id.rbt2);

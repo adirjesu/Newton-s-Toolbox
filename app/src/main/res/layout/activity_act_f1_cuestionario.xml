@@ -55,7 +55,7 @@
                 android:id="@+id/btns1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="ocNm"
+                android:onClick="sim1"
                 android:textColor="@color/white"
                 android:layout_marginLeft="40dp"
                 android:backgroundTint="@color/black"
@@ -67,7 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                android:onClick="ocN"
+                android:onClick="sim2"
                 android:text="" />
 
             <Button
@@ -75,7 +75,7 @@
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="ocm"
+                android:onClick="sim3"
                 android:backgroundTint="@color/black"
                 android:text="" />
 
@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:backgroundTint="@color/black"
-                android:onClick="ocmenos"
+                android:onClick="sim5"
                 android:text="" />
 
             <Button
@@ -118,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                android:onClick="ocala"
+                android:onClick="sim7"
                 android:text="" />
 
             <Button
@@ -127,7 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                android:onClick="ocpa"
+                android:onClick="sim8"
                 android:text="" />
         </TableRow>
 
