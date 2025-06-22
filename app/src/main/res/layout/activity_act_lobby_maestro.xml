@@ -36,12 +36,21 @@
         android:textSize="30dp" />
 
     <Button
-        android:id="@+id/btnmodificarreac"
-        android:layout_width="334dp"
+        android:id="@+id/btnagregarr"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:backgroundTint="@color/black"
-        android:text="modificar reactivos"
+        android:text="agregar reactivos"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btneditarreac"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:backgroundTint="@color/black"
+        android:text="editar reactivos"
         android:textSize="20dp" />
 
     <ImageView

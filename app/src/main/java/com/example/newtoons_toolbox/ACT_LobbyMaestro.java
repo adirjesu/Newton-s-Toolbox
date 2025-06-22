@@ -8,13 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class ACT_LobbyMaestro extends AppCompatActivity {
     TextView usu,mat;
-    Button reactivos;
+    Button agregar,editar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,18 +24,31 @@ public class ACT_LobbyMaestro extends AppCompatActivity {
 
         usu=findViewById(R.id.txttitulomaestro);
         mat=findViewById(R.id.txtmateriamaestro);
-        reactivos=findViewById(R.id.btnmodificarreac);
+        agregar =findViewById(R.id.btnagregarr);
+        editar  =findViewById(R.id.btneditarreac);
 
         usu.setText("Bienvenido "+ usuario);
         mat.setText("Materia: "+ materia);
 
-        reactivos.setOnClickListener(new View.OnClickListener() {
+        agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getApplicationContext(), ACT_MA_C_agregar.class);
+                intent.putExtra("usuario", usuario);
+                intent.putExtra("materia", materia);
+                startActivity(intent);
             }
         });
-    }
+        editar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ACT_MA_Crud.class);
+                intent.putExtra("usuario", usuario);
+                intent.putExtra("materia", materia);
+                startActivity(intent);
+            }
+        });
+    }//main
 
 
 
@@ -52,7 +64,7 @@ public class ACT_LobbyMaestro extends AppCompatActivity {
         if (id == R.id.regresar) {
             Toast.makeText(this, "Regresando",
                     Toast.LENGTH_SHORT).show();
-            Intent w = new Intent(this,ACT_Login.class);
+            Intent w = new Intent(this,ACT_LogginMaestro.class);
             startActivity(w);
         }
         return super.onOptionsItemSelected(item);
