@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ACT_MA_C_Editar">
+
+    <TextView
+        android:id="@+id/txtTitulo7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="INGRESE LOS DATOS"
+        android:textAlignment="center"
+        android:textColor="#6A5ACD"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/txtusuariomaestro2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Pregunta:"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etpreguntareac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="¿?"
+        android:inputType="text"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/txtcontra2"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Respuesta: "
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etrespuestareac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="="
+        android:inputType="number"
+        android:maxLength="12"
+        android:textSize="18dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btns1r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:backgroundTint="@color/black"
+                android:onClick="ocsimf1"
+                android:text=""
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btns2r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="ocsimf2"
+                android:text=""
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btns3r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="ocsimf3"
+                android:text=""
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btns4r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="ocsimf4"
+                android:text=""
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btns5r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:backgroundTint="@color/black"
+                android:onClick="ocsimf5"
+                android:text=""
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btns6r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="ocsimf6"
+                android:text=""
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btns7r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="ocsimf7"
+                android:text=""
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btns8r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="ocsimf8"
+                android:text=""
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btnlipiareactivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/black"
+                android:text="Limpiar"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btneditareactivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/black"
+                android:text="Actualizar" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

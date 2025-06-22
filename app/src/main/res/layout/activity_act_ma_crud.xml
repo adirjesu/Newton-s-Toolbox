@@ -21,7 +21,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp">
+        android:layout_height="403dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -483,38 +483,43 @@
                     android:id="@+id/rbtc1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="ocTemareact"
                     android:text="" />
 
                 <RadioButton
                     android:id="@+id/rbtc2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="ocTemareact"
                     android:text="" />
 
                 <RadioButton
                     android:id="@+id/rbtc3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="ocTemareact"
                     android:text="" />
             </RadioGroup>
-
-            <Button
-                android:id="@+id/btneditareac"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="editar" />
-            <Button
-                android:id="@+id/btneliminareac"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="eliminar" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btneliminareac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="eliminar" />
+
+            <Button
+                android:id="@+id/btneditareac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="editar" />
+        </TableRow>
 
     </TableLayout>
 
