@@ -71,7 +71,7 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         tema_elegido = recibeDatos.getInt("tema");
         if(tema_elegido==1){
 
-            } else if (tema_elegido==2) {
+        } else if (tema_elegido==2) {
             preguntas = getResources().getStringArray(R.array.f1_lhp);
             respuestas = getResources().getStringArray(R.array.f1_lhr);
             retroalimentaciones = getResources().getStringArray(R.array.f1_lha);
@@ -83,9 +83,9 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
             s6.setText("×10^");
             s7.setText("^");
             s8.setText("Pa");
-                }else if (tema_elegido==3) {
+        } else if (tema_elegido==3) {
 
-                    }
+        }
 
 
 // Inicializa la matriz con el tamaño adecuado
