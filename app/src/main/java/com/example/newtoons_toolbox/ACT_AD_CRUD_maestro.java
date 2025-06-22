@@ -297,7 +297,7 @@ private void usuariorepetido(String URL){
                                             agregar.setEnabled(true);
                                             agregar.setVisibility(View.VISIBLE);
                                         } else {
-                                            Toast.makeText(ACT_AD_CRUD_maestro.this, "Ingresa un correo válido", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(ACT_AD_CRUD_maestro.this,  "Ingresa un correo válido", Toast.LENGTH_SHORT).show();
                                         }//else correo
                                     }else{
                                         Toast.makeText(ACT_AD_CRUD_maestro.this, "Ingresa un apellido válido", Toast.LENGTH_SHORT).show();
