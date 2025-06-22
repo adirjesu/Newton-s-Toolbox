@@ -32,6 +32,9 @@
     <string name="valor_1_2_3">Capa 1, Fila 2, Columna 3</string>
 
 
+
+    <!-- //////////     FÍSICA 1      \\\\\\\\\\ -->
+
     <string name="valor_3_0_0">Tema: Ley de Hooke</string>
 
 
@@ -64,6 +67,7 @@
         <item>3×10^7Pa</item>
         <item>2.5×10^−4m</item>
     </string-array>
+
     <string-array name="f1_lha">
         <item>Primero, conviertes los centímetros a metros (divide entre 100). Luego, aplicas la fórmula 𝑘=𝐹/x
             que relaciona la fuerza con el alargamiento del resorte. Este valor indica la rigidez del resorte: mientras mayor es
@@ -85,6 +89,7 @@
         <item>Este ejercicio combina el área con el módulo de elasticidad para obtener cuánto se alarga el alambre.
             Este tipo de cálculo es fundamental en estructuras.</item>
     </string-array>
+
     <string-array name="f1_lhf">
         <item>k = F / x</item>
         <item>F = w</item>
@@ -93,14 +98,13 @@
         <item>F = -k * x</item>
         <item>F = m * g</item>
         <item>F = k * ΔL</item>
-        <item>w = (1/2) * k * ΔL²</item>
+        <item>w = (½) * k * ΔL²</item>
         <item>E = F / A</item>
         <item>A = π * r²</item>
         <item>Le = Fm / A</item>
     </string-array>
 
     <string-array name="f1_lhv">
-
         <item>k: Constante elástica del resorte (N/m)\n
 F: Fuerza aplicada (N)\n
 x: Deformación o alargamiento (m)</item>
@@ -133,5 +137,27 @@ r: Radio (m)\n
         <item>Le: Alargamiento específico (m)\n
 Fm: Fuerza máxima aplicada (N)\n
 A: Área de la sección transversal (m²)</item>
+    </string-array>
+
+
+
+    <!-- //////////     ÁLGEBRA      \\\\\\\\\\ -->
+
+    <string-array name="al_poli_p">
+        <item>Un vivero calcula la cantidad de árboles que necesita sembrar durante dos temporadas distintas del año.<br/>En primavera, el número de árboles que siembran está representado por el polinomio 4x²+3x+7. En otoño, siembran según el polinomio 2x²+5x+9.<br/>Cuál es la expresión que representa la cantidad total de árboles sembrados en ambas temporadas?</item>
+        <item>Una constructora compara los costos de dos tipos de materiales usados en dos proyectos distintos. El costo del primer proyecto está representado por el polinomio 5x²+6x+10, y el del segundo por 3x²+4x+8.<br/>Se desea conocer la diferencia entre ambos costos.</item>
+        <item>Una empresa de publicidad multiplica su inversión inicial mensual de xxx unidades por una estrategia que incluye 4x²+3x−5 medios de difusión.<br/>¿Cuál es la expresión que representa el total de recursos invertidos en publicidad por mes?</item>
+        <item>Un terreno rectangular tiene como dimensiones x+5 metros de base y x+2 metros de altura.<br/>Se desea calcular el área total del terreno en función del valor de x.</item>
+        <item>Una compañía genera residuos industriales según el polinomio 6x³+9x²−12x kilogramos al día.<br/>Para transportar los residuos, cada camión puede llevar 3x kilogramos.<br/>¿Cuántos camiones se necesitan para transportar toda la carga diaria?</item>
+        <item>Una empresa agrícola monitorea la producción de dos campos de cultivo diferentes durante el año.<br/>El rendimiento del primer campo, medido en toneladas de vegetales por mes, se representa con el polinomio 5x²+3x+8.<br/>El rendimiento del segundo campo está dado por 2x²−x+4. Desean saber cuál es la producción total combinada de ambos campos conforme pasan los meses.</item>
+        <item>Un ingeniero calcula el desgaste de dos carreteras diferentes después de cierto número de meses.<br/>El desgaste del primer camino está modelado por 6x³+5x²−3x+10, y el del segundo por 4x³+2x²+x−6.<br/>Desea conocer la diferencia de desgaste entre ambos caminos para planificar reparaciones.</item>
+        <item>Una fábrica produce paquetes que contienen una cantidad variable de piezas, representada por 2x²+3x−5.<br/>Durante una promoción, se triplicó la producción diaria de estos paquetes.<br/>¿Cuál será la nueva expresión que representa la cantidad de piezas producidas por día?</item>
+        <item>Una arquitecta diseña un jardín rectangular donde la base mide x+2x metros y la altura x+4 metros.<br/>Desea hallar el área total del jardín en función del valor de xxx, que representa el número de módulos de terreno por sección.</item>
+        <item>Una empresa de alimentos distribuye productos en dos rutas distintas, y desea modelar el tiempo que toma cada entrega en función del tráfico.<br/>El tiempo en horas de la primera ruta está representado por el polinomio 3/4x²+1/2x+2/3, y el de la segunda ruta por 1/2x²+3/4x+1/6.<br/>¿Cuál es el tiempo total estimado en función de x si ambas rutas se recorren el mismo día?</item>
+    </string-array>
+
+    <string-array name="al_poli_r">
+        <item>5/4x²+5/4x+5/6 </item>
+        <!-- COMPLETAR LAS RESPUESTAS -->
     </string-array>
 </resources>

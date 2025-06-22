@@ -73,10 +73,9 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
         tema_elegido = recibeDatos.getInt("tema");
 
         if(tema_elegido==1){
-            /*
-            preguntas = getResources().getStringArray(R.array.al_poli);
-            respuestas = getResources().getStringArray(R.array.al_poli);
-            retroalimentaciones = getResources().getStringArray(R.array.al_poli);
+            preguntas = getResources().getStringArray(R.array.al_poli_p);
+            respuestas = getResources().getStringArray(R.array.al_poli_r);
+            retroalimentaciones = getResources().getStringArray(R.array.al_poli_retro);
             s1.setText("+");
             s2.setText("-");
             s3.setText("(");
@@ -85,12 +84,11 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             s6.setText("^");
             s7.setText("√");
             s8.setText("=");
-            */
+
         } else if (tema_elegido==2) {
-            /*
-            preguntas = getResources().getStringArray(R.array.al_ecua);
-            respuestas = getResources().getStringArray(R.array.al_ecua);
-            retroalimentaciones = getResources().getStringArray(R.array.al_ecua);
+            preguntas = getResources().getStringArray(R.array.al_ecua_p);
+            respuestas = getResources().getStringArray(R.array.al_ecua_r);
+            retroalimentaciones = getResources().getStringArray(R.array.al_ecua_retro);
             s1.setText("+");
             s2.setText("-");
             s3.setText("(");
@@ -99,12 +97,11 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             s6.setText("^");
             s7.setText("√");
             s8.setText("=");
-            */
+
         } else if (tema_elegido==3) {
-            /*
-            preguntas = getResources().getStringArray(R.array.al_fact);
-            respuestas = getResources().getStringArray(R.array.al_fact);
-            retroalimentaciones = getResources().getStringArray(R.array.al_fact);
+            preguntas = getResources().getStringArray(R.array.al_fact_p);
+            respuestas = getResources().getStringArray(R.array.al_fact_r);
+            retroalimentaciones = getResources().getStringArray(R.array.al_fact_retro);
             s1.setText("+");
             s2.setText("-");
             s3.setText("(");
@@ -113,7 +110,6 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             s6.setText("^");
             s7.setText("√");
             s8.setText("=");
-            */
         }
 
 
