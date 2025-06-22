@@ -71,7 +71,7 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         tema_elegido = recibeDatos.getInt("tema");
         if(tema_elegido==1){
 
-            } else if (tema_elegido==2) {
+        } else if (tema_elegido==2) {
             preguntas = getResources().getStringArray(R.array.f1_lhp);
             respuestas = getResources().getStringArray(R.array.f1_lhr);
             retroalimentaciones = getResources().getStringArray(R.array.f1_lha);
@@ -83,9 +83,9 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
             s6.setText("×10^");
             s7.setText("^");
             s8.setText("Pa");
-                }else if (tema_elegido==3) {
+        } else if (tema_elegido==3) {
 
-                    }
+        }
 
 
 // Inicializa la matriz con el tamaño adecuado
@@ -118,45 +118,44 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
 
         retro.setText(String.valueOf(matriz[praleatorio[contador]][2]));
 
-        String respuesta= String.valueOf(res.getText());
+        String respuesta = String.valueOf(res.getText());
         if(respuesta.equals(String.valueOf(matriz[praleatorio[contador]][1]))){
             sino.setText("corecto");
             sino.setTextColor(Color.rgb(76,175,80));
             continuar.setBackgroundColor(Color.rgb(76,175,80));
             puntuacion++;
-            }
-            else{
-                sino.setText("Incorrecto");
-                sino.setTextColor(Color.rgb(255,0,0));
-                continuar.setBackgroundColor(Color.rgb(255,0,0));
-            }
+        } else {
+            sino.setText("Incorrecto");
+            sino.setTextColor(Color.rgb(255,0,0));
+            continuar.setBackgroundColor(Color.rgb(255,0,0));
+        }
         contador++;
         contadorotro++;
     }
 
     public void ocContinuar(View view){
-            if(contador<=9){
-                nopreg.setText("Pregunta : " + (contadorotro));
-                //quitamos el texto
-                res.setText("");
-                retro.setText("");
-                sino.setText("");
-                //activamos y hacemos visible el boton calificar
-                calificar.setEnabled(true);
-                calificar.setVisibility(View.VISIBLE);
-                //desactivamos y ocultamos el botón continuar
-                continuar.setEnabled(false);
-                continuar.setVisibility(View.INVISIBLE);
-                preg.setText(matriz[praleatorio[contador]][0]);
+        if(contador<=9){
+            nopreg.setText("Pregunta : " + (contadorotro));
+            //quitamos el texto
+            res.setText("");
+            retro.setText("");
+            sino.setText("");
+            //activamos y hacemos visible el boton calificar
+            calificar.setEnabled(true);
+            calificar.setVisibility(View.VISIBLE);
+            //desactivamos y ocultamos el botón continuar
+            continuar.setEnabled(false);
+            continuar.setVisibility(View.INVISIBLE);
+            preg.setText(matriz[praleatorio[contador]][0]);
 
-            }
-            else{
-                Bundle enviarDatos = new Bundle();
-                enviarDatos.putInt("respuestas",puntuacion);
-                Intent x =  new Intent(this, ACT_F1_Resultados.class);
-                x.putExtras(enviarDatos);
-                startActivity(x);
-            }
+        }
+        else{
+            Bundle enviarDatos = new Bundle();
+            enviarDatos.putInt("respuestas",puntuacion);
+            Intent x =  new Intent(this, ACT_F1_Resultados.class);
+            x.putExtras(enviarDatos);
+            startActivity(x);
+        }
     }
 
 
@@ -182,17 +181,10 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }else if (tema_elegido==4) {
-
-        }else if (tema_elegido==5) {
             String resbefore= String.valueOf(res.getText());
             res.setText(resbefore+"N/m");
-        }else if (tema_elegido==6) {
 
-        }else if (tema_elegido==7) {
+        }else if (tema_elegido==3) {
 
         }
     }
@@ -200,17 +192,10 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }else if (tema_elegido==4) {
-
-        }else if (tema_elegido==5) {
             String resbefore= String.valueOf(res.getText());
             res.setText(resbefore+"N");
-        }else if (tema_elegido==6) {
 
-        }else if (tema_elegido==7) {
+        }else if (tema_elegido==3) {
 
         }
     }
@@ -218,17 +203,10 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }else if (tema_elegido==4) {
-
-        }else if (tema_elegido==5) {
             String resbefore= String.valueOf(res.getText());
             res.setText(resbefore+"m");
-        }else if (tema_elegido==6) {
 
-        }else if (tema_elegido==7) {
+        }else if (tema_elegido==3) {
 
         }
     }
@@ -236,17 +214,10 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }else if (tema_elegido==4) {
-
-        }else if (tema_elegido==5) {
             String resbefore= String.valueOf(res.getText());
             res.setText(resbefore+"J");
-        }else if (tema_elegido==6) {
 
-        }else if (tema_elegido==7) {
+        }else if (tema_elegido==3) {
 
         }
     }
@@ -254,17 +225,10 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }else if (tema_elegido==4) {
-
-        }else if (tema_elegido==5) {
             String resbefore= String.valueOf(res.getText());
             res.setText(resbefore+"-");
-        }else if (tema_elegido==6) {
 
-        }else if (tema_elegido==7) {
+        }else if (tema_elegido==3) {
 
         }
     }
@@ -272,17 +236,10 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }else if (tema_elegido==4) {
-
-        }else if (tema_elegido==5) {
             String resbefore= String.valueOf(res.getText());
             res.setText(resbefore+"×10^");
-        }else if (tema_elegido==6) {
 
-        }else if (tema_elegido==7) {
+        }else if (tema_elegido==3) {
 
         }
     }
@@ -290,17 +247,10 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }else if (tema_elegido==4) {
-
-        }else if (tema_elegido==5) {
             String resbefore= String.valueOf(res.getText());
             res.setText(resbefore+"^");
-        }else if (tema_elegido==6) {
 
-        }else if (tema_elegido==7) {
+        }else if (tema_elegido==3) {
 
         }
     }
@@ -308,17 +258,10 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-
-        }else if (tema_elegido==3) {
-
-        }else if (tema_elegido==4) {
-
-        }else if (tema_elegido==5) {
             String resbefore= String.valueOf(res.getText());
             res.setText(resbefore+"Pa");
-        }else if (tema_elegido==6) {
 
-        }else if (tema_elegido==7) {
+        }else if (tema_elegido==3) {
 
         }
     }

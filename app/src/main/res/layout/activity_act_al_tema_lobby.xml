@@ -7,9 +7,14 @@
     tools:context=".ACT_AL_TemaLobby">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/txtTituloAlgLobby"
@@ -23,48 +28,48 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/btncalf1lh"
+            android:id="@+id/btncalAl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
+            android:layout_marginLeft="110dp"
             android:layout_marginRight="50dp"
             android:backgroundTint="@color/black"
-            android:onClick="ocCalf1lh"
+            android:onClick="ocCalAl"
             android:text="Calculadora"
             android:textSize="20dp" />
 
         <Button
-            android:id="@+id/btncuesf1lh"
+            android:id="@+id/btncuesAl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="ocCuesf1lh"
-            android:textSize="19dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"
-            android:layout_marginLeft="120dp"
             android:backgroundTint="@color/black"
-            android:text="Cuestionario" />
+            android:onClick="ocCuesAl"
+            android:text="Cuestionario"
+            android:textSize="19dp" />
 
         <Button
-            android:id="@+id/btnforf1lh"
+            android:id="@+id/btnforAl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="ocForf1lh"
-            android:textSize="19dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"
-            android:layout_marginLeft="120dp"
             android:backgroundTint="@color/black"
-            android:text="Banco de Fórmulas" />
+            android:onClick="ocForAl"
+            android:text="Banco de Fórmulas"
+            android:textSize="19dp" />
 
         <Button
-            android:id="@+id/btnexpf1lh"
+            android:id="@+id/btnexpAl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="ocExpf1lh"
-            android:textSize="19dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"
-            android:layout_marginLeft="120dp"
             android:backgroundTint="@color/black"
-            android:text="Explicación" />
+            android:onClick="ocExpAl"
+            android:text="Explicación"
+            android:textSize="19dp" />
 
         <ImageView
             android:id="@+id/imageView9"

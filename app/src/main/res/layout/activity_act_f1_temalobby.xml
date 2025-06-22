@@ -33,12 +33,12 @@
         android:id="@+id/btncuesf1lh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="ocCuesf1lh"
-        android:textSize="19dp"
         android:layout_marginRight="100dp"
         android:layout_marginLeft="120dp"
         android:backgroundTint="@color/black"
-        android:text="Cuestionario" />
+        android:onClick="ocCuesf1lh"
+        android:text="Cuestionario"
+        android:textSize="19dp" />
 
     <Button
         android:id="@+id/btnforf1lh"

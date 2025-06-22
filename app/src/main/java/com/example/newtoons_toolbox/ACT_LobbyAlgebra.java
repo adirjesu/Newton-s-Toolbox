@@ -22,13 +22,13 @@ public class ACT_LobbyAlgebra extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_lobby_algebra);
 
-        /*poli = findViewById(R.id.btnpolinomios);
-        ecua = findViewById(R.id.btnecuaciones);
-        fact = findViewById(R.id.btnfactor);*/
+        poli = findViewById(R.id.btnPolinomios);
+        ecua = findViewById(R.id.btnEcuaciones);
+        fact = findViewById(R.id.btnFactorizacion);
     }
 
 
-    public void ocPoli (View view){
+    public void ocPolinomios (View view){
         tema_elegido=1;
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
@@ -37,7 +37,7 @@ public class ACT_LobbyAlgebra extends AppCompatActivity {
         startActivity(x);
     }
 
-    public void ocEcua (View view){
+    public void ocEcuaciones (View view){
         tema_elegido=2;
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
@@ -46,7 +46,7 @@ public class ACT_LobbyAlgebra extends AppCompatActivity {
         startActivity(x);
     }
 
-    public void ocFactor (View view){
+    public void ocFactorizacion (View view){
         tema_elegido=3;
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);

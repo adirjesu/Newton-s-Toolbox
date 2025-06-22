@@ -27,6 +27,7 @@ public class ACT_F1_TemaLobby extends AppCompatActivity {
         Bundle recibeDatos = getIntent().getExtras();
         tema_elegido = recibeDatos.getInt("tema");
         titulo=findViewById(R.id.txtTitulo5);
+
         if(tema_elegido==1){
             titulo.setText("Principio de Pascal");
 
@@ -41,6 +42,7 @@ public class ACT_F1_TemaLobby extends AppCompatActivity {
         }
     }//main
 
+
     public void ocCalf1lh (View view){
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
@@ -49,15 +51,16 @@ public class ACT_F1_TemaLobby extends AppCompatActivity {
         startActivity(x);
 
     }
+
     public void ocCuesf1lh (View view){
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
         Intent x =  new Intent(this,ACT_F1_Cuestionario.class);
         x.putExtras(enviarDatos);
         startActivity(x);
-
-
     }
+
+
     public void ocForf1lh (View view){
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
@@ -65,6 +68,8 @@ public class ACT_F1_TemaLobby extends AppCompatActivity {
         x.putExtras(enviarDatos);
         startActivity(x);
     }
+
+
     public void ocExpf1lh (View view){
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
@@ -111,6 +116,5 @@ public class ACT_F1_TemaLobby extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 
 }
