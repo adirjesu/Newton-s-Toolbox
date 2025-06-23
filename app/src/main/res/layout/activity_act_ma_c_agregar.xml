@@ -112,96 +112,120 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/btns1a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="ocsimf1"
-                android:textColor="@color/white"
                 android:layout_marginLeft="40dp"
                 android:backgroundTint="@color/black"
-                android:text="" />
+                android:onClick="ocsimf1"
+                android:text=""
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btns2a"
-                android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
                 android:onClick="ocsimf2"
-                android:text="" />
+                android:text=""
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btns3a"
-                android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="ocsimf3"
                 android:backgroundTint="@color/black"
-                android:text="" />
+                android:onClick="ocsimf3"
+                android:text=""
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btns4a"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
                 android:onClick="ocsimf4"
-                android:text="" />
+                android:text=""
+                android:textColor="@color/white" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/btns5a"
-                android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:backgroundTint="@color/black"
                 android:onClick="ocsimf5"
-                android:text="" />
+                android:text=""
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btns6a"
-                android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
                 android:onClick="ocsimf6"
-                android:text="" />
+                android:text=""
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btns7a"
-                android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
                 android:onClick="ocsimf7"
-                android:text="" />
+                android:text=""
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btns8a"
-                android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
                 android:onClick="ocsimf8"
-                android:text="" />
+                android:text=""
+                android:textColor="@color/white" />
         </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/txtRETRO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Retroalimentación:"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etretro"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="¿?"
+        android:inputType="text"
+        android:textSize="18dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="77dp">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="74dp"
             android:layout_weight="3">
 
             <Button
@@ -254,12 +278,14 @@
 
         </TableRow>
 
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="90dp"
-            android:layout_height="110dp"
-            android:layout_marginTop="-80dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
     </TableLayout>
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="match_parent"
+        android:layout_height="159dp"
+        android:layout_marginTop="-10dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/captura_de_pantalla_2025_05_28_221107" />
+
 </LinearLayout>

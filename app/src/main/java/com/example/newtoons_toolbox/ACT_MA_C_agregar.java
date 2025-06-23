@@ -30,7 +30,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ACT_MA_C_agregar extends AppCompatActivity {
-    private EditText pregunta,respuesta;
+    private EditText pregunta,respuesta,retroalimentacion;
     private Button s1,s2,s3,s4,s5,s6,s7,s8,agregar;
     private RadioButton t1,t2,t3;
     public static String materi,usuario,mat;
@@ -43,6 +43,7 @@ public class ACT_MA_C_agregar extends AppCompatActivity {
 
         pregunta=findViewById(R.id.etpreguntar);
         respuesta=findViewById(R.id.etrespuestar);
+        retroalimentacion=findViewById(R.id.etretro);
 
         s1      =findViewById(R.id.btns1a);
         s2      =findViewById(R.id.btns2a);
@@ -84,8 +85,12 @@ public class ACT_MA_C_agregar extends AppCompatActivity {
                     Toast.makeText(ACT_MA_C_agregar.this, "Debe ingresar una pregunta", Toast.LENGTH_SHORT).show();
                 } else if (respuesta.length()<2) {
                     Toast.makeText(ACT_MA_C_agregar.this, "Debe ingresar una respuesta", Toast.LENGTH_SHORT).show();
-                }else{
+                }else if(retroalimentacion.length()<2){
+                    Toast.makeText(ACT_MA_C_agregar.this, "Debe ingresar una retroalimentación", Toast.LENGTH_SHORT).show();
+
+                } else{
                     buscar_nopregunta("http://192.168.0.120:8080/newtons/buscar_nopreguntas.php?materia="+materi+"&tema="+t+"");
+
                 }
 
 
@@ -145,6 +150,7 @@ public class ACT_MA_C_agregar extends AppCompatActivity {
                 parametros.put("tema", String.valueOf(t));
                 parametros.put("reactivo",pregunta.getText().toString());
                 parametros.put("respuesta",respuesta.getText().toString());
+                parametros.put("retroalimentacion",retroalimentacion.getText().toString());
 
                 return parametros;
             }

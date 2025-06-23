@@ -58,7 +58,7 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TableRow
             android:layout_width="match_parent"
@@ -144,9 +144,33 @@
                 android:textColor="@color/white" />
         </TableRow>
 
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/txtRETRO2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Retroalimentación:"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etretroalimen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="¿?"
+        android:inputType="text"
+        android:textSize="18dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/btnlipiareactivo"
@@ -165,5 +189,7 @@
                 android:backgroundTint="@color/black"
                 android:text="Actualizar" />
         </TableRow>
+
     </TableLayout>
+
 </LinearLayout>
