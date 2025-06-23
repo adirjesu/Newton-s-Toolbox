@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Polinomio 1 -->
+
+        <TextView
+            android:text="Polinomio 1  (a₁x² + b₁x + c₁)"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/a1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="a₁"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/b1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="b₁"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/c1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="c₁"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <!-- Polinomio 2 -->
+        <Space
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Polinomio 2  (a₂x² + b₂x + c₂)"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/a2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="a₂"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/b2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="b₂"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/c2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="c₂"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <Space
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnSumar"
+            android:text="Sumar Polinomios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnRestar"
+            android:text="Restar Polinomios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnMultiplicar"
+            android:text="Multiplicar Polinomios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black" />
+
+        <TextView
+            android:text="Monomio divisor (por ejemplo: 2x):"
+            android:textSize="18dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etMonomio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Coef. del monomio"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnDividir"
+            android:text="Dividir P1 ÷ Monomio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black" />
+
+    </LinearLayout>
+
+</ScrollView>

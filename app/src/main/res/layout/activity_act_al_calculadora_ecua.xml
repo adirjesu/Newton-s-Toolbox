@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:text="Resolución de ecuaciones"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="ax² + bx + c = 0"
+            android:textSize="18sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="24dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="Coeficiente a"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="Coeficiente b"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="Coeficiente c"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:padding="16dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:text=""
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/btnResolver"
+            android:text="Resolver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="USOS DE ESTA CALCULADORA"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:background="#EEEEEE"
+                android:padding="8dp">
+
+                <!-- Fila de encabezado -->
+                <TableRow>
+                    <TextView android:text="Tipo" android:padding="8dp" android:textStyle="bold" android:textSize="18dp" android:textAlignment="center"/>
+                    <TextView android:text="Ejemplo" android:padding="8dp" android:textStyle="bold" android:textSize="18dp" android:textAlignment="center"/>
+                    <TextView android:text="Resultado" android:padding="8dp" android:textStyle="bold" android:textSize="18dp" android:textAlignment="center"/>
+                </TableRow>
+
+                <!-- Fila 1 -->
+                <TableRow>
+                    <TextView android:text="Primer grado" android:padding="8dp" android:textSize="18dp"/>
+                    <TextView android:text="a=0, b=2, c=-4" android:padding="8dp" android:textSize="18dp"/>
+                    <TextView android:text="x = 2" android:padding="8dp" android:textSize="18dp"/>
+                </TableRow>
+
+                <!-- Fila 2 -->
+                <TableRow>
+                    <TextView android:text="2° grado (2 reales)" android:padding="8dp" android:textSize="18dp"/>
+                    <TextView android:text="a=1, b=-3, c=2" android:padding="8dp" android:textSize="18dp"/>
+                    <TextView android:text="x₁ = 2, x₂ = 1" android:padding="8dp" android:textSize="18dp"/>
+                </TableRow>
+
+                <!-- Fila 3 -->
+                <TableRow>
+                    <TextView android:text="2° grado (doble raíz)" android:padding="8dp" android:textSize="18dp"/>
+                    <TextView android:text="a=1, b=2, c=1" android:padding="8dp" android:textSize="18dp"/>
+                    <TextView android:text="x = -1" android:padding="8dp" android:textSize="18dp"/>
+                </TableRow>
+
+                <!-- Fila 4 -->
+                <TableRow>
+                    <TextView android:text="2° grado (complejas)" android:padding="8dp" android:textSize="18dp"/>
+                    <TextView android:text="a=1, b=2, c=5" android:padding="8dp" android:textSize="18dp"/>
+                    <TextView android:text="x₁ = -1+2i, x₂ = -1-2i" android:padding="8dp" android:textSize="18dp"/>
+                </TableRow>
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</ScrollView>
