@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 public class ACT_F1_Explicacion extends AppCompatActivity {
+
     public static int tema_elegido=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,6 @@ public class ACT_F1_Explicacion extends AppCompatActivity {
             w.putExtras(enviarDatos);
             startActivity(w);
         }
-
 
 
         return super.onOptionsItemSelected(item);

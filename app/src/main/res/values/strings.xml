@@ -141,7 +141,10 @@ A: Área de la sección transversal (m²)</item>
 
 
 
+
+
     <!-- //////////     ÁLGEBRA      \\\\\\\\\\ -->
+    <!-- //////////     OPERACIONES CON POLINOMIOS      \\\\\\\\\\ -->
 
     <string-array name="al_poli_p">
         <item>Un vivero calcula la cantidad de árboles que necesita sembrar durante dos temporadas distintas del año.<br/>En primavera, el número de árboles que siembran está representado por el polinomio 4x²+3x+7. En otoño, siembran según el polinomio 2x²+5x+9.<br/>Cuál es la expresión que representa la cantidad total de árboles sembrados en ambas temporadas?</item>
@@ -160,4 +163,26 @@ A: Área de la sección transversal (m²)</item>
         <item>5/4x²+5/4x+5/6 </item>
         <!-- COMPLETAR LAS RESPUESTAS -->
     </string-array>
+
+    <string-array name = "al_poli_retro">
+
+    </string-array>
+
+
+
+    <!-- //////////     RESOLUCIÓN DE ECUACIONES      \\\\\\\\\\ -->
+    <string-array name="al_ecua_p"></string-array>
+
+    <string-array name="al_ecua_r"></string-array>
+
+    <string-array name = "al_ecua_retro"></string-array>
+
+
+
+    <!-- //////////     FACTORIZACIÓN      \\\\\\\\\\ -->
+    <string-array name="al_fact_p"></string-array>
+
+    <string-array name="al_fact_r"></string-array>
+
+    <string-array name = "al_fact_retro"></string-array>
 </resources>
