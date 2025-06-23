@@ -15,6 +15,16 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Random;
 
 public class ACT_F1_Cuestionario extends AppCompatActivity {
@@ -43,6 +53,13 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
     public static String[] preguntas;
     public static String[] respuestas;
     public static String[] retroalimentaciones;
+    public static String[] preguntassql= new String[15];
+    public static String[] respuestassql= new String[15];
+    public static String[] retroalimentacionessql= new String[15];
+    public static String [] Preguntas;
+    public static String [] Respuestas;
+    public static String [] Retroalimentaciones;
+
 
 
     @Override
@@ -70,6 +87,7 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         Bundle recibeDatos = getIntent().getExtras();
         tema_elegido = recibeDatos.getInt("tema");
         if(tema_elegido==1){
+            buscarreactivos("http://192.168.0.120:8080/newtons/buscar_preguntas.php?materia=2&tema=1");
 
         } else if (tema_elegido==2) {
             preguntas = getResources().getStringArray(R.array.f1_lhp);
@@ -83,25 +101,16 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
             s6.setText("×10^");
             s7.setText("^");
             s8.setText("Pa");
+            buscarreactivos("http://192.168.0.120:8080/newtons/buscar_preguntas.php?materia=2&tema=2");
         } else if (tema_elegido==3) {
+            buscarreactivos("http://192.168.0.120:8080/newtons/buscar_preguntas.php?materia=2&tema=3");
 
         }
 
 
 // Inicializa la matriz con el tamaño adecuado
 
-// Llenar la matriz con preguntas, respuestas y retroalimentaciones
-        for (int i = 0; i < preguntas.length; i++) {
-            matriz[i][0] = preguntas[i]; // Pregunta
-            matriz[i][1] = respuestas[i]; // Respuesta
-            matriz[i][2] = retroalimentaciones[i]; // Retroalimentación
-        }
 
-        for(int i=0;i<praleatorio.length;i++){
-            praleatorio[i]=i;
-        }
-        shuffleArray(praleatorio);
-        preg.setText(matriz[praleatorio[0]][0]);
 
 
         mensaje(ACT_F1_Cuestionario.this);
@@ -173,7 +182,66 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
     }
 
     /*//////////////EMPIEZAN LAS VARIABLES\\\\\\\\\\\\\\*/
+//////////////////////////* LOS DESTOS PA'  CONECTAR *\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    /////////////
+    private void buscarreactivos(String URL){
+        int b=0;
+        JsonArrayRequest jsonArrayRequest= new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                JSONObject jsonObject = null;
+                for (int i = 0; i < response.length(); i++) {
+                    try {
+                        jsonObject = response.getJSONObject(i);
+                        //radioButtons[i].setText(jsonObject.getString("id_reactivo"));
+                        preguntassql[i]=jsonObject.getString("reactivo");
+                        respuestassql[i]=jsonObject.getString("respuesta");
+                        retroalimentacionessql[i]=jsonObject.getString("retroalimentacion");
 
+                    } catch (JSONException e) {
+                        Toast.makeText(ACT_F1_Cuestionario.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }//catch
+                }//for
+                Preguntas = new String[preguntas.length + preguntassql.length];
+                System.arraycopy(preguntas, 0, Preguntas, 0, preguntas.length);
+                System.arraycopy(preguntassql, 0, Preguntas, preguntas.length, preguntassql.length);
+
+
+                Respuestas = new String[respuestas.length + respuestassql.length];
+                System.arraycopy(respuestas, 0, Respuestas, 0, respuestas.length);
+                System.arraycopy(respuestassql, 0, Respuestas, respuestas.length, respuestassql.length);
+
+
+                Retroalimentaciones = new String[retroalimentaciones.length + retroalimentacionessql.length];
+                System.arraycopy(retroalimentaciones, 0, Retroalimentaciones, 0, retroalimentaciones.length);
+                System.arraycopy(retroalimentacionessql, 0, Retroalimentaciones, retroalimentaciones.length, retroalimentacionessql.length);
+// Llenar la matriz con preguntas, respuestas y retroalimentaciones
+                for (int i = 0; i < preguntas.length; i++) {
+                    matriz[i][0] = Preguntas[i]; // Pregunta
+                    matriz[i][1] = Respuestas[i]; // Respuesta
+                    matriz[i][2] = Retroalimentaciones[i]; // Retroalimentación
+                }
+
+                for(int i=0;i<praleatorio.length;i++){
+                    praleatorio[i]=i;
+                }
+                shuffleArray(praleatorio);
+                preg.setText(matriz[praleatorio[0]][0]);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(ACT_F1_Cuestionario.this, "NO SE ENCONTRARON REACTIVOS", Toast.LENGTH_SHORT).show();
+
+            }
+        }
+        );
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(jsonArrayRequest);
+    }
+
+    ///////////////////
+    /////////////////////////////////////////////////////////
 
 
 /////////////////////////*     SÍMBOLOS   *\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

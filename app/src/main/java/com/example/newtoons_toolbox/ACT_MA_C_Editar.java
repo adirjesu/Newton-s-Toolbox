@@ -29,7 +29,7 @@ import java.util.Map;
 public class ACT_MA_C_Editar extends AppCompatActivity {
     public static String id_reactivo,materia,tema;
     RequestQueue requestQueue;
-    private EditText pregunta,respuesta;
+    private EditText pregunta,respuesta,retroalimentacion;
     private Button editar,s1,s2,s3,s4,s5,s6,s7,s8;
     ;
 
@@ -42,6 +42,7 @@ public class ACT_MA_C_Editar extends AppCompatActivity {
 
         pregunta=findViewById(R.id.etpreguntareac);
         respuesta=findViewById(R.id.etrespuestareac);
+        retroalimentacion=findViewById(R.id.etretroalimen);
         editar=findViewById(R.id.btneditareactivo);
 
         s1      =findViewById(R.id.btns1r);
@@ -139,8 +140,9 @@ public class ACT_MA_C_Editar extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> parametros= new HashMap<String,String>();
                 parametros.put("id_reactivo",id_reactivo);
-                parametros.put("reactivo",pregunta.toString());
-                parametros.put("respuesta",respuesta.toString());
+                parametros.put("reactivo",pregunta.getText().toString());
+                parametros.put("respuesta",respuesta.getText().toString());
+                parametros.put("retroalimentacion",retroalimentacion.getText().toString());
                 return parametros;
             }
         };
