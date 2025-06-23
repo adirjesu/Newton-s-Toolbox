@@ -23,7 +23,7 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
     public static int [] praleatorio= new int[10];
     private TextView nopreg;
     private TextView preg;
-    private TextView res;
+    private EditText res;
     private TextView sino;
     private Button calificar;
     private Button continuar;
@@ -179,7 +179,7 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
         else{
             Bundle enviarDatos = new Bundle();
             enviarDatos.putInt("respuestas",puntuacion);
-            Intent x =  new Intent(this, ACT_F1_Resultados.class);
+            Intent x =  new Intent(this, ACT_AL_Resultados.class);
             x.putExtras(enviarDatos);
             startActivity(x);
         }

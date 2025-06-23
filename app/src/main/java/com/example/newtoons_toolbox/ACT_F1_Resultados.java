@@ -10,8 +10,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ACT_F1_Resultados extends AppCompatActivity {
-public static int puntuacion=0;
-private TextView resultado;
+
+    public static int puntuacion=0;
+    private TextView resultado;
     public static int tema_elegido=0;
 
     @Override
