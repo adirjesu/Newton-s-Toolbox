@@ -75,7 +75,7 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
         if(tema_elegido==1){
             preguntas = getResources().getStringArray(R.array.al_poli_p);
             respuestas = getResources().getStringArray(R.array.al_poli_r);
-            retroalimentaciones = getResources().getStringArray(R.array.al_poli_retro);
+            //retroalimentaciones = getResources().getStringArray(R.array.al_poli_retro);
             s1.setText("+");
             s2.setText("-");
             s3.setText("(");
@@ -86,9 +86,9 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             s8.setText("=");
 
         } else if (tema_elegido==2) {
-            preguntas = getResources().getStringArray(R.array.al_ecua_p);
-            respuestas = getResources().getStringArray(R.array.al_ecua_r);
-            retroalimentaciones = getResources().getStringArray(R.array.al_ecua_retro);
+            //preguntas = getResources().getStringArray(R.array.al_ecua_p);
+            //respuestas = getResources().getStringArray(R.array.al_ecua_r);
+            //retroalimentaciones = getResources().getStringArray(R.array.al_ecua_retro);
             s1.setText("+");
             s2.setText("-");
             s3.setText("(");
@@ -99,9 +99,9 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             s8.setText("=");
 
         } else if (tema_elegido==3) {
-            preguntas = getResources().getStringArray(R.array.al_fact_p);
-            respuestas = getResources().getStringArray(R.array.al_fact_r);
-            retroalimentaciones = getResources().getStringArray(R.array.al_fact_retro);
+           // preguntas = getResources().getStringArray(R.array.al_fact_p);
+            //respuestas = getResources().getStringArray(R.array.al_fact_r);
+            //retroalimentaciones = getResources().getStringArray(R.array.al_fact_retro);
             s1.setText("+");
             s2.setText("-");
             s3.setText("(");
@@ -205,45 +205,29 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
 
 
 /////////////////////////*     SÍMBOLOS   *\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    public void sim1(){
-        String resbefore= String.valueOf(res.getText());
-        res.setText(resbefore+"+");
-        res.setSelection(resbefore.length());
+    public void Sim1(){
+        respuesta("+");
     }
-    public void sim2(){
-        String resbefore= String.valueOf(res.getText());
-        res.setText(resbefore+"-");
-        res.setSelection(resbefore.length());
+    public void Sim2(){
+        respuesta("-");
     }
-    public void sim3(){
-        String resbefore= String.valueOf(res.getText());
-        res.setText(resbefore+"(");
-        res.setSelection(resbefore.length());
+    public void Sim3(){
+        respuesta("(");
     }
-    public void sim4(){
-        String resbefore= String.valueOf(res.getText());
-        res.setText(resbefore+")");
-        res.setSelection(resbefore.length());
+    public void Sim4(){
+        respuesta(")");
     }
-    public void sim5(){
-        String resbefore= String.valueOf(res.getText());
-        res.setText(resbefore+"÷");
-        res.setSelection(resbefore.length());
+    public void Sim5(){
+        respuesta("÷");
     }
-    public void sim6(){
-        String resbefore= String.valueOf(res.getText());
-        res.setText(resbefore+"^");
-        res.setSelection(resbefore.length());
+    public void Sim6(){
+        respuesta("^");
     }
-    public void sim7(){
-        String resbefore= String.valueOf(res.getText());
-        res.setText(resbefore+"√");
-        res.setSelection(resbefore.length());
+    public void Sim7(){
+        respuesta("√");
     }
-    public void sim8(){
-        String resbefore= String.valueOf(res.getText());
-        res.setText(resbefore+"=");
-        res.setSelection(resbefore.length());
+    public void Sim8(){
+        respuesta("=");
     }
 
 
@@ -264,7 +248,20 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
         }
     }
 
+    public String respuesta(String unidad) {
+        String resbefore;
+        if (res == null) {
+            return ""; // O lanzar una excepción si es crítico
+        }
+        else{
+            resbefore=res.getText().toString();
+        }
+        String nuevoTexto = resbefore + unidad;
+        res.setText(nuevoTexto);
+        res.setSelection(nuevoTexto.length());
 
+        return nuevoTexto; // Retorna el texto actualizado
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.regresar,menu);
