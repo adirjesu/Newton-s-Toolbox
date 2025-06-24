@@ -30,25 +30,38 @@ public class ACT_AL_TemaLobby extends AppCompatActivity {
 
         if(tema_elegido==1){
             titulo.setText("Operaciones con polinomios");
-
         }
         if(tema_elegido==2){
             titulo.setText("Resolución de ecuaciones");
         }
-
         if(tema_elegido==3){
             titulo.setText("Factorización");
-
         }
     }
 
 
     public void ocCalAl (View view){
+        if (tema_elegido == 1) {
+            Intent intent = new Intent(ACT_AL_TemaLobby.this, ACT_AL_Calculadora_Poli.class);
+            startActivity(intent);
+        }
+        if (tema_elegido == 2) {
+            Intent intent = new Intent(ACT_AL_TemaLobby.this, ACT_AL_Calculadora_Ecua.class);
+            startActivity(intent);
+        }
+        if (tema_elegido == 3) {
+            Intent intent = new Intent(ACT_AL_TemaLobby.this, ACT_AL_Calculadora_Fact.class);
+            startActivity(intent);
+        }
+
+
+        /*
         Bundle enviarDatos = new Bundle();
         enviarDatos.putInt("tema",tema_elegido);
-        Intent x =  new Intent(this,ACT_AL_Calculadora.class);
+        Intent x =  new Intent(this, ACT_AL_Calculadora_Ecua.class);
         x.putExtras(enviarDatos);
         startActivity(x);
+        */
     }
 
 
@@ -79,6 +92,7 @@ public class ACT_AL_TemaLobby extends AppCompatActivity {
     }
 
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menuestudiantes,menu);
@@ -90,7 +104,7 @@ public class ACT_AL_TemaLobby extends AppCompatActivity {
         if(id==R.id.regresar){
             Toast.makeText(this, "Regresando",
                     Toast.LENGTH_SHORT).show();
-            Intent w =  new Intent(this,ACT_LobbyFisica1.class);
+            Intent w =  new Intent(this,ACT_LobbyAlgebra.class);
             startActivity(w);
         }
 

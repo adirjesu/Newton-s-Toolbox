@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Factorizar ax + bx"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <Spinner
+            android:id="@+id/spTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:entries="@array/tipos_factorizacion"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="a"
+            android:inputType="numberDecimal"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:minWidth="48dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="b"
+            android:inputType="numberDecimal"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:minWidth="48dp"
+            android:minHeight="48dp" />
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+
+        <!-- Binomio -->
+
+        <EditText
+            android:id="@+id/etBinA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="a²"
+            android:textColor="@color/black"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etBinB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="b²"
+            android:textColor="@color/black"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+
+        <!-- Trinomio -->
+        <EditText
+            android:id="@+id/etTriA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="a"
+            android:textColor="@color/black"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etTriB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="b"
+            android:textColor="@color/black"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etTriC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="c"
+            android:textColor="@color/black"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:hint="Resultado"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:paddingTop="30dp" />
+
+        <Button
+            android:id="@+id/btnFactorizar"
+            android:text="Factorizar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/black"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+</ScrollView>

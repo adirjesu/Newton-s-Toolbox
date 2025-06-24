@@ -31,7 +31,7 @@
             android:id="@+id/btncalAl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginRight="50dp"
             android:backgroundTint="@color/black"
             android:onClick="ocCalAl"
