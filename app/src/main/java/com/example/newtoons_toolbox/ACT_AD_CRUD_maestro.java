@@ -77,7 +77,7 @@ public class ACT_AD_CRUD_maestro extends AppCompatActivity {
             public void onClick(View view) {
                  email = correo.getText().toString().trim();
                 if (!email.isEmpty()) {
-                    usuariorepetido("http://192.168.3.67:8080/newtons/buscar_usu_maestro.php?usuario=" + email);
+                    usuariorepetido("http://192.168.0.247:8080/newtons/buscar_usu_maestro.php?usuario=" + email);
                 } else {
                     Toast.makeText(ACT_AD_CRUD_maestro.this, "Ingrese un correo", Toast.LENGTH_SHORT).show();
                 }
@@ -89,7 +89,7 @@ public class ACT_AD_CRUD_maestro extends AppCompatActivity {
             public void onClick(View view) {
 
                 if(!usuario.getText().toString().isEmpty()){
-                    buscarmaestro("http://192.168.0.250:8080/newtons/buscar_maestro.php?usuario="+usuario.getText()+"");
+                    buscarmaestro("http://192.168.0.247:8080/newtons/buscar_maestro.php?usuario="+usuario.getText()+"");
                     agregar.setVisibility(View.GONE);
                     agregar.setEnabled(false);
                     actualizar.setVisibility(View.VISIBLE);
@@ -106,14 +106,14 @@ public class ACT_AD_CRUD_maestro extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                    ejecutarServicio("http://192.168.0.250:8080/newtons/editar_maestro.php");
+                    ejecutarServicio("http://192.168.0.247:8080/newtons/editar_maestro.php");
 
             }
         });
         eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                eliminarprofesor("http://192.168.0.250:8080/newtons/eliminar_maestro.php");
+                eliminarprofesor("http://192.168.0.247:8080/newtons/eliminar_maestro.php");
             }
         });
 
@@ -238,7 +238,7 @@ private void usuariorepetido(String URL){
                         Toast.makeText(ACT_AD_CRUD_maestro.this, "USUARIO YA EXISTENTE", Toast.LENGTH_SHORT).show();
                         usuario.setText("");
                     }else{
-                        ejecutarServicio("http://192.168.3.67:8080/newtons/nuevo_maestro.php");
+                        ejecutarServicio("http://192.168.0.247:8080/newtons/nuevo_maestro.php");
                     }
                 } catch (JSONException e) {
                 }//catch

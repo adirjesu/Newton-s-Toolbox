@@ -89,7 +89,7 @@ public class ACT_MA_C_agregar extends AppCompatActivity {
                     Toast.makeText(ACT_MA_C_agregar.this, "Debe ingresar una retroalimentación", Toast.LENGTH_SHORT).show();
 
                 } else{
-                    buscar_nopregunta("http://192.168.0.120:8080/newtons/buscar_nopreguntas.php?materia="+materi+"&tema="+t+"");
+                    buscar_nopregunta("http://192.168.0.247:8080/newtons/buscar_nopreguntas.php?materia="+materi+"&tema="+t+"");
 
                 }
 
@@ -110,7 +110,7 @@ public class ACT_MA_C_agregar extends AppCompatActivity {
                     Toast.makeText(ACT_MA_C_agregar.this, "Preguntas Guardadas: " + totalpreguntas, Toast.LENGTH_SHORT).show();
                     int preguntasg = Integer.parseInt(totalpreguntas); // Conversión a int
                     if(preguntasg<=20){
-                        ejecutarServicio("http://192.168.0.120:8080/newtons/nueva_pregunta.php");
+                        ejecutarServicio("http://192.168.0.247:8080/newtons/nueva_pregunta.php");
                     }else{
                         Toast.makeText(ACT_MA_C_agregar.this, "Ha alcanzado el límite de preguntas guardadas (20)", Toast.LENGTH_SHORT).show();
                     }

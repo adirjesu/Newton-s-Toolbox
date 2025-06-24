@@ -139,11 +139,6 @@ A: Área de la sección transversal (m²)</item>
     </string-array>
 
 
-
-
-
-
-
     <!-- //////////     ÁLGEBRA      \\\\\\\\\\ -->
     <!-- //////////     OPERACIONES CON POLINOMIOS      \\\\\\\\\\ -->
 
@@ -244,25 +239,23 @@ A: Área de la sección transversal (m²)</item>
         </item>
         <item>
             1. Primero identificamos los términos semejantes en ambos polinomios: los términos con x², y los constantes.
-            <br/>
+            <br />
             2. Sumamos los términos con x²: 3/4x² + 1/2x².
             Para sumar estas fracciones, buscamos un común denominador (mínimo común denominador entre 4 y 2 es 4)
             3/4x²+2/4x²=5/4
-            <br/>
+            <br />
             3. Sumamos los términos con x: 1/2x+3/4x
             Mínimo común denominador entre 2 y 4 es 4:
             2/4x+3/4x=5/4x
-            <br/>
+            <br />
             4. Sumamos los términos constantes: ⅔ +⅙ .
             El mínimo común denominador entre 3 y 6 es 6:
             4/6+⅙ =⅚
-            <br/>
+            <br />
             5. Ahora unimos todos los resultados:
             5/4x²+5/4x+5/6
         </item>
     </string-array>
-
-
 
 
     <!-- //////////     RESOLUCIÓN DE ECUACIONES      \\\\\\\\\\ -->
@@ -271,8 +264,6 @@ A: Área de la sección transversal (m²)</item>
     <string-array name="al_ecua_r"></string-array>
 
     <string-array name="al_ecua_retro"></string-array>
-
-
 
 
     <!-- //////////     FACTORIZACIÓN      \\\\\\\\\\ -->

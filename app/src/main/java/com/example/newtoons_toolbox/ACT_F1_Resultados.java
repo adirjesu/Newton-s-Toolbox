@@ -42,8 +42,8 @@ public class ACT_F1_Resultados extends AppCompatActivity {
         puntuacion=7;
         incorrecta=3;
         tema_elegido=2;
-        ejecutarServicio("http://192.168.3.67:8080/newtons/up_promedio.php");
-        ejecutarServicio2("http://192.168.3.67:8080/newtons/up_porcentaje.php");
+        ejecutarServicio("http://192.168.0.247:8080/newtons/up_promedio.php");
+        ejecutarServicio2("http://192.168.0.247:8080/newtons/up_porcentaje.php");
     }//main
     private void ejecutarServicio(String URL){
 

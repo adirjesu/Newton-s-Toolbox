@@ -25,7 +25,7 @@ public class ACT_F1_Calculadora_Pascal extends AppCompatActivity {
 
 
 
-        ejecutarServicio("http://192.168.3.67:8080/newtons/up_calculadora.php");
+        ejecutarServicio("http://192.168.0.247:8080/newtons/up_calculadora.php");
 
     }
     private void ejecutarServicio(String URL){

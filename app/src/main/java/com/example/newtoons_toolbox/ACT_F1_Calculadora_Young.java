@@ -22,7 +22,7 @@ public class ACT_F1_Calculadora_Young extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_f1_calculadora_young);
-        ejecutarServicio("http://192.168.3.67:8080/newtons/up_calculadora.php");
+        ejecutarServicio("http://192.168.0.247:8080/newtons/up_calculadora.php");
 
     }
     private void ejecutarServicio(String URL){

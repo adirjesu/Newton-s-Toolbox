@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class ACT_LobbyMaestro extends AppCompatActivity {
     TextView usu,mat;
-    Button agregar,editar;
+    Button agregar,editar,reportes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +26,7 @@ public class ACT_LobbyMaestro extends AppCompatActivity {
         mat=findViewById(R.id.txtmateriamaestro);
         agregar =findViewById(R.id.btnagregarr);
         editar  =findViewById(R.id.btneditarreac);
+        reportes=findViewById(R.id.btnreportes);
 
         usu.setText("Bienvenido "+ usuario);
         mat.setText("Materia: "+ materia);
@@ -43,6 +44,15 @@ public class ACT_LobbyMaestro extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ACT_MA_Crud.class);
+                intent.putExtra("usuario", usuario);
+                intent.putExtra("materia", materia);
+                startActivity(intent);
+            }
+        });
+        reportes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ACT_MA_Reportes.class);
                 intent.putExtra("usuario", usuario);
                 intent.putExtra("materia", materia);
                 startActivity(intent);

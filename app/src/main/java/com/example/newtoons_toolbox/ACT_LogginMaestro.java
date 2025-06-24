@@ -53,7 +53,7 @@ public class ACT_LogginMaestro extends AppCompatActivity {
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                login("http://192.168.0.120:8080/newtons/login_maestro.php");
+                login("http://192.168.0.247:8080/newtons/login_maestro.php");
             }
         });
 
@@ -63,7 +63,7 @@ public class ACT_LogginMaestro extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 if (!response.isEmpty()) {
-                    buscarmaestro("http://192.168.0.120:8080/newtons/buscar_maestro.php?usuario=" + usu.getText() + "");
+                    buscarmaestro("http://192.168.0.247:8080/newtons/buscar_maestro.php?usuario=" + usu.getText() + "");
                 } else {
                     Toast.makeText(ACT_LogginMaestro.this, "Usuario o contraseña incorrecta", Toast.LENGTH_SHORT).show();
                 }

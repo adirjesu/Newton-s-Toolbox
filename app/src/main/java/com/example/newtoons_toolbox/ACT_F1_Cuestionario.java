@@ -88,7 +88,7 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         Bundle recibeDatos = getIntent().getExtras();
         tema_elegido = recibeDatos.getInt("tema");
         if(tema_elegido==1){
-            buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=2&tema=1");
+            buscarreactivos("http://192.168.0.247:8080/newtons/buscar_preguntas.php?materia=2&tema=1");
 
         } else if (tema_elegido==2) {
             preguntas = getResources().getStringArray(R.array.f1_lhp);
@@ -102,9 +102,9 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
             s6.setText("×10^");
             s7.setText("^");
             s8.setText("Pa");
-            buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=2&tema=2");
+            buscarreactivos("http://192.168.0.247:8080/newtons/buscar_preguntas.php?materia=2&tema=2");
         } else if (tema_elegido==3) {
-            buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=2&tema=3");
+            buscarreactivos("http://192.168.0.247:8080/newtons/buscar_preguntas.php?materia=2&tema=3");
 
         }
 

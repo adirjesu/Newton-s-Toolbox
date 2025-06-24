@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ACT_MA_Reportes">
+
+    <TextView
+        android:id="@+id/txtTituloreac3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="INGRESE LOS DATOS"
+        android:textAlignment="center"
+        android:textColor="#6A5ACD"
+        android:textSize="30dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtmateriaa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Tema: "
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <RadioGroup
+                android:id="@+id/rgTema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbrt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="ocTemareac"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/rbrt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="ocTemareac"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/rbrt3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="ocTemareac"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </RadioGroup>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtmateriaa2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Reporte: "
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <RadioGroup
+                android:id="@+id/rgrTema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbrr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="ocTemareac"
+                    android:text="promedio de aciertos"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/rbrr2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="ocTemareac"
+                    android:text="Uso de la calculadora"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/rbrr3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="ocTemareac"
+                    android:text="promedio de aprobados/reprobados"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </RadioGroup>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnreporte"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="Generar Reporte"
+        android:textSize="20dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text=" : "
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtr2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text=" : "
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtr3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text=" : "
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

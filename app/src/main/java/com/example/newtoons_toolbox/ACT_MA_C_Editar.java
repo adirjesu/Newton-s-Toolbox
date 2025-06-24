@@ -54,11 +54,11 @@ public class ACT_MA_C_Editar extends AppCompatActivity {
         s7      =findViewById(R.id.btns7r);
         s8      =findViewById(R.id.btns8r);
 
-        buscarreactivos("http://192.168.0.120:8080/newtons/buscar_pregunta.php?id_reactivo="+id_reactivo+"");
+        buscarreactivos("http://192.168.0.247:8080/newtons/buscar_pregunta.php?id_reactivo="+id_reactivo+"");
         editar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ejecutarServicio("http://192.168.0.120:8080/newtons/editar_reactivo.php");
+                ejecutarServicio("http://192.168.0.247:8080/newtons/editar_reactivo.php");
             }
         });
 

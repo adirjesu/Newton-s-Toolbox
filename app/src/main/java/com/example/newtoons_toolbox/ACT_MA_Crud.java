@@ -139,7 +139,7 @@ public class ACT_MA_Crud extends AppCompatActivity {
         eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                borrarreactivo("http://192.168.0.120:8080/newtons/eliminar_reactivo.php");
+                borrarreactivo("http://192.168.0.247:8080/newtons/eliminar_reactivo.php");
             }
         });
         editar.setOnClickListener(new View.OnClickListener() {
@@ -222,17 +222,17 @@ private void buscarreactivos(String URL){
     public void ocTemareact(View view){
         if (t1.isChecked()){
             t=1;
-            buscarreactivos("http://192.168.0.120:8080/newtons/buscar_preguntas.php?materia="+materi+"&tema="+t+"");
+            buscarreactivos("http://192.168.0.247:8080/newtons/buscar_preguntas.php?materia="+materi+"&tema="+t+"");
 
         }
         if (t2.isChecked()){
             t=2;
-            buscarreactivos("http://192.168.0.120:8080/newtons/buscar_preguntas.php?materia="+materi+"&tema="+t+"");
+            buscarreactivos("http://192.168.0.247:8080/newtons/buscar_preguntas.php?materia="+materi+"&tema="+t+"");
 
         }
         if (t3.isChecked()){
             t=3;
-            buscarreactivos("http://192.168.0.120:8080/newtons/buscar_preguntas.php?materia="+materi+"&tema="+t+"");
+            buscarreactivos("http://192.168.0.247:8080/newtons/buscar_preguntas.php?materia="+materi+"&tema="+t+"");
 
         }
     }
