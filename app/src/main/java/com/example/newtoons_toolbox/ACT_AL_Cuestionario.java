@@ -95,8 +95,13 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
         if(tema_elegido==1){
             preguntas = getResources().getStringArray(R.array.al_poli_p);
             respuestas = getResources().getStringArray(R.array.al_poli_r);
+<<<<<<< HEAD
             //retroalimentaciones = getResources().getStringArray(R.array.al_poli_retro);
             buscarreactivos("http://192.168.0.247:8080/newtons/buscar_preguntas.php?materia=1&tema=1");
+=======
+            retroalimentaciones = getResources().getStringArray(R.array.al_poli_retro);
+            buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=1&tema=1");
+>>>>>>> 79c0b0a1434aaf9f97d7ff479c08d0b010ebfccc
 
             s1.setText("+");
             s2.setText("-");
@@ -106,6 +111,10 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             s6.setText("^");
             s7.setText("√");
             s8.setText("=");
+<<<<<<< HEAD
+=======
+
+>>>>>>> 79c0b0a1434aaf9f97d7ff479c08d0b010ebfccc
             retroalimentaciones = getResources().getStringArray(R.array.al_poli_retro);
             s1.setText("x");
             s2.setText("+");
@@ -118,10 +127,17 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             s9.setText("=");
 
         } else if (tema_elegido==2) {
+<<<<<<< HEAD
             //preguntas = getResources().getStringArray(R.array.al_ecua_p);
             //respuestas = getResources().getStringArray(R.array.al_ecua_r);
             //retroalimentaciones = getResources().getStringArray(R.array.al_ecua_retro);
             buscarreactivos("http://192.168.0.247:8080/newtons/buscar_preguntas.php?materia=1&tema=2");
+=======
+            preguntas = getResources().getStringArray(R.array.al_ecua_p);
+            respuestas = getResources().getStringArray(R.array.al_ecua_r);
+            retroalimentaciones = getResources().getStringArray(R.array.al_ecua_retro);
+            buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=1&tema=2");
+>>>>>>> 79c0b0a1434aaf9f97d7ff479c08d0b010ebfccc
 
             s1.setText("+");
             s2.setText("-");
@@ -133,10 +149,17 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             s8.setText("=");
 
         } else if (tema_elegido==3) {
+<<<<<<< HEAD
            // preguntas = getResources().getStringArray(R.array.al_fact_p);
             //respuestas = getResources().getStringArray(R.array.al_fact_r);
             //retroalimentaciones = getResources().getStringArray(R.array.al_fact_retro);
             buscarreactivos("http://192.168.0.247:8080/newtons/buscar_preguntas.php?materia=1&tema=3");
+=======
+            preguntas = getResources().getStringArray(R.array.al_fact_p);
+            respuestas = getResources().getStringArray(R.array.al_fact_r);
+            retroalimentaciones = getResources().getStringArray(R.array.al_fact_retro);
+            buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=1&tema=3");
+>>>>>>> 79c0b0a1434aaf9f97d7ff479c08d0b010ebfccc
 
             s1.setText("+");
             s2.setText("-");

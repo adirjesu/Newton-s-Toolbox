@@ -2,12 +2,16 @@ package com.example.newtoons_toolbox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ACT_AL_Calculadora_Fact extends AppCompatActivity {
 
@@ -15,6 +19,7 @@ public class ACT_AL_Calculadora_Fact extends AppCompatActivity {
     EditText etA, etB;
     EditText etBinA, etBinB, etTriA, etTriB, etTriC;
     TextView tvResultado;
+    public static int tema_elegido;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,9 @@ public class ACT_AL_Calculadora_Fact extends AppCompatActivity {
         etTriB = findViewById(R.id.etTriB);
         etTriC = findViewById(R.id.etTriC);
         tvResultado = findViewById(R.id.tvResultado);
+
+        Bundle recibeDatos = getIntent().getExtras();
+        tema_elegido = recibeDatos.getInt("tema");
 
         findViewById(R.id.btnFactorizar).setOnClickListener(v -> {
             switch (spTipo.getSelectedItemPosition()) {
@@ -170,5 +178,32 @@ public class ACT_AL_Calculadora_Fact extends AppCompatActivity {
 
         if (!factorizado)
             tvResultado.setText("No se puede factorizar con números enteros.");
+    }
+
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.regresar,menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.regresar) {
+            Toast.makeText(this, "Regresando",
+                    Toast.LENGTH_SHORT).show();
+            Bundle enviarDatos = new Bundle();
+            enviarDatos.putInt("tema", tema_elegido);
+            Intent w = new Intent(this, ACT_AL_TemaLobby.class);
+            w.putExtras(enviarDatos);
+            startActivity(w);
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 }

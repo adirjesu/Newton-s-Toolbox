@@ -70,15 +70,6 @@ public class ACT_F1_TemaLobby extends AppCompatActivity {
     }
 
 
-    public void ocExpf1lh (View view){
-        Bundle enviarDatos = new Bundle();
-        enviarDatos.putInt("tema",tema_elegido);
-        Intent x =  new Intent(this,ACT_F1_Explicacion.class);
-        x.putExtras(enviarDatos);
-        startActivity(x);
-    }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menuestudiantes,menu);
