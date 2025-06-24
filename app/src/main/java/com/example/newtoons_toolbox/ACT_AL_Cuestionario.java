@@ -16,6 +16,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.EditText;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Random;
 
 public class ACT_AL_Cuestionario extends AppCompatActivity {
@@ -45,6 +55,13 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
     public static String[] preguntas;
     public static String[] respuestas;
     public static String[] retroalimentaciones;
+    public static String[] preguntassql= new String[15];
+    public static String[] respuestassql= new String[15];
+    public static String[] retroalimentacionessql= new String[15];
+    public static String [] Preguntas;
+    public static String [] Respuestas;
+    public static String [] Retroalimentaciones;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +93,8 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             preguntas = getResources().getStringArray(R.array.al_poli_p);
             respuestas = getResources().getStringArray(R.array.al_poli_r);
             //retroalimentaciones = getResources().getStringArray(R.array.al_poli_retro);
+            buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=1&tema=1");
+
             s1.setText("+");
             s2.setText("-");
             s3.setText("(");
@@ -89,6 +108,8 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             //preguntas = getResources().getStringArray(R.array.al_ecua_p);
             //respuestas = getResources().getStringArray(R.array.al_ecua_r);
             //retroalimentaciones = getResources().getStringArray(R.array.al_ecua_retro);
+            buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=1&tema=2");
+
             s1.setText("+");
             s2.setText("-");
             s3.setText("(");
@@ -102,6 +123,8 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
            // preguntas = getResources().getStringArray(R.array.al_fact_p);
             //respuestas = getResources().getStringArray(R.array.al_fact_r);
             //retroalimentaciones = getResources().getStringArray(R.array.al_fact_retro);
+            buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=1&tema=3");
+
             s1.setText("+");
             s2.setText("-");
             s3.setText("(");
@@ -115,18 +138,7 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
 
 // Inicializa la matriz con el tamaño adecuado
 
-// Llenar la matriz con preguntas, respuestas y retroalimentaciones
-        for (int i = 0; i < preguntas.length; i++) {
-            matriz[i][0] = preguntas[i]; // Pregunta
-            matriz[i][1] = respuestas[i]; // Respuesta
-            matriz[i][2] = retroalimentaciones[i]; // Retroalimentación
-        }
 
-        for(int i=0;i<praleatorio.length;i++){
-            praleatorio[i]=i;
-        }
-        shuffleArray(praleatorio);
-        preg.setText(matriz[praleatorio[0]][0]);
 
 
         mensaje(ACT_AL_Cuestionario.this);
@@ -134,7 +146,61 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
 
     }
 
+    private void buscarreactivos(String URL){
+        int b=0;
+        JsonArrayRequest jsonArrayRequest= new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                JSONObject jsonObject = null;
+                for (int i = 0; i < response.length(); i++) {
+                    try {
+                        jsonObject = response.getJSONObject(i);
+                        //radioButtons[i].setText(jsonObject.getString("id_reactivo"));
+                        preguntassql[i]=jsonObject.getString("reactivo");
+                        respuestassql[i]=jsonObject.getString("respuesta");
+                        retroalimentacionessql[i]=jsonObject.getString("retroalimentacion");
 
+                    } catch (JSONException e) {
+                        Toast.makeText(ACT_AL_Cuestionario.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }//catch
+                }//for
+                Preguntas = new String[preguntas.length + preguntassql.length];
+                System.arraycopy(preguntas, 0, Preguntas, 0, preguntas.length);
+                System.arraycopy(preguntassql, 0, Preguntas, preguntas.length, preguntassql.length);
+
+
+                Respuestas = new String[respuestas.length + respuestassql.length];
+                System.arraycopy(respuestas, 0, Respuestas, 0, respuestas.length);
+                System.arraycopy(respuestassql, 0, Respuestas, respuestas.length, respuestassql.length);
+
+
+                Retroalimentaciones = new String[retroalimentaciones.length + retroalimentacionessql.length];
+                System.arraycopy(retroalimentaciones, 0, Retroalimentaciones, 0, retroalimentaciones.length);
+                System.arraycopy(retroalimentacionessql, 0, Retroalimentaciones, retroalimentaciones.length, retroalimentacionessql.length);
+// Llenar la matriz con preguntas, respuestas y retroalimentaciones
+                for (int i = 0; i < preguntas.length; i++) {
+                    matriz[i][0] = Preguntas[i]; // Pregunta
+                    matriz[i][1] = Respuestas[i]; // Respuesta
+                    matriz[i][2] = Retroalimentaciones[i]; // Retroalimentación
+                }
+
+                for(int i=0;i<praleatorio.length;i++){
+                    praleatorio[i]=i;
+                }
+                shuffleArray(praleatorio);
+                preg.setText(matriz[praleatorio[0]][0]);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(ACT_AL_Cuestionario.this, "NO SE ENCONTRARON REACTIVOS", Toast.LENGTH_SHORT).show();
+
+            }
+        }
+        );
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(jsonArrayRequest);
+    }
     public void ocCalificar(View view){
 
         calificar.setEnabled(false);

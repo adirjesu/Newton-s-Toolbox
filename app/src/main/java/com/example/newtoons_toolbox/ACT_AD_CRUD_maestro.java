@@ -35,7 +35,7 @@ public class ACT_AD_CRUD_maestro extends AppCompatActivity {
     Button agregar, buscar, actualizar, eliminar,limpiar;
     RadioButton rb1,rb2,rb3;
     RequestQueue requestQueue;
-    public static String materia;
+    public static String materia,email;
     public static boolean usuarioexistente;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +75,12 @@ public class ACT_AD_CRUD_maestro extends AppCompatActivity {
         agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                usuariorepetido("http://192.168.0.120:8080/newtons/buscar_maestro.php?usuario="+usuario.getText()+"");
+                 email = correo.getText().toString().trim();
+                if (!email.isEmpty()) {
+                    usuariorepetido("http://192.168.3.67:8080/newtons/buscar_usu_maestro.php?usuario=" + email);
+                } else {
+                    Toast.makeText(ACT_AD_CRUD_maestro.this, "Ingrese un correo", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -84,7 +89,7 @@ public class ACT_AD_CRUD_maestro extends AppCompatActivity {
             public void onClick(View view) {
 
                 if(!usuario.getText().toString().isEmpty()){
-                    buscarmaestro("http://192.168.0.120:8080/newtons/buscar_maestro.php?usuario="+usuario.getText()+"");
+                    buscarmaestro("http://192.168.0.250:8080/newtons/buscar_maestro.php?usuario="+usuario.getText()+"");
                     agregar.setVisibility(View.GONE);
                     agregar.setEnabled(false);
                     actualizar.setVisibility(View.VISIBLE);
@@ -101,14 +106,14 @@ public class ACT_AD_CRUD_maestro extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                    ejecutarServicio("http://192.168.0.120:8080/newtons/editar_maestro.php");
+                    ejecutarServicio("http://192.168.0.250:8080/newtons/editar_maestro.php");
 
             }
         });
         eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                eliminarprofesor("http://192.168.0.120:8080/newtons/eliminar_maestro.php");
+                eliminarprofesor("http://192.168.0.250:8080/newtons/eliminar_maestro.php");
             }
         });
 
@@ -132,6 +137,12 @@ public class ACT_AD_CRUD_maestro extends AppCompatActivity {
         });
     }//main
 
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    }
+    /////////////////////////////////////
+
+//////////////////////SERVICIOS\\\\\\\\\\\\\\\\\\\\\\\\\\
     private void ejecutarServicio(String URL){
         if(rb1.isChecked()){
             materia="algebra";
@@ -221,13 +232,13 @@ private void usuariorepetido(String URL){
             for (int i = 0; i < response.length(); i++) {
                 try {
                     jsonObject = response.getJSONObject(i);
-                    String us;
-                    us=jsonObject.getString("usuario");
-                    if(us.equals(usuario.getText().toString())){
+                    int us;
+                    us= Integer.parseInt(jsonObject.getString("total"));
+                    if(us!=0){
                         Toast.makeText(ACT_AD_CRUD_maestro.this, "USUARIO YA EXISTENTE", Toast.LENGTH_SHORT).show();
                         usuario.setText("");
                     }else{
-                        ejecutarServicio("http://192.168.0.170:8080/newtons/nuevo_maestro.php");
+                        ejecutarServicio("http://192.168.3.67:8080/newtons/nuevo_maestro.php");
                     }
                 } catch (JSONException e) {
                 }//catch
@@ -236,7 +247,7 @@ private void usuariorepetido(String URL){
     }, new Response.ErrorListener() {
         @Override
         public void onErrorResponse(VolleyError error) {
-            Toast.makeText(ACT_AD_CRUD_maestro.this, "ERROR DE CONEXIÓN", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ACT_AD_CRUD_maestro.this, "ERROR DE CONEXIÓN USUARIO REPETIDO", Toast.LENGTH_SHORT).show();
         }
     }
     );
