@@ -2,12 +2,17 @@ package com.example.newtoons_toolbox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ACT_AL_Calculadora_Poli extends AppCompatActivity {
 
+    public static int tema_elegido;
     EditText a1, b1, c1, a2, b2, c2;
     TextView tvResultado;
 
@@ -23,7 +28,11 @@ public class ACT_AL_Calculadora_Poli extends AppCompatActivity {
         a2 = findViewById(R.id.a2);
         b2 = findViewById(R.id.b2);
         c2 = findViewById(R.id.c2);
+
         tvResultado = findViewById(R.id.tvResultado);
+
+        Bundle recibeDatos = getIntent().getExtras();
+        tema_elegido = recibeDatos.getInt("tema");
 
         findViewById(R.id.btnSumar).setOnClickListener(v -> calcular(true));
         findViewById(R.id.btnRestar).setOnClickListener(v -> calcular(false));
@@ -86,5 +95,32 @@ public class ACT_AL_Calculadora_Poli extends AppCompatActivity {
 
         String resultado = String.format("Resultado:\n%.2fx² + %.2fx + %.2f", A1 / monomio, B1 / monomio, C1 / monomio);
         tvResultado.setText(resultado);
+    }
+
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.regresar,menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.regresar) {
+            Toast.makeText(this, "Regresando",
+                    Toast.LENGTH_SHORT).show();
+            Bundle enviarDatos = new Bundle();
+            enviarDatos.putInt("tema", tema_elegido);
+            Intent w = new Intent(this, ACT_AL_TemaLobby.class);
+            w.putExtras(enviarDatos);
+            startActivity(w);
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 }

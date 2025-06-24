@@ -33,7 +33,7 @@ public class ACT_AL_Explicacion extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
             Bundle enviarDatos = new Bundle();
             enviarDatos.putInt("tema",tema_elegido);
-            Intent w =  new Intent(this, ACT_F1_TemaLobby.class);
+            Intent w =  new Intent(this, ACT_AL_TemaLobby.class);
             w.putExtras(enviarDatos);
             startActivity(w);
         }
