@@ -83,15 +83,6 @@ public class ACT_AL_TemaLobby extends AppCompatActivity {
     }
 
 
-    public void ocExpAl (View view){
-        Bundle enviarDatos = new Bundle();
-        enviarDatos.putInt("tema",tema_elegido);
-        Intent x =  new Intent(this,ACT_AL_Explicacion.class);
-        x.putExtras(enviarDatos);
-        startActivity(x);
-    }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

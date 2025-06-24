@@ -61,12 +61,6 @@
             android:name=".ACT_AL_Cuestionario"
             android:exported="false" />
         <activity
-            android:name=".ACT_AL_Explicacion"
-            android:exported="false" />
-        <activity
-            android:name=".ACT_AL_explicacion2"
-            android:exported="false" />
-        <activity
             android:name=".ACT_AL_Resultados"
             android:exported="false" />
         <activity
@@ -77,12 +71,6 @@
             android:exported="false" />
         <activity
             android:name=".ACT_F2_Cuestionario"
-            android:exported="false" />
-        <activity
-            android:name=".ACT_F2_Explicacion"
-            android:exported="false" />
-        <activity
-            android:name=".ACT_F2_explicacion2"
             android:exported="false" />
         <activity
             android:name=".ACT_F2_Resultados"
@@ -98,12 +86,6 @@
             android:exported="false" />
         <activity
             android:name=".ACT_LogginAdmin"
-            android:exported="false" />
-        <activity
-            android:name=".ACT_F1_explicacion2"
-            android:exported="false" />
-        <activity
-            android:name=".ACT_F1_Explicacion"
             android:exported="false" />
         <activity
             android:name=".ACT_F1_banco_formulas"

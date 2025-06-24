@@ -51,17 +51,6 @@
         android:backgroundTint="@color/black"
         android:text="Banco de Fórmulas" />
 
-    <Button
-        android:id="@+id/btnexpf1lh"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="ocExpf1lh"
-        android:textSize="19dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginLeft="120dp"
-        android:backgroundTint="@color/black"
-        android:text="Explicación" />
-
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="match_parent"

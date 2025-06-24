@@ -160,6 +160,7 @@ A: Área de la sección transversal (m²)</item>
         <item>Una empresa de alimentos distribuye productos en dos rutas distintas, y desea modelar el tiempo que toma cada entrega en función del tráfico.<br />El tiempo en horas de la primera ruta está representado por el polinomio 3/4x²+1/2x+2/3, y el de la segunda ruta por 1/2x²+3/4x+1/6.<br />¿Cuál es el tiempo total estimado en función de x si ambas rutas se recorren el mismo día?</item>
     </string-array>
 
+
     <string-array name="al_poli_r">
         <item>6x^2+8x+16</item>
         <item>2x^2+2x+2</item>
@@ -172,6 +173,7 @@ A: Área de la sección transversal (m²)</item>
         <item>x^2+6x+8</item>
         <item>5/4x^2+5/4x+5/6 </item>
     </string-array>
+
 
     <string-array name="al_poli_retro">
         <item>
@@ -266,21 +268,331 @@ A: Área de la sección transversal (m²)</item>
 
 
     <!-- //////////     RESOLUCIÓN DE ECUACIONES      \\\\\\\\\\ -->
-    <string-array name="al_ecua_p"></string-array>
+    <string-array name="al_ecua_p">
+        <item>Una tienda de abarrotes vende bolsas de arroz a un precio fijo. Si un cliente compra 4 bolsas y paga $180, y sabemos que el precio por bolsa es el mismo, ¿cuánto cuesta cada bolsa?<br/>Ecuación: 4x = 180</item>
+        <item>Un electricista cobra $150 por la visita y $50 por hora de trabajo. Si después de cierto trabajo su cobro total fue de $400, ¿cuántas horas trabajó?<br/>Ecuación: 150 + 50x = 400</item>
+        <item>Una empresa lanza un producto cuya ganancia (en miles de pesos) se modela por la ecuación: G(x) = x² − 5x − 24. Quieren saber en qué puntos las ganancias serán exactamente cero.<br/>Ecuación: x² − 5x − 24 = 0</item>
+        <item>En un proyecto de construcción, se analiza la altura h (en metros) que alcanza un objeto lanzado verticalmente, modelado por la ecuación: h = −1/2x² + 5x. Si el objeto toca el suelo nuevamente, ¿en qué momento ocurre eso?<br/>Ecuación: −1/2x² + 5x = 0</item>
+        <item>Una diseñadora industrial calcula el área A de un componente cuadrado con un agujero circular en el centro. El modelo se da por A = x² − 6x + 7, donde A debe ser igual a 2 cm². ¿Qué valores de x cumplen con esa condición?<br/>Ecuación: x² − 6x + 7 = 2</item>
+        <item>Un investigador diseña un modelo de crecimiento de bacterias basado en la ecuación: 1/2x²−3/4x−1/4=0 donde x representa el tiempo en horas. ¿En qué momentos se estima que la población llega a un punto de equilibrio?</item>
+        <item>La trayectoria de un proyectil lanzado verticalmente está modelada por: y=−5x²+20x+15, donde y es la altura en metros y x el tiempo en segundos. ¿Cuándo el proyectil volverá a tocar el suelo?<br/>y=−5x²+20x+15<br/>Buscamos los valores de x cuando y=0</item>
+        <item>Un carpintero compra madera. Paga un precio fijo de $150 y, además, $x por cada tabla. Si compra 8 tablas y gasta un total de $370, ¿cuánto cuesta cada tabla?<br/>Ecuación: 150+8x=370</item>
+        <item>Un ingeniero diseña una estructura cuya estabilidad depende de la fórmula:x²−4x/ x−2=0. Determina para qué valores de x se mantiene el equilibrio estructural.</item>
+        <item>Una fábrica estudia el rendimiento de una máquina con el modelo: 25x²−30x−55=0. ¿Cuáles son los valores de x (en horas de uso) que permiten un rendimiento óptimo?</item>
+    </string-array>
 
-    <string-array name="al_ecua_r"></string-array>
 
-    <string-array name="al_ecua_retro"></string-array>
+    <string-array name="al_ecua_r">
+        <item>El precio de cada bolsa es de $45.</item>
+        <item>El electricista trabajó 5 horas.</item>
+        <item>Las ganancias serán cero cuando x = 8 o x = −3.</item>
+        <item>El objeto toca el suelo en los instantes x = 0 y x = 10 segundos.</item>
+        <item>Los valores de x que cumplen son 1 cm y 5 cm.</item>
+        <item>El punto de equilibrio ocurre aproximadamente en x≈1.78 horas y x≈−0.28 horas (este último no tiene sentido práctico en este contexto).</item>
+        <item>El proyectil vuelve al suelo a los x≈4.65x segundos.</item>
+        <item>Cada tabla cuesta $27.50</item>
+        <item>Los valores que mantienen la estructura en equilibrio son x=0  y x=4.</item>
+        <item>El rendimiento óptimo se alcanza a las 2.2 horas de uso (se descarta x= −1).</item>
+    </string-array>
+
+
+    <string-array name="al_ecua_retro">
+        <item>
+            1. Identificamos que x representa el precio de una bolsa.
+            <br/>
+            2. Despejamos x dividiendo ambos lados entre 4: x = 180 ÷ 4 = 45
+        </item>
+        <item>
+            1. Restamos 150 de ambos lados: 50x = 400 − 150 = 250
+            <br/>
+            2. Dividimos entre 50: x = 250 ÷ 50 = 5
+        </item>
+        <item>
+            1. Identificamos que es una ecuación cuadrática de la forma ax² + bx + c = 0
+            <br/>
+            2. Aplicamos la fórmula general:
+            x = [−(−5) ± √((−5)² − 4(1)(−24))]/(2(1))
+            x = [5 ± √(25 + 96)] / 2
+            x = [5 ± √121] / 2
+            x = [5 ± 11] / 2
+            <br/>
+            3. Calculamos ambas soluciones:
+            x₁ = (5 + 11)/2 = 16/2 = 8
+            x₂ = (5 − 11)/2 = −6/2 = −3
+        </item>
+        <item>
+            1. Factorizamos: x(−1/2x + 5) = 0
+            <br/>
+            2. Igualamos cada factor a 0: x = 0
+            −1/2x + 5 = 0
+            <br/>
+            3. Despejamos x:
+            −1/2x = −5
+            x = (−5)/(−1/2) = 10
+        </item>
+        <item>
+            1. Restamos 2 a ambos lados para igualar a cero:
+            x² − 6x + 5 = 0
+            <br/>
+            2. Aplicamos fórmula general:
+            x = [6 ± √(36 − 4(1)(5))]/2
+            x = [6 ± √(36 − 20)]/2
+            x = [6 ± √16]/2
+            x = [6 ± 4]/2
+            x₁ = (6 + 4)/2 = 10/2 = 5
+            x₂ = (6 − 4)/2 = 2/2 = 1
+        </item>
+        <item>
+            1. Multiplicamos toda la ecuación por 4 para eliminar fracciones:
+            4(1/2x²−3/4x−1/4)=0 ⇒ 2x²−3x−1=0
+            <br/>
+            2. Usamos la fórmula general:
+            x=3 ±√ (−3)2−4(2)(−1)/2(2) = 3± √ 9 +8/4 = 3± √ 17/4
+            <br/>
+            3. Soluciones:
+            x₁=3+√ 17
+            x₂=3−√ 17
+        </item>
+        <item>
+            1. Planteamos la ecuación:
+            −5x²+20x+15=0
+            <br/>
+            2. Aplicamos fórmula general:
+            x= −20±√400−4(−5)(15)/−10 = −20±√400+300/−10 = −20±√700/−10
+            <br/>
+            3. Simplificamos:
+            700 ≈ 26.45
+            x₁=−20+26.45/−10 ≈ 6.45/−10=−0.645 =  -0.645
+            x₂=−20−26.45/−10 ≈ −46.45/−10 = 4.645
+        </item>
+        <item>
+            1. Restamos 150 de ambos lados:
+            8x=370−150=220
+            <br/>
+            2. Dividimos entre 8:
+            x=220/8=27.5
+        </item>
+        <item>
+            1. Para que una fracción sea 0, el numerador debe ser 0 y el denominador ≠ 0.
+            <br/>
+            2. Factorizamos el numerador:
+            x²−4x=x(x−4)
+            <br/>
+            3. Igualamos el numerador a 0:
+            x(x−4)=  0⇒x  =0   o  x  ⇒ 4
+            <br/>
+            4. Verificamos que el denominador no se anule en esos valores:
+            x=2 anula el denominador, pero no es solución.
+        </item>
+        <item>
+            1. Aplicamos la fórmula general:
+            x=30± √(−30)²−4(25)(−55)/ 2(25)
+            <br/>
+            2. Calculamos:
+            x = 30±√900+5500/50 = 30±√6400/50 = 30±80/50
+            <br/>
+            3. Soluciones:
+            x₁=30+80/50=110/50=2.2,
+            x₂=30−80/50= −50/50= −1
+        </item>
+    </string-array>
 
 
 
 
     <!-- //////////     FACTORIZACIÓN      \\\\\\\\\\ -->
-    <string-array name="al_fact_p"></string-array>
+    <string-array name="al_fact_p">
+        <item>
+            Una empresa que fabrica empaques ecológicos calcula el desperdicio de material durante la producción mediante la expresión algebraica:
+            W(x)=−5/6x³+10/9x²−5/18x
+            En esta función, x representa el tamaño del empaque. Para facilitar cálculos rápidos en el taller sin depender de software, el equipo de producción desea factorizar esta expresión.
+        </item>
+        <item>
+            Un taller de fabricación de estructuras metálicas diseña un soporte cuya resistencia viene dada por el polinomio:
+            R(x)=6x³−9x²+4x−6
+            Para facilitar el cálculo rápido de puntos de resistencia crítica, desean factorizar esta expresión para simplificar el análisis.
+        </item>
+        <item>
+            Un programa de energía eléctrica calcula la potencia consumida según la fórmula:
+            P(x)=−12x⁴+18x³−6x²
+            Esta función representa el consumo de potencia en función de una variable xxx, que puede ser la intensidad del flujo eléctrico.
+            Para facilitar cálculos en campo, se desea expresar esta función en forma factorizada, permitiendo evaluaciones más rápidas y detectar valores críticos de consumo.
+        </item>
+        <item>
+            Una empresa estudia la diferencia en áreas de dos parcelas cuadradas cuyos lados se expresan con la variable x y constantes:
+            A(x)=(3x+5)² − (x−1)²
+            Este polinomio representa cómo varía la diferencia de área en función de x, lo cual es fundamental para la planificación territorial y diseño de instalaciones.
+            Para facilitar cálculos y entender el comportamiento de esta diferencia, se desea factorizar la expresión.
+        </item>
+        <item>
+            Un químico estudia la concentración de un reactivo expresada como:
+            C(x)=1/9x²−2/3x+1
+            Esta función modela cómo varía la concentración con la variable x, posiblemente tiempo o temperatura.
+            Para entender mejor los valores críticos y facilitar la interpretación, se busca factorizar la expresión.
+        </item>
+        <item>
+            Un ingeniero en energías renovables está analizando el comportamiento de un panel solar en diferentes niveles de radiación. Define la eficiencia energética del panel con la función:
+            E(x) = 1/4x² − x + 1
+            Esta función modela cómo varía la eficiencia (E) respecto a la intensidad de radiación (x), donde x está normalizada entre ciertos valores estándar de prueba.
+            Se requiere factorizar la expresión para identificar fácilmente el punto donde el sistema alcanza su máxima eficiencia o su mínimo rendimiento, lo cual es fundamental para ajustar la inclinación y orientación del panel.
+        </item>
+        <item>
+            Una empresa calcula el costo total de producción de un artículo mediante la función:
+            C(x) = x² + 10x + 25
+            En esta expresión, x representa la cantidad de unidades producidas en cientos, y C(x) el costo total en miles de pesos.
+            Se requiere factorizar para determinar el punto en el que los costos alcanzan un valor mínimo, útil para establecer el nivel de producción más rentable.
+        </item>
+        <item>
+            Un físico teórico está investigando la energía potencial de una partícula cargada bajo la influencia de un campo. Modela la energía con la función:
+            E(x) = 1/16x² − 5/8x + 1
+            Esta función representa cómo varía la energía con respecto a la posición x de la partícula.
+            Factorizar esta expresión le permitirá encontrar los puntos de equilibrio o los valores de x donde la energía es mínima o se anula, lo cual es clave para determinar zonas de estabilidad en el sistema.
+        </item>
+        <item>
+            Un agricultor trabaja con un modelo matemático que describe la producción de tomates a lo largo del tiempo. Define la producción semanal con la función:
+            P(x) = x² − 7x + 12
+            En este modelo, x representa el número de semanas desde que se sembraron las plantas, y P(x) representa la cantidad de tomates cosechados por semana, medido en kilogramos.
+            El agricultor desea conocer cuándo la producción podría caer a cero para prevenir problemas como enfermedades, plagas o falta de nutrientes. Factorizar esta función le permite identificar los puntos en los que la producción cesa completamente.
+        </item>
+        <item>
+            Una empresa farmacéutica está desarrollando un nuevo medicamento y analiza cómo varía su concentración en la sangre del paciente con el paso del tiempo. Utiliza el siguiente modelo matemático:
+            M(x) = 1/25x² − 2/5x + 1
+            En esta función, x representa las horas transcurridas desde que se administró la dosis, y M(x) es la concentración en sangre del medicamento, medida en miligramos por litro.
+            La factorización de esta expresión permite al equipo médico conocer el momento en que la concentración alcanza su valor más bajo, lo cual es fundamental para ajustar el intervalo entre dosis y evitar niveles peligrosamente bajos de medicamento.
+        </item>
+    </string-array>
 
-    <string-array name="al_fact_r"></string-array>
 
-    <string-array name="al_fact_retro"></string-array>
+    <string-array name="al_fact_r">
+        <item>W(x)=−5/18x(x−1)(3x−1)</item>
+        <item>R(x)=(3x²+2)(2x−3)</item>
+        <item>P(x)=−6x²(2x−1)(x−1)</item>
+        <item>A(x)=8(x+3)(x+1)</item>
+        <item>C(x)=(x−3)²/9</item>
+        <item>E(x)=(x−2)²/4</item>
+        <item>C(x)=(x+5)²</item>
+        <item>E(x)=(x−8)(x−2)/16</item>
+        <item>P(x)=(x−3)(x−4)</item>
+        <item>M(x)=(x−5)²/25</item>
+    </string-array>
+
+
+    <string-array name="al_fact_retro">
+        <item>
+            Paso 1: Extraer el factor común literal
+            Todos los términos tienen la variable xxx, por lo tanto factorizamos:
+            W(x)=x(−5/6x²+10/9x−5/18)
+            <br/>
+            Paso 2: Eliminar fracciones para facilitar la factorización
+            Buscamos el mínimo común denominador entre 6, 9 y 18: es 18.
+            Multiplicamos todo el trinomio por 18 para trabajar con enteros:>
+            18(−5/6x² +10/9x −5/18 )= −15x²+20x−5
+            <br/>
+            Paso 3: Factor común del trinomio entero
+            Factor común de −15x²+20x−5 es 5
+            −5(3x²−4x+1)
+            <br/>
+            Paso 4: Factorizar el trinomio dentro del paréntesis
+            Buscamos dos números que multiplicados den 3⋅1=3 y sumen −4: −3 y −1
+            3x²−3x− x + 1=3x(x−1)−1(x−1)=(x−1)(3x−1)
+            Por lo tanto: −5(3x²−4x+1)=−5(x−1)(3x−1)
+            <br/>
+            Paso 5: Reescribir la expresión completa
+            Recordamos que el trinomio fue multiplicado por 18 al inicio, así que dividimos al final por 18 para mantener la igualdad:
+            W(x)= x⋅ (−5/18(x−1)(3x−1))
+        </item>
+        <item>
+            Paso 1: Agrupamos términos
+            (6x³−9x²)+(4x−6)
+            <br/>
+            Paso 2: Factorizamos cada grupo
+            3x² (2x−3)+2(2x−3)
+            <br/>
+            Paso 3: Sacamos factor común del binomio
+            (3x²+2)(2x−3)
+        </item>
+        <item>
+            Paso 1: Identificamos factor común
+            Los coeficientes tienen factor común 6, y la variable con menor exponente es x²:
+            −6x² (2x²−3x+1)
+            <br/>
+            Paso 2: Factorizamos el trinomio
+            Buscamos dos números que multiplicados den 2×1=2 y sumen −3: −1 y −2
+            2x²−3x+1=(2x−1)(x−1)
+        </item>
+        <item>
+            Paso 1: Reconocer la diferencia de cuadrados
+            a² − b²=(a−b)(a+b) , donde a=3x + 5  y b=x−1
+            <br/>
+            Paso 2: Aplicar fórmula
+            (3x+5−(x−1))×(3x+5+(x−1))
+            (3x+5−x+1)(3x+5+x−1)
+            (2x+6)(4x+4)
+            <br/>
+            Paso 3: Sacar factor común en cada paréntesis
+            2(x+3)× 4(x+1)
+            8(x+3)(x+1)
+        </item>
+        <item>
+            Paso 1: Multiplicamos todo por 9 para eliminar fracciones
+            9×C(x)=x²−6x+9
+            <br/>
+            Paso 2: Factorizamos el trinomio cuadrado perfecto
+            x²−6x+9=(x−3)²
+            <br/>
+            Paso 3: Volvemos a la expresión original dividiendo entre 9
+            C(x)=(x−3)²/9
+        </item>
+        <item>
+            Paso 1: Eliminamos las fracciones multiplicando por 4 toda la expresión.
+            4 × E(x) = x² − 4x + 4
+            <br/>
+            Paso 2: Factorizamos el trinomio cuadrado perfecto.
+            x² − 4x + 4 = (x − 2)²
+            <br/>
+            Paso 3: Volvemos a la forma original dividiendo entre 4.
+            E(x) = (x − 2)² / 4
+        </item>
+        <item>
+            Paso 1: Observamos que el trinomio es un cuadrado perfecto.
+            x² + 10x + 25 = (x + 5)²
+        </item>
+        <item>
+            Paso 1: Multiplicamos por 16 para eliminar fracciones.
+            16 × E(x) = x² − 10x + 16
+            <br/>
+            Paso 2: Buscamos dos números cuyo producto sea 16 y suma sea −10.
+            −8 y −2
+            <br/>
+            Paso 3: Factorizamos.
+            x² − 10x + 16 = (x − 8)(x − 2)
+            <br/>
+            Paso 4: Regresamos dividiendo entre 16.
+            E(x) = (x − 8)(x − 2) / 16
+        </item>
+        <item>
+            Paso 1: Identificamos si se puede factorizar el trinomio.
+            Buscamos dos números que multiplicados den 12 y que sumen −7.
+            <br/>
+            Paso 2: Encontramos que los números −3 y −4 cumplen esa condición.
+            -3 × −4 = 12 y −3 + (−4) = −7
+            <br/>
+            Paso 3: Factorizamos el trinomio.
+            P(x) = (x − 3)(x − 4)
+        </item>
+        <item>
+            Paso 1: Eliminamos las fracciones multiplicando toda la función por 25.
+            25 × M(x) = x² − 10x + 25
+            <br/>
+            Paso 2: Observamos que el trinomio  x² − 10x + 25 es un trinomio cuadrado perfecto.
+            √25 = 5, y (−5) × 2 = −10, lo cual confirma que es cuadrado perfecto.
+            x² − 10x + 25 = (x − 5)²
+            <br/>
+            Paso 3: Volvemos a la expresión original dividiendo entre 25.
+            M(x) = (x − 5)² / 25
+        </item>
+    </string-array>
+
 
     <string-array name="tipos_factorizacion">
         <item>Selecciona tipo</item> <!-- posición 0 -->

@@ -95,8 +95,7 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
         if(tema_elegido==1){
             preguntas = getResources().getStringArray(R.array.al_poli_p);
             respuestas = getResources().getStringArray(R.array.al_poli_r);
-<<<<<<< HEAD
-            //retroalimentaciones = getResources().getStringArray(R.array.al_poli_retro);
+            retroalimentaciones = getResources().getStringArray(R.array.al_poli_retro);
             buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=1&tema=1");
 
             s1.setText("+");
@@ -107,7 +106,7 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             s6.setText("^");
             s7.setText("√");
             s8.setText("=");
-=======
+
             retroalimentaciones = getResources().getStringArray(R.array.al_poli_retro);
             s1.setText("x");
             s2.setText("+");
@@ -118,12 +117,11 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             s7.setText("^");
             s8.setText("√");
             s9.setText("=");
->>>>>>> f6af5c72564322859a07f6d290cd3051ce314b4a
 
         } else if (tema_elegido==2) {
-            //preguntas = getResources().getStringArray(R.array.al_ecua_p);
-            //respuestas = getResources().getStringArray(R.array.al_ecua_r);
-            //retroalimentaciones = getResources().getStringArray(R.array.al_ecua_retro);
+            preguntas = getResources().getStringArray(R.array.al_ecua_p);
+            respuestas = getResources().getStringArray(R.array.al_ecua_r);
+            retroalimentaciones = getResources().getStringArray(R.array.al_ecua_retro);
             buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=1&tema=2");
 
             s1.setText("+");
@@ -136,9 +134,9 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
             s8.setText("=");
 
         } else if (tema_elegido==3) {
-           // preguntas = getResources().getStringArray(R.array.al_fact_p);
-            //respuestas = getResources().getStringArray(R.array.al_fact_r);
-            //retroalimentaciones = getResources().getStringArray(R.array.al_fact_retro);
+            preguntas = getResources().getStringArray(R.array.al_fact_p);
+            respuestas = getResources().getStringArray(R.array.al_fact_r);
+            retroalimentaciones = getResources().getStringArray(R.array.al_fact_retro);
             buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=1&tema=3");
 
             s1.setText("+");
