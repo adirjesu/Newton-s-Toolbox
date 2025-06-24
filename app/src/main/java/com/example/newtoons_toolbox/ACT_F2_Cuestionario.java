@@ -11,4 +11,5 @@ public class ACT_F2_Cuestionario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_f2_cuestionario);
     }
+
 }

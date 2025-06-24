@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +32,7 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
     public static int [] praleatorio= new int[10];
     private TextView nopreg;
     private TextView preg;
-    private TextView res;
+    private EditText res;
     private TextView sino;
     private Button calificar;
     private Button continuar;
@@ -87,7 +88,7 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
         Bundle recibeDatos = getIntent().getExtras();
         tema_elegido = recibeDatos.getInt("tema");
         if(tema_elegido==1){
-            buscarreactivos("http://192.168.0.120:8080/newtons/buscar_preguntas.php?materia=2&tema=1");
+            buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=2&tema=1");
 
         } else if (tema_elegido==2) {
             preguntas = getResources().getStringArray(R.array.f1_lhp);
@@ -101,9 +102,9 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
             s6.setText("×10^");
             s7.setText("^");
             s8.setText("Pa");
-            buscarreactivos("http://192.168.0.120:8080/newtons/buscar_preguntas.php?materia=2&tema=2");
+            buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=2&tema=2");
         } else if (tema_elegido==3) {
-            buscarreactivos("http://192.168.0.120:8080/newtons/buscar_preguntas.php?materia=2&tema=3");
+            buscarreactivos("http://192.168.0.250:8080/newtons/buscar_preguntas.php?materia=2&tema=3");
 
         }
 
@@ -245,90 +246,74 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
 
 
 /////////////////////////*     SÍMBOLOS   *\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    public void sim1(){
+    public void sim1(View view){
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"N/m");
-
+            respuesta("N/m");
         }else if (tema_elegido==3) {
 
         }
     }
-    public void sim2(){
+    public void sim2(View view){
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"N");
-
+            respuesta("N");
         }else if (tema_elegido==3) {
 
         }
     }
-    public void sim3(){
+    public void sim3(View view){
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"m");
-
+            respuesta("m");
         }else if (tema_elegido==3) {
 
         }
     }
-    public void sim4(){
+    public void sim4(View view){
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"J");
-
+            respuesta("J");
         }else if (tema_elegido==3) {
 
         }
     }
-    public void sim5(){
+    public void sim5(View view){
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"-");
-
+            respuesta("-");
         }else if (tema_elegido==3) {
 
         }
     }
-    public void sim6(){
+    public void sim6(View view){
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"×10^");
-
+            respuesta("×10^");
         }else if (tema_elegido==3) {
 
         }
     }
-    public void sim7(){
+    public void sim7(View view){
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"^");
-
+            respuesta("^");
         }else if (tema_elegido==3) {
 
         }
     }
-    public void sim8(){
+    public void sim8(View view){
         if(tema_elegido==1){
 
         } else if (tema_elegido==2) {
-            String resbefore= String.valueOf(res.getText());
-            res.setText(resbefore+"Pa");
-
+            respuesta("Pa");
         }else if (tema_elegido==3) {
 
         }
@@ -337,29 +322,19 @@ public class ACT_F1_Cuestionario extends AppCompatActivity {
 
 /////////////////////////*     SÍMBOLOS   *\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-    public void ocNm(View view){
-        sim1();
-    }
-    public void ocN(View view){
-        sim2();
-    }
-    public void ocm(View view){
-        sim3();
-    }
-    public void ocJ(View view){
-        sim4();
-    }
-    public void ocmenos(View view){
-        sim5();
-    }
-    public void ocpor10(View view){
-        sim6();
-    }
-    public void ocala(View view){
-        sim7();
-    }
-    public void ocpa(View view){
-        sim8();
+    public String respuesta(String unidad) {
+        String resbefore;
+        if (res == null) {
+            return ""; // O lanzar una excepción si es crítico
+        }
+        else{
+            resbefore=res.getText().toString();
+        }
+        String nuevoTexto = resbefore + unidad;
+        res.setText(nuevoTexto);
+        res.setSelection(nuevoTexto.length());
+
+        return nuevoTexto; // Retorna el texto actualizado
     }
     /*//////////////TERMINAN LAS VARIABLES\\\\\\\\\\\\\\*/
     private static void shuffleArray(int[] array)

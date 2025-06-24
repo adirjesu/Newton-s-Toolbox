@@ -109,7 +109,7 @@
             android:name=".ACT_F1_banco_formulas"
             android:exported="false" />
         <activity
-            android:name=".ACT_F1_Resultados"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".ACT_F1_Cuestionario"
@@ -133,7 +133,7 @@
             android:name=".ACT_Login"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ACT_F1_Resultados"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
