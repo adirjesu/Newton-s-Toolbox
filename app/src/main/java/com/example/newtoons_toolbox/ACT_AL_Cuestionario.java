@@ -36,6 +36,7 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
     private Button s6;
     private Button s7;
     private Button s8;
+    private Button s9;
     private TextView retro;
     public static  String[][] matriz = new String[10][3];
     public static int contador=0;
@@ -45,6 +46,7 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
     public static String[] preguntas;
     public static String[] respuestas;
     public static String[] retroalimentaciones;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,14 +61,15 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
         calificar =findViewById(R.id.btnCalificarAl);
         continuar =findViewById(R.id.btnContinuarAl);
 
-        s1        =findViewById(R.id.btns1Al);
-        s2         =findViewById(R.id.btns2Al);
-        s3         =findViewById(R.id.btns3Al);
-        s4         =findViewById(R.id.btns4Al);
-        s5     =findViewById(R.id.btns5Al);
-        s6     =findViewById(R.id.btns6Al);
-        s7       =findViewById(R.id.btns7Al);
-        s8        =findViewById(R.id.btns8Al);
+        s1 = findViewById(R.id.btns1Al);
+        s2 = findViewById(R.id.btns2Al);
+        s3 = findViewById(R.id.btns3Al);
+        s4 = findViewById(R.id.btns4Al);
+        s5 = findViewById(R.id.btns5Al);
+        s6 = findViewById(R.id.btns6Al);
+        s7 = findViewById(R.id.btns7Al);
+        s8 = findViewById(R.id.btns8Al);
+        s9 = findViewById(R.id.btns9Al);
 
 
         Bundle recibeDatos = getIntent().getExtras();
@@ -75,15 +78,16 @@ public class ACT_AL_Cuestionario extends AppCompatActivity {
         if(tema_elegido==1){
             preguntas = getResources().getStringArray(R.array.al_poli_p);
             respuestas = getResources().getStringArray(R.array.al_poli_r);
-            //retroalimentaciones = getResources().getStringArray(R.array.al_poli_retro);
-            s1.setText("+");
-            s2.setText("-");
-            s3.setText("(");
-            s4.setText(")");
-            s5.setText("÷");
-            s6.setText("^");
-            s7.setText("√");
-            s8.setText("=");
+            retroalimentaciones = getResources().getStringArray(R.array.al_poli_retro);
+            s1.setText("x");
+            s2.setText("+");
+            s3.setText("-");
+            s4.setText("(");
+            s5.setText(")");
+            s6.setText("÷");
+            s7.setText("^");
+            s8.setText("√");
+            s9.setText("=");
 
         } else if (tema_elegido==2) {
             //preguntas = getResources().getStringArray(R.array.al_ecua_p);

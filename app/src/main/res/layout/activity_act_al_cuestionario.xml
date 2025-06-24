@@ -62,39 +62,57 @@
 
                 <Button
                     android:id="@+id/btns1Al"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="Sim1"
+                    android:layout_gravity="center"
+                    android:layout_span="4"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/black"
+                    android:text="" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btns2Al"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="Sim2"
                     android:textColor="@color/white"
                     android:layout_marginLeft="40dp"
                     android:backgroundTint="@color/black"
                     android:text="" />
 
                 <Button
-                    android:id="@+id/btns2Al"
+                    android:id="@+id/btns3Al"
                     android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/black"
-                    android:onClick="Sim2"
-                    android:text="" />
-
-                <Button
-                    android:id="@+id/btns3Al"
-                    android:textColor="@color/white"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:onClick="Sim3"
-                    android:backgroundTint="@color/black"
                     android:text="" />
 
                 <Button
                     android:id="@+id/btns4Al"
                     android:textColor="@color/white"
-                    android:backgroundTint="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="Sim4"
+                    android:backgroundTint="@color/black"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/btns5Al"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="Sim5"
                     android:text="" />
             </TableRow>
 
@@ -103,20 +121,11 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/btns5Al"
-                    android:textColor="@color/white"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:backgroundTint="@color/black"
-                    android:onClick="Sim5"
-                    android:text="" />
-
-                <Button
                     android:id="@+id/btns6Al"
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
                     android:backgroundTint="@color/black"
                     android:onClick="Sim6"
                     android:text="" />
@@ -137,6 +146,15 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/black"
                     android:onClick="Sim8"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/btns9Al"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:onClick="Sim9"
                     android:text="" />
             </TableRow>
 

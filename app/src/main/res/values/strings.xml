@@ -139,6 +139,11 @@ A: Área de la sección transversal (m²)</item>
     </string-array>
 
 
+
+
+
+
+
     <!-- //////////     ÁLGEBRA      \\\\\\\\\\ -->
     <!-- //////////     OPERACIONES CON POLINOMIOS      \\\\\\\\\\ -->
 
@@ -156,13 +161,108 @@ A: Área de la sección transversal (m²)</item>
     </string-array>
 
     <string-array name="al_poli_r">
-        <item>5/4x²+5/4x+5/6 </item>
-        <!-- COMPLETAR LAS RESPUESTAS -->
+        <item>6x^2+8x+16</item>
+        <item>2x^2+2x+2</item>
+        <item>4x^3+3x^2−5x</item>
+        <item>x^2+7x+10</item>
+        <item>2x^2+3x−4</item>
+        <item>7x^2+2x+12</item>
+        <item>2x^3+3x^2−4x+16</item>
+        <item>6x^2+9x−15</item>
+        <item>x^2+6x+8</item>
+        <item>5/4x^2+5/4x+5/6 </item>
     </string-array>
 
     <string-array name="al_poli_retro">
-
+        <item>
+            Sumamos los polinomios término por término, agrupando los que tienen el mismo grado:
+            4x²+2x²=6x²
+            3x+5x=8x
+            7+9=16
+            La expresión resultante que representa el total de árboles sembrados es 6x²+8x+16.
+        </item>
+        <item>
+            Restamos los polinomios, invirtiendo el signo del segundo:
+            5x²−3x²=2x²
+            6x−4x=2x
+            10−8=2
+            La diferencia de costos queda representada por 2x²+2x+2.
+        </item>
+        <item>
+            Multiplicamos el monomio por cada término del polinomio:
+            x⋅4x²=4x³
+            x⋅3x=3x²
+            x⋅(−5)=−5x
+            Resultado final: 4x³+3x²−5x
+        </item>
+        <item>
+            Multiplicamos los dos binomios:
+            x⋅x=x²
+            x⋅2=2x
+            5⋅x=5x
+            5⋅2=10
+            Sumamos los términos semejantes: x²+2x+5x+10=x²+7x+10
+            Resultado final: x²+7x+10
+        </item>
+        <item>
+            Dividimos cada término entre 3x:
+            6x³/3x= 2x²
+            9x²/3x=3x
+            −12x/3x=−4
+            Resultado final: 2x²+3x−4
+        </item>
+        <item>
+            Se suman los dos polinomios agrupando términos semejantes:
+            5x²+2x²=7x²
+            3x−x=2x
+            8+4=12
+            El polinomio resultante que expresa la producción combinada es: 7x²+2x+12
+        </item>
+        <item>
+            Restamos el segundo polinomio del primero, cambiando el signo de cada término del segundo:
+            6x³−4x³=2x³
+            5x²−2x²=3x²
+            −3x−x=−4x
+            10−(−6)=16
+            Resultado final: 2x³+3x²−4x+16
+        </item>
+        <item>
+            Multiplicamos cada término por 3:
+            3⋅2x²=6x²
+            3⋅3x=9x
+            3⋅(−5)=−15
+            Resultado final: 6x²+9x−15
+        </item>
+        <item>
+            Multiplicamos los binomios con el método distributivo:
+            x⋅x=x²
+            x⋅4=4x
+            2⋅x=2x
+            2⋅4=8
+            Sumamos términos semejantes: x²+4x+2x+8=x²+6x+8
+            Resultado final: x²+6x+8
+        </item>
+        <item>
+            1. Primero identificamos los términos semejantes en ambos polinomios: los términos con x², y los constantes.
+            <br/>
+            2. Sumamos los términos con x²: 3/4x² + 1/2x².
+            Para sumar estas fracciones, buscamos un común denominador (mínimo común denominador entre 4 y 2 es 4)
+            3/4x²+2/4x²=5/4
+            <br/>
+            3. Sumamos los términos con x: 1/2x+3/4x
+            Mínimo común denominador entre 2 y 4 es 4:
+            2/4x+3/4x=5/4x
+            <br/>
+            4. Sumamos los términos constantes: ⅔ +⅙ .
+            El mínimo común denominador entre 3 y 6 es 6:
+            4/6+⅙ =⅚
+            <br/>
+            5. Ahora unimos todos los resultados:
+            5/4x²+5/4x+5/6
+        </item>
     </string-array>
+
+
 
 
     <!-- //////////     RESOLUCIÓN DE ECUACIONES      \\\\\\\\\\ -->
@@ -171,6 +271,8 @@ A: Área de la sección transversal (m²)</item>
     <string-array name="al_ecua_r"></string-array>
 
     <string-array name="al_ecua_retro"></string-array>
+
+
 
 
     <!-- //////////     FACTORIZACIÓN      \\\\\\\\\\ -->
